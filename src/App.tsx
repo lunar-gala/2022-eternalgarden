@@ -2,7 +2,8 @@ import "./App.css";
 import { Route, Routes } from "react-router-dom";
 import Home from "./home/home";
 import About from "./about/about";
-import NavBar from "./shared/navbar/navbar";
+import NavBar from "./components/navbar/navbar";
+import "./styles/main.scss";
 
 function App() {
   return (

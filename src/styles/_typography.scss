@@ -1,0 +1,90 @@
+/**
+ * Importing Faubourg, Cormorant, and Karla
+*/
+@font-face {
+    font-family: "Faubourg";
+    src: url("./fonts/Faubourg-Display.woff2") format('woff2'), 
+        url("./fonts/Faubourg-Display.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cormorant";
+    src: url("./fonts/Cormorant-Regular.woff2") format('woff2'), 
+        url("./fonts/Cormorant-Regular.woff") format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Cormorant";
+    src: url("./fonts/Cormorant-Medium.woff2") format('woff2'), 
+        url("./fonts/Cormorant-Medium.woff") format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+
+
+// karla has a variable font
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&display=swap');
+// @font-face {
+//     font-family: 'Karla';
+//     src: url('./fonts/Karla-VariableFont_wght.woff2') format('woff2-variations'),
+//         url('./fonts/Karla-VariableFont_wght.woff') format('woff-variations');
+//     font-weight: 100 900;
+//     font-stretch: 75% 125%;
+//     font-style: normal;
+// }
+
+/**
+ * Typography
+*/
+h1, .h1 {
+    font-family: "Faubourg";
+    font-size: 120px;
+    font-weight: 400;
+    letter-spacing: -0.03rem;
+    line-height: 80%;
+}
+
+h2, .h2 {
+    font-family: "Faubourg";
+    font-size: 80px;
+    font-weight: 400;
+    letter-spacing: -0.03rem;
+    line-height: 80%;
+}
+
+h3, .h3 {
+    font-family: "Cormorant";
+    font-size: 64px;
+    font-weight: 400;
+    letter-spacing: -0.03rem;
+    line-height: 80%;
+}
+
+h4, .h4 {
+    font-family: "Cormorant";
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: -0.03rem;
+    line-height: 80%;
+}
+
+h5, .h5 {
+    font-family: "Karla";
+    font-size: 14px;
+    // font-weight: 600;
+    font-variation-settings: "wght" 600;
+    letter-spacing: 0rem;
+    line-height: 130%;
+}
+
+p, .body {
+    font-family: "Karla";
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 0rem;
+    line-height: 130%;
+}
