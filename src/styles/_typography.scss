@@ -59,7 +59,7 @@ h2, .h2 {
 
 h3, .h3 {
     font-family: "Cormorant";
-    font-size: $font-size-3;
+    font-size: $font-size-4;
     font-weight: 400;
     letter-spacing: $letter-spacing-1;
     line-height: $line-height-1;
@@ -87,4 +87,31 @@ p, .body {
     font-weight: 400;
     letter-spacing: $letter-spacing-0;
     line-height: $line-height-2;
+}
+
+// convert to desktop type styles
+@media only screen and (min-width: 1200px) {
+    h1, .h1 {
+        font-size: $font-size-7;
+    }
+    
+    h2, .h2 {
+        font-size: $font-size-6;
+    }
+    
+    h3, .h3 {
+        font-size: $font-size-5;
+    }
+    
+    h4, .h4 {
+        font-size: $font-size-3;
+    }
+    
+    h5, .h5 {
+        font-size: $font-size-1;
+    }
+    
+    p, .body {
+        font-size: $font-size-1;
+    }
 }

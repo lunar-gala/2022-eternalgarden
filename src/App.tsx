@@ -8,15 +8,16 @@ import "./styles/main.scss";
 
 function App() {
   return (
-    <div className="App">
-      <div className="noise" />
-      {/* <Preloader /> */}
-      {/* <NavBar /> */}
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
-      </Routes>
-    </div>
+    <>
+      <div className="App">
+        {/* <Preloader /> */}
+        {/* <NavBar /> */}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
+    </>
   );
 }
 
