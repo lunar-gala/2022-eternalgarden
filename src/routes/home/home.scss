@@ -1,0 +1,91 @@
+@import "../../styles/variables.scss";
+
+.home {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+
+    &-main {
+        width: calc(100vw);
+        height: calc(100vh);
+        background: $gradient-accent;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        clip-path: inset($spacing-10 $spacing-5 $spacing-5 $spacing-5 round 300px 300px 0% 0%); /* these values affect gate clipping dimensions */
+        opacity: 1;
+        z-index: 1000;
+    }
+
+    &-logo {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        max-width: 100%;
+        width: 70%;
+        height: auto;
+        transform: translate(-50%, -50%);
+    }
+
+    &-flowers {
+        position: absolute;
+        left: 50%;
+        bottom: -100vw;
+        width: 150vw;
+        height: auto;
+        transform: translate(-50%,-50%);
+        overflow: hidden;
+    }
+
+    &-nav-left {
+        position: absolute;
+        top: $spacing-5;
+        left: $spacing-5;
+    }
+    
+    &-nav-right {
+        position: absolute;
+        top: $spacing-5;
+        right: $spacing-5;
+    }
+}
+
+// convert to desktop type styles
+@media only screen and (min-width: 768px) {
+    .home {    
+        &-logo {
+            width: 100%;
+            max-width: 400px;
+        }
+    }
+}
+
+// convert to desktop type styles
+@media only screen and (min-width: 1200px) {
+    .home {    
+        &-main {
+            clip-path: inset($spacing-7 $spacing-7 $spacing-7 $spacing-7 round 350px 350px 0% 0%); /* these values affect gate clipping dimensions */
+        }
+    
+        &-logo {
+            max-width: 450px;
+        }
+    
+        &-flowers {
+            width: 125%;
+            bottom: -100vw;
+        }
+    
+        &-nav-left {
+            top: 2rem;
+            left: 2rem;
+        }
+        
+        &-nav-right {
+            top: 2rem;
+            right: 2rem;
+        }
+    } 
+}
