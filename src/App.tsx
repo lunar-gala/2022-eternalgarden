@@ -9,6 +9,7 @@ import "./styles/main.scss";
 function App() {
   return (
     <div className="App">
+      <div className="noise" />
       {/* <Preloader /> */}
       {/* <NavBar /> */}
       <Routes>

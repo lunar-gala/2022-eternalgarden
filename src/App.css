@@ -1,3 +1,19 @@
-.App {
-    /* background-color: black; */
+/* .bg-noise {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    filter: contrast(300%) brightness(330%) grayscale(100%) opacity(0.5);
+    background: 
+        linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+        url(./assets/images/noise.svg);
+} */
+
+.noise {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    filter: contrast(1000%) brightness(100%) grayscale(100%) opacity(0.1);
+    background: 
+        linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
+        url(./assets/images/noise.svg);
 }

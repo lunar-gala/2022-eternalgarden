@@ -1,3 +1,5 @@
+@import './variables';
+
 /**
  * Importing Faubourg, Cormorant, and Karla
 */
@@ -25,7 +27,6 @@
     font-style: normal;
 }
 
-
 // karla has a variable font
 @import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&display=swap');
 // @font-face {
@@ -42,49 +43,48 @@
 */
 h1, .h1 {
     font-family: "Faubourg";
-    font-size: 120px;
+    font-size: $font-size-5;
     font-weight: 400;
-    letter-spacing: -0.03rem;
-    line-height: 80%;
+    letter-spacing: $letter-spacing-1;
+    line-height: $line-height-1;
 }
 
 h2, .h2 {
     font-family: "Faubourg";
-    font-size: 80px;
+    font-size: $font-size-4;
     font-weight: 400;
-    letter-spacing: -0.03rem;
-    line-height: 80%;
+    letter-spacing: $letter-spacing-1;
+    line-height: $line-height-1;
 }
 
 h3, .h3 {
     font-family: "Cormorant";
-    font-size: 64px;
+    font-size: $font-size-3;
     font-weight: 400;
-    letter-spacing: -0.03rem;
-    line-height: 80%;
+    letter-spacing: $letter-spacing-1;
+    line-height: $line-height-1;
 }
 
 h4, .h4 {
     font-family: "Cormorant";
-    font-size: 24px;
+    font-size: $font-size-2;
     font-weight: 500;
-    letter-spacing: -0.03rem;
-    line-height: 80%;
+    letter-spacing: $letter-spacing-1;
+    line-height: $line-height-1;
 }
 
 h5, .h5 {
     font-family: "Karla";
-    font-size: 14px;
-    // font-weight: 600;
+    font-size: $font-size-1;
     font-variation-settings: "wght" 600;
-    letter-spacing: 0rem;
-    line-height: 130%;
+    letter-spacing: $letter-spacing-0;
+    line-height: $line-height-2;
 }
 
 p, .body {
     font-family: "Karla";
-    font-size: 14px;
+    font-size: $font-size-1;
     font-weight: 400;
-    letter-spacing: 0rem;
-    line-height: 130%;
+    letter-spacing: $letter-spacing-0;
+    line-height: $line-height-2;
 }

@@ -1,7 +1,37 @@
 // palette
-$white: #fff;
-$off-white: #F8F8F8;
-$off-black: #535B67;
-$disabled: #535B67;
+$white:         #fff;
+$off-white:     #F8F8F8;
+$off-black:     #535B67;
+$disabled:      #535B67;
+$solid-accent:  #599CFF;
 $gradient-accent: linear-gradient(180deg, #7889CE 0%, #6274C5 100%);
-$solid-accent: #599CFF;
+
+// spacing
+$spacing-0:     0;
+$spacing-1:     2px;
+$spacing-2:     4px;
+$spacing-3:     8px;
+$spacing-4:     12px;
+$spacing-5:     16px;
+$spacing-6:     24px;
+$spacing-7:     32px;
+$spacing-8:     48px;
+$spacing-9:     64px;
+$spacing-10:    96px;
+$spacing-11:    128px;
+$spacing-12:    256px;
+
+// font-size
+$font-size-1: 14px;
+$font-size-2: 24px;
+$font-size-3: 64px;
+$font-size-4: 80px;
+$font-size-5: 120px;
+
+// letter-spacing
+$letter-spacing-0: 0rem;
+$letter-spacing-1: -0.03rem;
+
+// line-height
+$line-height-1: 80%;
+$line-height-2: 130%;
