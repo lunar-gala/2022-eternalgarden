@@ -1,6 +1,6 @@
-import "./home.scss";
+import "./about.scss";
 
-export default function Home() {
+export default function About() {
   return (
     <>
       <h1>Header 1</h1>
