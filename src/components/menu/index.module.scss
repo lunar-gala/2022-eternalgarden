@@ -1,0 +1,63 @@
+@import '../../styles/variables.scss';
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 4rem);
+  width: calc(100vw - 4rem);
+  padding: 2rem;
+  background-color: $white;
+  z-index: 3;
+  display: none;
+}
+
+.active {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1.5rem;
+  font-size: 4rem;
+  font-family: 'Cormorant';
+  line-height: 80%;
+  letter-spacing: -0.03em;
+}
+
+.item {
+  display: inline-flex;
+  cursor: pointer;
+}
+
+.item:not(:last-child) {
+  padding-bottom: 0.25rem;
+}
+
+.active {
+  color: $off-black;
+}
+
+.disabled {
+  color: $disabled;
+  opacity: 0.5;
+}
+
+.highlight {
+  color: $solid-accent;
+}
+
+.callout {
+  font-size: 0.875rem;
+  font-family: 'Karla';
+  font-weight: 600;
+  line-height: 130%;
+}
+
+.noiseLayer {
+  z-index: 3;
+  pointer-events: none;
+}

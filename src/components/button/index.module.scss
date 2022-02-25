@@ -1,6 +1,7 @@
 @import '../../styles/variables';
 
 .btn {
+  display: inline-block;
   color: $solid-accent;
   background: $white;
   padding: 6px 16px;

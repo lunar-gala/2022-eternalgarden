@@ -7,7 +7,7 @@
   width: 100vw;
   height: 100vh;
   background: $off-black;
-  z-index: 999;
+  z-index: 1;
 
   &-clip {
     position: absolute;
@@ -20,6 +20,6 @@
     position: absolute;
     background: #fff;
     opacity: 1;
-    z-index: 1000;
+    z-index: 2;
   }
 }
