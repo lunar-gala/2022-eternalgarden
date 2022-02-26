@@ -19,10 +19,10 @@ export default function Menu() {
             </Button>
           </Link>
           <div className={styles.items}>
-            <Link to="/" className={cn(styles.item)}>
+            <Link to="/" state={{ previousLocation: '/menu' }} className={cn(styles.item)}>
               HOME
             </Link>
-            <Link to="/about" className={cn(styles.item)}>
+            <Link to="/about" state={{ previousLocation: '/menu' }} className={cn(styles.item)}>
               ABOUT
             </Link>
             <div className={cn(styles.item, styles.disabled)}>
