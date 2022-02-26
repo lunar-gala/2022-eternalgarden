@@ -6,7 +6,7 @@ export const LINE_INFO = [
   {
     name: 'expeiri',
     designers: ['Skylar McAuliffe', 'Asad Sheikh'],
-    images: [IMG_1, IMG_2],
+    images: [IMG_1, IMG_2, IMG_1],
     description:
       'Born in 1996, Lunar Gala is an annual student-run fashion show that showcases brilliant artistry in design, modeling, and production, and dance performance. The show was originally inspired by the Taiwanese Student Association’s Lunar New Year tradition of wearing new clothes. Over the years, it has evolved to become the largest fashion event in Pittsburgh, a unique platform to display innovative and avant garde fashion. ',
   },

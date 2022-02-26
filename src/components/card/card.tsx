@@ -37,13 +37,15 @@ export default function Button({
           layoutId={`line-item-${index}`}
           className={classes}
         >
-          <h1 className="card-heading">{name}</h1>
-          <h2 className="card-designers">{designers.join(', ')}</h2>
-          <p className="card-description">{description}</p>
-          <div className="card-images">
-            {images.map((img, index) => (
-              <img src={img} alt={`${name} line shoot number ${index + 1}`} />
-            ))}
+          <div className="card-main">
+            <h1 className="card-heading">{name}</h1>
+            <h2 className="card-designers">{designers.join(', ')}</h2>
+            <p className="card-description">{description}</p>
+            <div className="card-images">
+              {images.map((img, index) => (
+                <img src={img} alt={`${name} line shoot number ${index + 1}`} />
+              ))}
+            </div>
           </div>
         </motion.div>
       ) : (
