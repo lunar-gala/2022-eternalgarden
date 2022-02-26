@@ -8,6 +8,9 @@ const container = {
   show: {
     clipPath: 'inset(8% 2% 2% 2% round 300px 300px 0% 0%)',
   },
+  exit: {
+    clipPath: 'inset(100% 2% 2% 2% round 300px 300px 0% 0%)',
+  }
 };
 
 const containerTransition = {

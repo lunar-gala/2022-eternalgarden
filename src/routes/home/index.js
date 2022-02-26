@@ -76,9 +76,9 @@ export default function Home() {
       <motion.div
         className="home-main"
         variants={container}
-        initial="loading"
+        initial={location.state?.previousLocation ? 'exit' : 'loading'}
         animate={controls}
-        exit={{ opacity: 0 }}
+        exit="exit"
         transition={{ ...containerTransition, delay: loading ? 0 : 0.6 }}
       >
         <motion.img
