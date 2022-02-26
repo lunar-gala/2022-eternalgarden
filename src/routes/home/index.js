@@ -28,30 +28,38 @@ export default function Home() {
 
   // create fake preloading experience wew
   useEffect(() => {
-    const timer = setTimeout(() => {
+    let timer;
+    if (location.state?.previousLocation) {
       setLoading(false);
-      controls.start('show');
-    }, 3000);
+      controls.set('show');
+    } else {
+      timer = setTimeout(() => {
+        setLoading(false);
+        controls.start('show');
+      }, 3000);
+    }
 
-    // clear timeout function after load
+    // cleanup timer on unmount
     return () => {
-      clearTimeout(timer);
+      timer && clearTimeout(timer);
     };
   }, [controls]);
 
   return (
     <motion.div className="home">
-      <motion.div
-        className="home-nav-left"
-        variants={buttonVariants}
-        initial="loading"
-        animate={controls}
-        transition={buttonTransition1}
-      >
-        <Button>
-          <Link to="/menu" state={{ previousLocation: location }}>Explore</Link>
-        </Button>
-      </motion.div>
+      <Link to="/menu" state={{ previousLocation: '/' }}>
+        <motion.div
+          className="home-nav-left"
+          variants={buttonVariants}
+          initial="loading"
+          animate={controls}
+          transition={buttonTransition1}
+        >
+          <Button>
+            Explore
+          </Button>
+        </motion.div>
+      </Link>
       <motion.div
         className="home-nav-right"
         variants={buttonVariants}

@@ -13,11 +13,11 @@ export default function Menu() {
     <div>
       <section className={cn(styles.container)}>
         <div>
-          <Button>
-            <Link to={location.state.previousLocation.pathname} state={{ previousLocation: location }}>
+          <Link to={location.state.previousLocation} state={{ previousLocation: '/menu' }}>
+            <Button>
               CLOSE
-            </Link>
-          </Button>
+            </Button>
+          </Link>
           <div className={styles.items}>
             <Link to="/" className={cn(styles.item)}>
               HOME
