@@ -12,4 +12,13 @@
   &:hover {
     background: $off-white;
   }
+
+  &__white {
+    border-color: $white;
+    color: $white;
+    background: none;
+    &:hover {
+      background: $gradient-accent;
+    }
+  }
 }

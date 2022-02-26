@@ -1,1 +1,54 @@
 @import '../../styles/variables.scss';
+
+.lines {
+  position: relative;
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+
+  &-main {
+    width: calc(100vw);
+    height: calc(100vh);
+    background: $gradient-accent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    display: flex;
+  }
+
+  &-nav-left {
+    z-index: 1000;
+    position: absolute;
+    top: $spacing-5;
+    left: $spacing-5;
+  }
+
+  &-nav-right {
+    z-index: 1000;
+    position: absolute;
+    top: $spacing-5;
+    right: $spacing-5;
+  }
+}
+
+// convert to desktop type styles
+@media only screen and (min-width: 1200px) {
+  .lines {
+    &-main {
+      // clip-path: inset($spacing-7 $spacing-7 $spacing-7 $spacing-7 round 350px 350px 0% 0%); /* these values affect gate clipping dimensions */
+      // clip-path: inset(40% 40% 40% 40% round 350px 350px 0% 0%); /* these values affect gate clipping dimensions */
+    }
+
+    &-nav-left {
+      top: 2rem;
+      left: 2rem;
+    }
+
+    &-nav-right {
+      top: 2rem;
+      right: 2rem;
+    }
+  }
+}
