@@ -1,11 +1,13 @@
+import 'routes/home/index.scss';
+
 import { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-
-import './home.scss';
-import logo from '../../assets/images/logo.svg';
-import flowers from '../../assets/images/main-flower.svg';
-import Button from '../../components/button';
-// import useWindowSize, { Size } from '../../hooks/useWindowSize';
+import { Link } from 'react-router-dom';
+  
+// import useWindowSize, { Size } from 'hooks/useWindowSize';
+import logo from 'assets/images/logo.svg';
+import flowers from 'assets/images/main-flower.svg';
+import Button from 'components/button';
 import {
   container,
   containerTransition,
@@ -13,7 +15,7 @@ import {
   buttonTransition1,
   buttonTransition2,
   logoVariants,
-} from './animation';
+} from 'routes/home/animation';
 
 export default function Home({ setMenu }) {
   const controls = useAnimation();
@@ -47,7 +49,9 @@ export default function Home({ setMenu }) {
         animate={controls}
         transition={buttonTransition1}
       >
-        <Button onClick={handleMenu}>Explore</Button>
+        <Button onClick={handleMenu}>
+          <Link to="/menu">Explore</Link>
+        </Button>
       </motion.div>
       <motion.div
         className="home-nav-right"

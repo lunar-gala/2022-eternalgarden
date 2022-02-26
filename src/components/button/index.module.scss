@@ -13,4 +13,9 @@
   &:hover {
     background: $off-white;
   }
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
 }

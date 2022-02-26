@@ -1,28 +1,26 @@
 import { useEffect } from 'react';
+import { Link } from 'react-router-dom';
 import cn from 'classnames';
-import styles from './index.module.scss';
-import Button from '../button';
-import { ReactComponent as LGLogo } from '../../assets/icons/lg-logo.svg';
 
-export default function Menu({ active, setActive }) {
-  useEffect(() => {
-    // TODO
-  }, [active]);
+import styles from 'routes/menu/index.module.scss';
+import Button from 'components/button';
+import { ReactComponent as LGLogo } from 'assets/icons/lg-logo.svg';
 
-  const handleMenu = () => setActive((s) => !s);
+export default function Menu() {
+  const handleMenu = () => console.log('TODO');
 
   return (
     <div>
-      <section className={cn(styles.container, { [styles.active]: active })}>
+      <section className={cn(styles.container)}>
         <div>
           <Button onClick={handleMenu}>CLOSE</Button>
           <div className={styles.items}>
-            <div className={cn(styles.item, styles.active)}>
+            <Link to="/" className={cn(styles.item)}>
               HOME
-            </div>
-            <div className={cn(styles.item, styles.active)}>
+            </Link>
+            <Link to="/about" className={cn(styles.item)}>
               ABOUT
-            </div>
+            </Link>
             <div className={cn(styles.item, styles.disabled)}>
               LINES
               <span className={cn(styles.callout, styles.highlight)}>
@@ -44,7 +42,7 @@ export default function Menu({ active, setActive }) {
           <LGLogo />
         </div>
       </section>
-      <div className={cn({ noise: active, [styles.noiseLayer]: active })} />
+      <div className={cn('noise', styles.noiseLayer)} />
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import "./about.scss";
+import 'routes/guide/index.scss';
 
 export default function About() {
   return (
