@@ -1,35 +1,41 @@
 @import '../../styles/variables.scss';
 
 .lines {
-  position: relative;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
-
   &-main {
-    width: calc(100vw);
-    height: calc(100vh);
+    width: 100%;
     background: $gradient-accent;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
     opacity: 1;
     display: flex;
+    justify-content: center;
   }
 
   &-nav-left {
     z-index: 1000;
-    position: absolute;
+    position: fixed;
     top: $spacing-5;
     left: $spacing-5;
   }
 
   &-nav-right {
     z-index: 1000;
-    position: absolute;
+    position: fixed;
     top: $spacing-5;
     right: $spacing-5;
+  }
+
+  &-list {
+    padding-left: 0;
+    text-align: center;
+    list-style-type: none;
+    color: $white;
+    font-size: $font-size-5;
+    font-family: Faubourg;
+    text-transform: uppercase;
+    li {
+      height: auto;
+      line-height: $line-height-1;
+    }
   }
 }
 
@@ -49,6 +55,10 @@
     &-nav-right {
       top: 2rem;
       right: 2rem;
+    }
+
+    &-list {
+      font-size: $font-size-7;
     }
   }
 }

@@ -8,7 +8,7 @@ import {
 
 import './lines.scss';
 import Button from '../../components/button/button';
-// import { LINE_INFO } from '../../assets/data/line_data';
+import { LINE_INFO } from '../../assets/data/line_data';
 
 export default function Lines() {
   const controls = useAnimation();
@@ -39,6 +39,13 @@ export default function Lines() {
         </motion.div>
         <motion.div className="lines-main" initial="loading" animate={controls}>
           {/* noise on top of flowers + logo, so it is last */}
+          <ul className="lines-list">
+            {LINE_INFO.map(({ name }, index) => {
+              return (
+                <motion.li layoutId={`line-item-${index}`}>{name}</motion.li>
+              );
+            })}
+          </ul>
           <div className="noise" />
         </motion.div>
       </motion.div>
