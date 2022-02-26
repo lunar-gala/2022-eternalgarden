@@ -53,6 +53,7 @@ export default function Home() {
           variants={buttonVariants}
           initial="loading"
           animate={controls}
+          exit="loading"
           transition={buttonTransition1}
         >
           <Button>
@@ -65,6 +66,7 @@ export default function Home() {
         variants={buttonVariants}
         initial="loading"
         animate={controls}
+        exit="loading"
         transition={buttonTransition2}
       >
         <Button onClick={() => console.log('Link to tickets')}>
