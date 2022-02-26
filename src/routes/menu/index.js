@@ -123,7 +123,7 @@ export default function Menu() {
           initial="hidden"
           animate="visible"
           exit="hidden"
-          transition={{ ...transition, delay: 1.9 }}
+          transition={{ ...transition, duration: 0.3, delay: 1.9 }}
         >
           <LGLogo />
         </motion.div>
