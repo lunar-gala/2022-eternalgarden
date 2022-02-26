@@ -9,6 +9,7 @@
   border-radius: $spacing-7;
   text-transform: uppercase;
   cursor: pointer;
+  transition: all 0.3s;
 
   &:hover {
     background: $off-white;
@@ -17,5 +18,16 @@
   & a {
     text-decoration: none;
     color: inherit;
+  }
+}
+
+.btnWhite {
+  background: transparent;
+  border: 1px solid $white;
+  color: $white;
+
+  &:hover {
+    background: $gradient-accent;
+    opacity: 0.8;
   }
 }

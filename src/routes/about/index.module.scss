@@ -1,0 +1,53 @@
+@import '../../styles/variables.scss';
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 4rem);
+  width: calc(100vw - 4rem);
+  padding: $spacing-7;
+  text-align: center;
+  background: $gradient-accent;
+  color: $white;
+  z-index: 3;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header {
+  margin-top: $spacing-4;
+}
+
+.subheader {
+  margin-top: $spacing-11;
+}
+
+.content {
+  margin: $spacing-6 25%;
+  line-height: $line-height-2;
+}
+
+.noise {
+  z-index: 3;
+  pointer-events: none;
+}
+
+@media screen and (max-width: 768px) {
+  .header {
+    margin-top: $spacing-7;
+  }
+
+  .subheader {
+    margin-top: $spacing-8;
+    font-size: $font-size-3;
+  }
+
+  .content {
+    margin: $spacing-7 0;
+  }
+}
