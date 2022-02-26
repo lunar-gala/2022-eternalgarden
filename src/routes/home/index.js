@@ -31,7 +31,7 @@ export default function Home() {
     let timer;
     if (location.state?.previousLocation) {
       setLoading(false);
-      controls.set('show');
+      controls.start('show');
     } else {
       timer = setTimeout(() => {
         setLoading(false);
@@ -54,7 +54,7 @@ export default function Home() {
           initial="loading"
           animate={controls}
           exit="loading"
-          transition={buttonTransition1}
+          transition={{ ...buttonTransition1, delay: loading ? buttonTransition1.delay : 0 }}
         >
           <Button>
             Explore
@@ -67,7 +67,7 @@ export default function Home() {
         initial="loading"
         animate={controls}
         exit="loading"
-        transition={buttonTransition2}
+        transition={{ ...buttonTransition2, delay: loading ? buttonTransition2.delay : 0.4 }}
       >
         <Button onClick={() => console.log('Link to tickets')}>
           Tickets
@@ -78,7 +78,8 @@ export default function Home() {
         variants={container}
         initial="loading"
         animate={controls}
-        transition={containerTransition}
+        exit={{ opacity: 0 }}
+        transition={{ ...containerTransition, delay: loading ? 0 : 0.6 }}
       >
         <motion.img
           className="home-logo"
@@ -93,7 +94,7 @@ export default function Home() {
         {/* noise on top of flowers + logo, so it is last */}
         <div className="noise" />
       </motion.div>
-      {loading && (
+      {loading && !location.state?.previousLocation && (
         <motion.div className="progress">
           <motion.div
             className="progress-bar"
