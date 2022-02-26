@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import classNames from 'classnames';
 import './card.scss';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimateSharedLayout } from 'framer-motion';
 import internal from 'stream';
 
 interface Props {
@@ -30,9 +30,9 @@ export default function Button({
   });
 
   return (
-    <>
+    <AnimateSharedLayout>
       {open ? (
-        <AnimatePresence>
+        <>
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -45,12 +45,18 @@ export default function Button({
                 layoutId={`line-item-${index}`}
                 className="card-heading"
                 initial={{ opacity: 0 }}
-                animate={{ opacity: 1, y: 0 }}
+                animate={{ opacity: 1 }}
                 exit={{ opacity: 0 }}
               >
                 {name}
               </motion.h1>
-              <motion.div className="card-content">
+              <motion.div
+                className="card-content"
+                transition={{ delay: 0.2 }}
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+              >
                 <h2 className="card-designers">{designers.join(', ')}</h2>
                 <p className="card-description">{description}</p>
                 <div className="card-images">
@@ -64,7 +70,7 @@ export default function Button({
               </motion.div>
             </motion.div>
           </motion.div>
-        </AnimatePresence>
+        </>
       ) : (
         <motion.li
           onClick={() => setOpen(true)}
@@ -74,6 +80,6 @@ export default function Button({
           <p>{name}</p>
         </motion.li>
       )}
-    </>
+    </AnimateSharedLayout>
   );
 }
