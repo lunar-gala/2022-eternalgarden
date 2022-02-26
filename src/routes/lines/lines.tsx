@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 
 import './lines.scss';
@@ -35,6 +35,7 @@ export default function Lines() {
         </motion.div>
         <motion.div className="lines-main" initial="loading" animate={controls}>
           {/* noise on top of flowers + logo, so it is last */}
+
           <ul className="lines-list">
             {LINE_INFO.map((line, index) => {
               return <Card index={index} {...line} />;

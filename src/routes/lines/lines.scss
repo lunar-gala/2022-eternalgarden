@@ -30,14 +30,24 @@
     list-style-type: none;
     color: $white;
     font-size: $font-size-5;
-    li {
-      text-transform: uppercase;
-      font-family: Faubourg;
-      height: auto;
+  }
+
+  &-item {
+    text-transform: uppercase;
+    font-family: Faubourg;
+    padding: 0px;
+    margin: 0px;
+
+    p {
+      font-size: $font-size-5;
       line-height: $line-height-1;
-      &:hover {
-        cursor: pointer;
-      }
+      font-family: Faubourg;
+      margin: 0;
+      pointer-events: none;
+    }
+
+    &:hover {
+      cursor: pointer;
     }
   }
 
@@ -70,6 +80,12 @@
 
     &-list {
       font-size: $font-size-7;
+    }
+
+    &-item {
+      p {
+        font-size: $font-size-7;
+      }
     }
   }
 }
