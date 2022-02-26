@@ -1,7 +1,6 @@
 import 'App.css';
 import 'styles/main.scss';
 
-import { useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 
 import Home from 'routes/home';
