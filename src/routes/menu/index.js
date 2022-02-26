@@ -1,4 +1,5 @@
-import { Link } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import { Link, useLocation } from 'react-router-dom';
 import cn from 'classnames';
 
 import styles from 'routes/menu/index.module.scss';
@@ -6,13 +7,17 @@ import Button from 'components/button';
 import { ReactComponent as LGLogo } from 'assets/icons/lg-logo.svg';
 
 export default function Menu() {
-  const handleMenu = () => console.log('TODO');
+  const location = useLocation();
 
   return (
     <div>
       <section className={cn(styles.container)}>
         <div>
-          <Button onClick={handleMenu}>CLOSE</Button>
+          <Button>
+            <Link to={location.state.previousLocation.pathname} state={{ previousLocation: location }}>
+              CLOSE
+            </Link>
+          </Button>
           <div className={styles.items}>
             <Link to="/" className={cn(styles.item)}>
               HOME

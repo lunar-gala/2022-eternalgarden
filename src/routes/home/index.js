@@ -2,7 +2,7 @@ import 'routes/home/index.scss';
 
 import { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
   
 // import useWindowSize, { Size } from 'hooks/useWindowSize';
 import logo from 'assets/images/logo.svg';
@@ -17,7 +17,8 @@ import {
   logoVariants,
 } from 'routes/home/animation';
 
-export default function Home({ setMenu }) {
+export default function Home() {
+  const location = useLocation();
   const controls = useAnimation();
   const [loading, setLoading] = useState(true);
 
@@ -38,8 +39,6 @@ export default function Home({ setMenu }) {
     };
   }, [controls]);
 
-  const handleMenu = () => setMenu((s) => !s);
-
   return (
     <motion.div className="home">
       <motion.div
@@ -49,8 +48,8 @@ export default function Home({ setMenu }) {
         animate={controls}
         transition={buttonTransition1}
       >
-        <Button onClick={handleMenu}>
-          <Link to="/menu">Explore</Link>
+        <Button>
+          <Link to="/menu" state={{ previousLocation: location }}>Explore</Link>
         </Button>
       </motion.div>
       <motion.div
