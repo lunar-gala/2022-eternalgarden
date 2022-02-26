@@ -17,7 +17,7 @@
     // clip-path: inset($spacing-10 $spacing-5 $spacing-5 $spacing-5 round 300px 300px 0% 0%); /* these values affect gate clipping dimensions */
     // clip-path: inset(35% 30% 35% 30% round 350px 350px 0% 0%);
     opacity: 1;
-    z-index: 1000;
+    z-index: 2;
   }
 
   &-logo {
@@ -64,7 +64,7 @@
 
   &-bar {
     position: absolute;
-    z-index: 1000;
+    z-index: 2;
     left: 0;
     top: 0;
     width: 100%;
