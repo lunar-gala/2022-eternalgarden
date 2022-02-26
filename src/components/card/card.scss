@@ -10,6 +10,7 @@
   top: 0;
   left: 0;
   overflow: scroll;
+  z-index: 1000;
 
   &-main {
     width: 95vw;
@@ -54,7 +55,7 @@
   &-description {
     font-family: Karla;
     font-size: $font-size-1;
-    width: 37vw;
+    width: 45%;
     margin: $spacing-4 auto;
   }
 

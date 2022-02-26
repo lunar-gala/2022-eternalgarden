@@ -41,7 +41,7 @@ export default function Lines() {
               return <Card index={index} {...line} />;
             })}
           </ul>
-          <div className="lines-gradient" />
+          <div className="lines-gradient"></div>
           <div className="noise" />
         </motion.div>
       </motion.div>
