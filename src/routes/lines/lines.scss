@@ -37,16 +37,23 @@
       line-height: $line-height-1;
     }
   }
+
+  &-gradient {
+    background: linear-gradient(
+      180deg,
+      rgba(127, 109, 201, 0) 0%,
+      #6d7fc9 100%
+    );
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: $spacing-12;
+  }
 }
 
 // convert to desktop type styles
 @media only screen and (min-width: 1200px) {
   .lines {
-    &-main {
-      // clip-path: inset($spacing-7 $spacing-7 $spacing-7 $spacing-7 round 350px 350px 0% 0%); /* these values affect gate clipping dimensions */
-      // clip-path: inset(40% 40% 40% 40% round 350px 350px 0% 0%); /* these values affect gate clipping dimensions */
-    }
-
     &-nav-left {
       top: 2rem;
       left: 2rem;

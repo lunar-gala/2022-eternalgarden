@@ -46,6 +46,7 @@ export default function Lines() {
               );
             })}
           </ul>
+          <div className="lines-gradient" />
           <div className="noise" />
         </motion.div>
       </motion.div>
