@@ -1,13 +1,9 @@
 import React from 'react';
-import {
-  motion,
-  useAnimation,
-  // AnimateSharedLayout,
-  // AnimatePresence,
-} from 'framer-motion';
+import { motion, useAnimation } from 'framer-motion';
 
 import './lines.scss';
 import Button from '../../components/button/button';
+import Card from '../../components/card/card';
 import { LINE_INFO } from '../../assets/data/line_data';
 
 export default function Lines() {
@@ -40,10 +36,8 @@ export default function Lines() {
         <motion.div className="lines-main" initial="loading" animate={controls}>
           {/* noise on top of flowers + logo, so it is last */}
           <ul className="lines-list">
-            {LINE_INFO.map(({ name }, index) => {
-              return (
-                <motion.li layoutId={`line-item-${index}`}>{name}</motion.li>
-              );
+            {LINE_INFO.map((line, index) => {
+              return <Card index={index} {...line} />;
             })}
           </ul>
           <div className="lines-gradient" />

@@ -1,0 +1,45 @@
+@import '../../styles/variables.scss';
+
+.card {
+  &-main {
+    width: 95%;
+    background: $gradient-accent;
+    position: absolute;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+    z-index: 1000;
+  }
+
+  &-heading {
+    text-align: center;
+    text-transform: uppercase;
+    font-family: Faubourg;
+    line-height: $line-height-1;
+    font-size: $font-size-5;
+    color: $white;
+  }
+
+  &-designers {
+    font-family: Cormorant;
+    font-size: $font-size-3;
+  }
+
+  &-description {
+    font-family: Karla;
+    font-size: $font-size-1;
+  }
+}
+
+// convert to desktop type styles
+@media only screen and (min-width: 1200px) {
+  .card {
+    &-main {
+      width: 80%;
+    }
+
+    &-heading {
+      font-size: $font-size-7;
+    }
+  }
+}
