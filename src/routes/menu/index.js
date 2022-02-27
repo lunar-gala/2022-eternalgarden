@@ -83,7 +83,7 @@ export default function Menu() {
       <section className={cn(styles.container)}>
         <div>
           <Link
-            to={location.state.previousLocation}
+            to={location.state?.previousLocation || '/'}
             state={{ previousLocation: '/menu' }}
           >
             <motion.div
@@ -127,24 +127,26 @@ export default function Menu() {
               variants={item}
             >
               LINES
-              <span className={cn(styles.callout, 'h5', styles.highlight)}>
-                COMING 3/15
-              </span>
+              <span className={cn('h5', styles.highlight)}>COMING 3/15</span>
             </motion.h3>
             <motion.h3
               className={cn(styles.item, styles.disabled)}
               variants={item}
             >
               PEOPLE
-              <span className={cn(styles.callout, 'h5', styles.highlight)}>
-                COMING 3/18
-              </span>
+              <span className={cn('h5', styles.highlight)}>COMING 3/18</span>
             </motion.h3>
             <motion.h3
               className={cn(styles.item, styles.highlight)}
               variants={item}
             >
-              TICKETS
+              <a
+                href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                TICKETS
+              </a>
             </motion.h3>
           </motion.div>
         </div>
@@ -156,7 +158,13 @@ export default function Menu() {
           exit="hidden"
           transition={{ ...transition, duration: 0.3, delay: 0.4 }}
         >
-          <LGLogo />
+          <a
+            href="https://lunargala.org"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <LGLogo />
+          </a>
         </motion.div>
       </section>
       <div className={cn('noise', styles.noiseLayer)} />

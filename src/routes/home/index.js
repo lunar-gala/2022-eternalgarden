@@ -73,7 +73,15 @@ export default function Home() {
           delay: loading ? buttonTransition2.delay : 0.4,
         }}
       >
-        <Button onClick={() => console.log('Link to tickets')}>Tickets</Button>
+        <Button>
+          <a
+            href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Tickets
+          </a>
+        </Button>
       </motion.div>
       <motion.div
         className="home-main"
