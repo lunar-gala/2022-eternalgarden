@@ -12,7 +12,7 @@ const transition = {
 
 const button = {
   hidden: {
-    scale: 0,
+    scale: 0.9,
     opacity: 0,
   },
   visible: {
@@ -24,28 +24,30 @@ const button = {
 const container = {
   hidden: {
     opacity: 0,
+    duration: 0.1,
   },
   visible: {
-    opacity: 1
+    opacity: 1,
+    duration: 0.1,
   },
-}
+};
 
 const items = {
   hidden: {
     opacity: 0,
     transition: {
       when: 'afterChildren',
-      staggerChildren: 0.3,
+      staggerChildren: 0.02,
       ease: 'easeOut',
-      delay: 0.3,
+      delay: 0.07,
     },
   },
   visible: {
     opacity: 1,
     transition: {
       when: 'beforeChildren',
-      staggerChildren: 0.3,
-      delay: 0.8,
+      staggerChildren: 0.02,
+      delay: 0.07,
       ease: 'easeOut',
     },
   },
@@ -53,12 +55,12 @@ const items = {
 
 const item = {
   hidden: {
-    opacity: 0
+    opacity: 0,
   },
   visible: {
-    opacity: 1
+    opacity: 1,
   },
-}
+};
 
 export default function About() {
   const location = useLocation();
@@ -71,7 +73,7 @@ export default function About() {
         initial="hidden"
         animate="visible"
         exit="hidden"
-        transition={{ ...transition, delay: 0 }}
+        transition={{ ...transition, delay: 0, duration: 0.3 }}
       >
         <div className={styles.navbar}>
           <Link to="/menu" state={{ previousLocation: '/about' }}>
@@ -83,9 +85,7 @@ export default function About() {
               exit="hidden"
               transition={{ ...transition, delay: 0.1 }}
             >
-              <Button type="white">
-                Explore
-              </Button>
+              <Button type="white">Explore</Button>
             </motion.div>
           </Link>
           <Link to="/" state={{ previousLocation: '/about' }}>
@@ -95,11 +95,9 @@ export default function About() {
               initial="hidden"
               animate="visible"
               exit="hidden"
-              transition={{ ...transition, delay: 0.4 }}
+              transition={{ ...transition, delay: 0.1 }}
             >
-              <Button type="white">
-                Tickets
-              </Button>
+              <Button type="white">Tickets</Button>
             </motion.div>
           </Link>
         </div>
@@ -118,10 +116,21 @@ export default function About() {
           </motion.h2>
           <div className={styles.content}>
             <motion.p className="body" variants={item}>
-              Born in 1996, Lunar Gala is an annual student-run fashion show that showcases brilliant artistry in design, modeling, and production, and dance performance. The show was originally inspired by the Taiwanese Student Association’s Lunar New Year tradition of wearing new clothes. Over the years, it has evolved to become the largest fashion event in Pittsburgh, a unique platform to display innovative and avant.
+              Born in 1996, Lunar Gala is an annual student-run fashion show
+              that showcases brilliant artistry in design, modeling, and
+              production, and dance performance. The show was originally
+              inspired by the Taiwanese Student Association’s Lunar New Year
+              tradition of wearing new clothes. Over the years, it has evolved
+              to become the largest fashion event in Pittsburgh, a unique
+              platform to display innovative and avant.
             </motion.p>
             <motion.p className="body" variants={item}>
-              Our designers are unafraid of freely expressing themselves and taking risks. They explore our society’s most pressing current events and cultural values to bring them to life. Some of the unconventional materials that they use range from technological mood-sensing chips or glow-in-the-dark resin to robust sheet metal.
+              Our designers are unafraid of freely expressing themselves and
+              taking risks. They explore our society’s most pressing current
+              events and cultural values to bring them to life. Some of the
+              unconventional materials that they use range from technological
+              mood-sensing chips or glow-in-the-dark resin to robust sheet
+              metal.
             </motion.p>
           </div>
         </motion.div>

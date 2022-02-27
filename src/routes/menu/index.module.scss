@@ -54,6 +54,19 @@
   color: $solid-accent;
 }
 
+.item a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.item:hover {
+  opacity: 0.5 !important;
+}
+
+.disabled:hover {
+  opacity: 1 !important;
+}
+
 // .callout {
 //   font-size: 0.875rem;
 //   font-family: 'Karla';
