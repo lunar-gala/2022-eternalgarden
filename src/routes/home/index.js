@@ -3,7 +3,7 @@ import 'routes/home/index.scss';
 import { useState, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-  
+
 // import useWindowSize, { Size } from 'hooks/useWindowSize';
 import logo from 'assets/images/logo.svg';
 import flowers from 'assets/images/main-flower.svg';
@@ -54,11 +54,12 @@ export default function Home() {
           initial="loading"
           animate={controls}
           exit="loading"
-          transition={{ ...buttonTransition1, delay: loading ? buttonTransition1.delay : 0 }}
+          transition={{
+            ...buttonTransition1,
+            delay: loading ? buttonTransition1.delay : 0,
+          }}
         >
-          <Button>
-            Explore
-          </Button>
+          <Button>Explore</Button>
         </motion.div>
       </Link>
       <motion.div
@@ -67,11 +68,12 @@ export default function Home() {
         initial="loading"
         animate={controls}
         exit="loading"
-        transition={{ ...buttonTransition2, delay: loading ? buttonTransition2.delay : 0.4 }}
+        transition={{
+          ...buttonTransition2,
+          delay: loading ? buttonTransition2.delay : 0.4,
+        }}
       >
-        <Button onClick={() => console.log('Link to tickets')}>
-          Tickets
-        </Button>
+        <Button onClick={() => console.log('Link to tickets')}>Tickets</Button>
       </motion.div>
       <motion.div
         className="home-main"
@@ -79,7 +81,7 @@ export default function Home() {
         initial={location.state?.previousLocation ? 'exit' : 'loading'}
         animate={controls}
         exit="exit"
-        transition={{ ...containerTransition, delay: loading ? 0 : 0.6 }}
+        transition={{ ...containerTransition, delay: loading ? 0 : 0 }}
       >
         <motion.img
           className="home-logo"

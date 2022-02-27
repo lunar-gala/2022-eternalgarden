@@ -14,7 +14,7 @@ const transition = {
 
 const button = {
   hidden: {
-    scale: 0,
+    scale: 1,
     opacity: 0,
   },
   visible: {
@@ -28,17 +28,18 @@ const items = {
     opacity: 0,
     transition: {
       when: 'afterChildren',
-      staggerChildren: 0.3,
+      staggerChildren: 0.02,
       ease: 'easeOut',
-      delay: 1.2,
+      delay: 0.07,
+      staggerDirection: -1,
     },
   },
   visible: {
     opacity: 1,
     transition: {
       when: 'beforeChildren',
-      staggerChildren: 0.3,
-      delay: 0.2,
+      staggerChildren: 0.02,
+      delay: 0.07,
       ease: 'easeOut',
     },
   },
@@ -46,19 +47,31 @@ const items = {
 
 const item = {
   hidden: {
-    opacity: 0
-  },
-  visible: {
-    opacity: 1
-  },
-}
-
-const logo = {
-  hidden: {
     opacity: 0,
   },
   visible: {
     opacity: 1,
+  },
+};
+
+const logo = {
+  hidden: {
+    opacity: 0,
+    transition: {
+      duration: 1,
+      ease: 'easeOut',
+      duration: 0.3,
+      delay: 0,
+    },
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      duration: 1,
+      ease: 'easeOut',
+      duration: 0.3,
+      delay: 0.4,
+    },
   },
 };
 
@@ -69,7 +82,10 @@ export default function Menu() {
     <div>
       <section className={cn(styles.container)}>
         <div>
-          <Link to={location.state.previousLocation} state={{ previousLocation: '/menu' }}>
+          <Link
+            to={location.state.previousLocation}
+            state={{ previousLocation: '/menu' }}
+          >
             <motion.div
               className={styles.wrapper}
               variants={button}
@@ -78,9 +94,7 @@ export default function Menu() {
               exit="hidden"
               transition={{ ...transition, delay: 0 }}
             >
-              <Button>
-                CLOSE
-              </Button>
+              <Button>CLOSE</Button>
             </motion.div>
           </Link>
           <motion.div
@@ -90,31 +104,48 @@ export default function Menu() {
             animate="visible"
             exit="hidden"
           >
-            <motion.div className={styles.item} variants={item}>
-              <Link to="/" state={{ previousLocation: '/menu' }} className={cn(styles.item)}>
+            <motion.h3 className={cn(styles.item)} variants={item}>
+              <Link
+                to="/"
+                className={cn(styles.item)}
+                state={{ previousLocation: '/menu' }}
+              >
                 HOME
               </Link>
-            </motion.div>
-            <motion.div className={styles.item} variants={item}>
-              <Link to="/about" state={{ previousLocation: '/menu' }} className={cn(styles.item)}>
+            </motion.h3>
+            <motion.h3 className={styles.item} variants={item}>
+              <Link
+                to="/about"
+                state={{ previousLocation: '/menu' }}
+                className={cn(styles.item)}
+              >
                 ABOUT
               </Link>
-            </motion.div>
-            <motion.div className={cn(styles.item, styles.disabled)} variants={item}>
+            </motion.h3>
+            <motion.h3
+              className={cn(styles.item, styles.disabled)}
+              variants={item}
+            >
               LINES
-              <span className={cn(styles.callout, styles.highlight)}>
+              <span className={cn(styles.callout, 'h5', styles.highlight)}>
                 COMING 3/15
               </span>
-            </motion.div>
-            <motion.div className={cn(styles.item, styles.disabled)} variants={item}>
+            </motion.h3>
+            <motion.h3
+              className={cn(styles.item, styles.disabled)}
+              variants={item}
+            >
               PEOPLE
-              <span className={cn(styles.callout, styles.highlight)}>
+              <span className={cn(styles.callout, 'h5', styles.highlight)}>
                 COMING 3/18
               </span>
-            </motion.div>
-            <motion.div className={cn(styles.item, styles.highlight)} variants={item}>
+            </motion.h3>
+            <motion.h3
+              className={cn(styles.item, styles.highlight)}
+              variants={item}
+            >
               TICKETS
-            </motion.div>
+            </motion.h3>
           </motion.div>
         </div>
         <motion.div
@@ -123,12 +154,12 @@ export default function Menu() {
           initial="hidden"
           animate="visible"
           exit="hidden"
-          transition={{ ...transition, duration: 0.3, delay: 1.9 }}
+          transition={{ ...transition, duration: 0.3, delay: 0.4 }}
         >
           <LGLogo />
         </motion.div>
       </section>
       <div className={cn('noise', styles.noiseLayer)} />
     </div>
-  )
+  );
 }

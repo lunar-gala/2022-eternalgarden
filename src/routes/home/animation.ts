@@ -6,11 +6,11 @@ const container = {
     clipPath: 'inset(40% 40% 40% 40% round 350px 350px 0% 0%)',
   },
   show: {
-    clipPath: 'inset(8% 2% 2% 2% round 300px 300px 0% 0%)',
+    clipPath: 'inset(8% 2% 0% 2% round 300px 300px 0% 0%)',
   },
   exit: {
-    clipPath: 'inset(100% 2% 2% 2% round 300px 300px 0% 0%)',
-  }
+    clipPath: 'inset(100% 2% 0% 2% round 300px 300px 0% 0%)',
+  },
 };
 
 const containerTransition = {
@@ -20,7 +20,7 @@ const containerTransition = {
 
 const buttonVariants = {
   loading: {
-    scale: 0,
+    scale: 0.9,
     opacity: 0,
   },
   show: {
@@ -30,15 +30,15 @@ const buttonVariants = {
 };
 
 const buttonTransition1 = {
-  duration: 1,
+  duration: 0.5,
   ease: 'easeOut',
-  delay: 1,
+  delay: 0.4,
 };
 
 const buttonTransition2 = {
-  duration: 1,
+  duration: 0.5,
   ease: 'easeOut',
-  delay: 1.2,
+  delay: 0.4,
 };
 
 const logoVariants = {
