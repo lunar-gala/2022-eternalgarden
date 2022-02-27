@@ -56,6 +56,15 @@ const logoVariants = {
   },
 };
 
+const flowerVariants = {
+  loading: {
+    bottom: '-110vw',
+  },
+  show: {
+    bottom: '-100vw',
+  },
+};
+
 export {
   container,
   containerTransition,
@@ -63,4 +72,5 @@ export {
   buttonTransition1,
   buttonTransition2,
   logoVariants,
+  flowerVariants,
 };

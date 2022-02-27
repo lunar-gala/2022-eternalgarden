@@ -15,6 +15,7 @@ import {
   buttonTransition1,
   buttonTransition2,
   logoVariants,
+  flowerVariants,
 } from 'routes/home/animation';
 
 export default function Home() {
@@ -99,8 +100,22 @@ export default function Home() {
           transition={containerTransition}
           initial="loading"
           animate={controls}
+          exit="loading"
         />
-        <img className="home-flowers" src={flowers} alt="flowers" />
+        <motion.img
+          variants={flowerVariants}
+          transition={{
+            ...containerTransition,
+            delay: 0.1,
+            ease: loading ? [0.33, 1, 0.68, 1] : [0.33, 1, 0.68, 1].reverse(),
+          }}
+          initial="loading"
+          exit="loading"
+          animate={controls}
+          className="home-flowers"
+          src={flowers}
+          alt="flowers"
+        />
         {/* noise on top of flowers + logo, so it is last */}
         <div className="noise" />
       </motion.div>
