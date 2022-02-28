@@ -18,6 +18,13 @@
   display: inline-block;
 }
 
+.logo {
+  transition: opacity 0.2s;
+}
+.logo:hover {
+  opacity: 0.7;
+}
+
 .items {
   display: flex;
   flex-direction: column;
@@ -35,6 +42,25 @@
   text-decoration: none;
   color: $off-black;
   margin: 0;
+  transition: opacity 0.1s, transform 0.3s;
+}
+
+.item:hover {
+  opacity: 0.9 !important;
+  transform: translateX(2px);
+}
+
+.disabled {
+  color: $disabled;
+  cursor: not-allowed;
+}
+
+.disabled:hover {
+  opacity: 1 !important;
+}
+
+.highlight {
+  color: $solid-accent;
 }
 
 .item:not(:last-child) {
@@ -45,26 +71,9 @@
   color: $off-black;
 }
 
-.disabled {
-  color: $disabled;
-  cursor: not-allowed;
-}
-
-.highlight {
-  color: $solid-accent;
-}
-
 .item a {
   text-decoration: none;
   color: inherit;
-}
-
-.item:hover {
-  opacity: 0.5 !important;
-}
-
-.disabled:hover {
-  opacity: 1 !important;
 }
 
 // .callout {
