@@ -13,9 +13,14 @@ const container = {
   },
 };
 
-const containerTransition = {
+const preloaderTransition = {
   duration: 1,
   ease: [0.85, 0, 0.15, 1],
+};
+
+const menuTransition = {
+  duration: 1,
+  ease: [0.16, 1, 0.3, 1],
 };
 
 const buttonVariants = {
@@ -67,10 +72,11 @@ const flowerVariants = {
 
 export {
   container,
-  containerTransition,
   buttonVariants,
   buttonTransition1,
   buttonTransition2,
   logoVariants,
   flowerVariants,
+  menuTransition,
+  preloaderTransition,
 };
