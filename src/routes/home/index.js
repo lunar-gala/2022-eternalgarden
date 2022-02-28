@@ -15,12 +15,13 @@ import flowers from 'assets/images/main-flower.svg';
 import Button from 'components/button';
 import {
   container,
-  containerTransition,
   buttonVariants,
   buttonTransition1,
   buttonTransition2,
   logoVariants,
   flowerVariants,
+  menuTransition,
+  preloaderTransition,
 } from 'routes/home/animation';
 
 export default function Home() {
@@ -71,6 +72,8 @@ export default function Home() {
     };
   }, [controls]);
 
+  console.log(loading);
+  // console.log(loading);
   return (
     <motion.div className="home">
       <Link to="/menu" state={{ previousLocation: '/' }}>
@@ -120,31 +123,51 @@ export default function Home() {
         initial={location.state?.previousLocation ? 'exit' : 'loading'}
         animate={controls}
         exit="exit"
-        transition={{ ...containerTransition, delay: loading ? 0 : 0 }}
+        transition={{
+          ...preloaderTransition,
+          ...menuTransition,
+          ease:
+            location.state?.previousLocation == undefined
+              ? preloaderTransition.ease
+              : menuTransition.ease,
+          duration: 1,
+        }}
       >
         <motion.img
           className="home-logo"
           src={logo}
           alt="logo"
           variants={logoVariants}
-          transition={containerTransition}
           initial="loading"
           animate={controls}
           exit="loading"
+          transition={{
+            ...preloaderTransition,
+            ...menuTransition,
+            ease:
+              location.state?.previousLocation == undefined
+                ? preloaderTransition.ease
+                : menuTransition.ease,
+            duration: 1,
+          }}
         />
         <motion.img
           variants={flowerVariants}
-          transition={{
-            ...containerTransition,
-            delay: 0.1,
-            ease: loading ? [0.33, 1, 0.68, 1] : [0.33, 1, 0.68, 1].reverse(),
-          }}
           initial="loading"
           exit="loading"
           animate={controls}
           className="home-flowers"
           src={flowers}
           alt="flowers"
+          transition={{
+            ...preloaderTransition,
+            ...menuTransition,
+            ease:
+              location.state?.previousLocation == undefined
+                ? preloaderTransition.ease
+                : menuTransition.ease,
+            duration: 1,
+          }}
         />
         {/* noise on top of flowers + logo, so it is last */}
         <div className="noise" />
