@@ -16,10 +16,12 @@ const button = {
   hidden: {
     scale: 1,
     opacity: 0,
+    delay: 0,
   },
   visible: {
     scale: 1,
     opacity: 1,
+    delay: 0,
   },
 };
 
@@ -28,9 +30,9 @@ const items = {
     opacity: 0,
     transition: {
       when: 'afterChildren',
-      staggerChildren: 0.02,
+      staggerChildren: 0.05,
       ease: 'easeOut',
-      delay: 0.07,
+      delay: 0.0,
       staggerDirection: -1,
     },
   },
@@ -38,8 +40,8 @@ const items = {
     opacity: 1,
     transition: {
       when: 'beforeChildren',
-      staggerChildren: 0.02,
-      delay: 0.07,
+      staggerChildren: 0.05,
+      delay: 0.0,
       ease: 'easeOut',
     },
   },
@@ -57,12 +59,6 @@ const item = {
 const logo = {
   hidden: {
     opacity: 0,
-    transition: {
-      duration: 1,
-      ease: 'easeOut',
-      duration: 0.3,
-      delay: 0,
-    },
   },
   visible: {
     opacity: 1,
@@ -70,7 +66,7 @@ const logo = {
       duration: 1,
       ease: 'easeOut',
       duration: 0.3,
-      delay: 0.4,
+      delay: 0.6,
     },
   },
 };
@@ -156,7 +152,6 @@ export default function Menu() {
           initial="hidden"
           animate="visible"
           exit="hidden"
-          transition={{ ...transition, duration: 0.3, delay: 0.4 }}
         >
           <a
             href="https://lunargala.org"

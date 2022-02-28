@@ -3,16 +3,17 @@
 .btn {
   display: inline-block;
   color: $solid-accent;
-  background: $white;
   padding: 6px 16px;
   border: 1px solid $solid-accent;
   border-radius: $spacing-7;
   text-transform: uppercase;
   cursor: pointer;
-  transition: all 0.3s;
+  transition: all 0.1s;
 
   &:hover {
-    background: $off-white;
+    transform: scale(1.05);
+    background: $solid-accent;
+    color: $off-white;
   }
 
   & a {
