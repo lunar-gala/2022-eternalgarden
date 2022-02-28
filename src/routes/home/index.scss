@@ -15,8 +15,6 @@
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    // clip-path: inset($spacing-10 $spacing-5 $spacing-5 $spacing-5 round 300px 300px 0% 0%); /* these values affect gate clipping dimensions */
-    // clip-path: inset(35% 30% 35% 30% round 350px 350px 0% 0%);
     opacity: 1;
     z-index: 2;
   }
@@ -34,7 +32,7 @@
   &-flowers {
     position: absolute;
     left: 50%;
-    bottom: -100vw;
+    bottom: -120vw;
     width: 150vw;
     height: auto;
     transform: translate(-50%, -50%);
@@ -88,11 +86,6 @@
 // convert to desktop type styles
 @media only screen and (min-width: 1200px) {
   .home {
-    &-main {
-      // clip-path: inset($spacing-7 $spacing-7 $spacing-7 $spacing-7 round 350px 350px 0% 0%); /* these values affect gate clipping dimensions */
-      // clip-path: inset(40% 40% 40% 40% round 350px 350px 0% 0%); /* these values affect gate clipping dimensions */
-    }
-
     &-logo {
       max-width: 450px;
     }

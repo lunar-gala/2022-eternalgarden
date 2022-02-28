@@ -1,10 +1,15 @@
 import 'routes/home/index.scss';
 
 import { useState, useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
+import {
+  motion,
+  useAnimation,
+  useMotionValue,
+  useTransform,
+} from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 
-// import useWindowSize, { Size } from 'hooks/useWindowSize';
+import useWindowSize, { Size } from 'hooks/useWindowSize';
 import logo from 'assets/images/logo.svg';
 import flowers from 'assets/images/main-flower.svg';
 import Button from 'components/button';
@@ -22,9 +27,29 @@ export default function Home() {
   const controls = useAnimation();
   const [loading, setLoading] = useState(true);
 
-  // use window size to make preloader dimensions better
-  // const size: Size = useWindowSize();
-  // const aspectRatio = size.width / size.height;
+  // determine preloader arch width
+  const size = useWindowSize();
+  const aspectRatio = useMotionValue(1);
+  const aspectRatioRange = [0.5625, 1, 4.83];
+  const clipRange = [38, 44, 48];
+  const clipWidth = useTransform(aspectRatio, aspectRatioRange, clipRange);
+
+  // listen for aspect ratio size
+  useEffect(() => {
+    if (size && size.width && size.height) {
+      aspectRatio.set(size.width / size.height);
+      console.log('real aspect ratio', size.width / size.height);
+    }
+    console.log(
+      'Aspect Ratio',
+      aspectRatio.get() + '\n',
+      'Clip width',
+      clipWidth.get() + '\n',
+      'Size',
+      size.width,
+      size.height + '\n',
+    );
+  }, [size, size.width, size.height, aspectRatio, clipWidth]);
 
   // create fake preloading experience wew
   useEffect(() => {
@@ -77,7 +102,12 @@ export default function Home() {
       </motion.div>
       <motion.div
         className="home-main"
-        variants={container}
+        variants={{
+          ...container,
+          loading: {
+            clipPath: `inset(40% ${clipWidth.get()}% 40% ${clipWidth.get()}% round 350px 350px 0% 0%)`,
+          },
+        }}
         initial={location.state?.previousLocation ? 'exit' : 'loading'}
         animate={controls}
         exit="exit"
@@ -97,10 +127,15 @@ export default function Home() {
         <div className="noise" />
       </motion.div>
       {loading && !location.state?.previousLocation && (
-        <motion.div className="progress">
+        <motion.div
+          className="progress"
+          style={{ left: `${clipWidth.get()}%`, right: `${clipWidth.get()}%` }}
+        >
           <motion.div
             className="progress-bar"
-            initial={{ width: 0 }}
+            initial={{
+              width: 0,
+            }}
             animate={{ width: '100%' }}
             transition={{ duration: 3 }}
           />

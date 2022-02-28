@@ -1,8 +1,6 @@
 // framer motion variants
 const container = {
   loading: {
-    // clipPath: 'inset($spacing-10 $spacing-5 $spacing-5 $spacing-5 round 300px 300px 0% 0%)'
-    // clipPath: 'path("M0 95.5C0 42.7568 42.7568 0 95.5 0C148.243 0 191 42.7568 191 95.5V340H0V95.5Z")'
     clipPath: 'inset(40% 40% 40% 40% round 350px 350px 0% 0%)',
   },
   show: {
@@ -43,7 +41,7 @@ const buttonTransition2 = {
 
 const logoVariants = {
   loading: {
-    scale: 0.3,
+    scale: 0.25,
     top: '50%',
     y: '-50%',
     x: '-50%',
