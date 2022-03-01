@@ -8,10 +8,8 @@ import {
   useTransform,
 } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
-
 import useWindowSize, { Size } from 'hooks/useWindowSize';
 import logo from 'assets/images/logo.svg';
-import flowers from 'assets/images/main-flower.svg';
 import Button from 'components/button';
 import {
   container,
@@ -23,8 +21,19 @@ import {
   menuTransition,
   preloaderTransition,
 } from 'routes/home/animation';
+import Lottie from 'react-lottie';
+import animationData from 'assets/home_animation/test.json';
 
 export default function Home() {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  };
+
   const location = useLocation();
   const controls = useAnimation();
   const [loading, setLoading] = useState(true);
@@ -151,13 +160,12 @@ export default function Home() {
             duration: 1,
           }}
         />
-        <motion.img
+        <motion.div
           variants={flowerVariants}
           initial="loading"
           exit="loading"
           animate={controls}
           className="home-flowers"
-          src={flowers}
           alt="flowers"
           transition={{
             ...preloaderTransition,
@@ -168,7 +176,9 @@ export default function Home() {
                 : menuTransition.ease,
             duration: 1,
           }}
-        />
+        >
+          <Lottie options={defaultOptions} />
+        </motion.div>
         {/* noise on top of flowers + logo, so it is last */}
         <div className="noise" />
       </motion.div>

@@ -64,7 +64,7 @@ const flowerVariants = {
     bottom: '-110vw',
   },
   show: {
-    bottom: '-100vw',
+    bottom: '-50vw',
   },
 };
 
