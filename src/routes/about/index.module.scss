@@ -75,16 +75,16 @@
 
 .groupPurpleFlower {
   position: absolute;
-  transform: translateY(230px);
+  transform: translateY(275px);
   bottom: 0;
-  left: 20px;
+  left: 0;
 }
 
 .singlePurpleFlower {
   position: absolute;
-  transform: translateY(230px);
+  transform: translate(-200px, 200px);
   bottom: 0;
-  left: 20px;
+  left: 0px;
 }
 
 @media screen and (max-width: 768px) {

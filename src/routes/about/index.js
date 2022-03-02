@@ -195,12 +195,12 @@ export default function About() {
         <div className={styles.pinkFlower}>
           <Lottie options={pinkFlowerSettings} />
         </div>
+        <div className={styles.singlePurpleFlower}>
+          <Lottie options={singlePurpleFlowerSettings} />
+        </div>
         <div className={styles.groupPurpleFlower}>
           <Lottie options={groupPurpleFlowerSettings} />
         </div>
-        {/* <div className={styles.singlePurpleFlower}>
-          <Lottie options={singlePurpleFlowerSettings} />
-        </div> */}
       </motion.section>
       <div className={cn('noise', styles.noise)} />
     </div>
