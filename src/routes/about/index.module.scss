@@ -27,6 +27,12 @@
   justify-content: space-between;
 }
 
+.items {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
 .header {
   margin-top: $spacing-4;
 }
@@ -36,8 +42,17 @@
 }
 
 .content {
-  margin: $spacing-6 25%;
+  // margin: $spacing-6 25%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
   line-height: $line-height-2;
+}
+
+.content p {
+  max-width: 650px;
+  margin: 0 auto $spacing-7 auto;
 }
 
 .noise {
