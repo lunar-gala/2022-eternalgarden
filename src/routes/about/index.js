@@ -8,7 +8,8 @@ import Lottie from 'react-lottie';
 import eyeFlower from 'assets/about_animation/eyeflower/eyeflower.json';
 import orangeFlower from 'assets/about_animation/orangeflower/orangeflower.json';
 import pinkFlower from 'assets/about_animation/pinkflower/pinkflower.json';
-import groupPurpleFlower from 'assets/about_animation/group_purpleflower/group_purpleflower.json';
+import groupPurpleFlower from 'assets/about_animation/group_purpleflower/group_purpleflower.tsx';
+import singlePurpleFlower from 'assets/about_animation/single_purpleflower/single_purpleflower.json';
 
 //lottieAnimation settings
 const eyeFlowerSettings = {
@@ -42,6 +43,15 @@ const groupPurpleFlowerSettings = {
   loop: true,
   autoplay: true,
   animationData: groupPurpleFlower,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
+
+const singlePurpleFlowerSettings = {
+  loop: true,
+  autoplay: true,
+  animationData: singlePurpleFlower,
   rendererSettings: {
     preserveAspectRatio: 'xMidYMid slice',
   },
@@ -188,6 +198,9 @@ export default function About() {
         <div className={styles.groupPurpleFlower}>
           <Lottie options={groupPurpleFlowerSettings} />
         </div>
+        {/* <div className={styles.singlePurpleFlower}>
+          <Lottie options={singlePurpleFlowerSettings} />
+        </div> */}
       </motion.section>
       <div className={cn('noise', styles.noise)} />
     </div>
