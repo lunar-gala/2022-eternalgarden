@@ -61,7 +61,7 @@ const logoVariants = {
 
 const flowerVariants = {
   loading: {
-    bottom: '-110vw',
+    bottom: '-60vw',
   },
   show: {
     bottom: '-50vw',
