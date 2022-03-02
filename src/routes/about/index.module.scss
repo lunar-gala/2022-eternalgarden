@@ -13,6 +13,14 @@
   z-index: 3;
 }
 
+.eyeFlower {
+  position: absolute;
+  transform: translateX(-250px);
+
+  bottom: 0;
+  left: 0;
+}
+
 .navbar {
   display: flex;
   align-items: center;

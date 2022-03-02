@@ -4,6 +4,8 @@ import { motion } from 'framer-motion';
 
 import styles from 'routes/about/index.module.scss';
 import Button from 'components/button';
+import Lottie from 'react-lottie';
+import eyeFlower from 'assets/about_animation/eyeflower/eyeflower.json';
 
 const transition = {
   duration: 1,
@@ -64,6 +66,16 @@ const item = {
 
 export default function About() {
   const location = useLocation();
+
+  //lottieAnimation settings
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: eyeFlower,
+    rendererSettings: {
+      preserveAspectRatio: 'xMidYMid slice',
+    },
+  };
 
   return (
     <div>
@@ -134,6 +146,9 @@ export default function About() {
             </motion.p>
           </div>
         </motion.div>
+        <div className={styles.eyeFlower}>
+          <Lottie options={defaultOptions} />
+        </div>
       </motion.section>
       <div className={cn('noise', styles.noise)} />
     </div>
