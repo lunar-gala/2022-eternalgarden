@@ -8,7 +8,7 @@ import Lottie from 'react-lottie';
 import eyeFlower from 'assets/about_animation/eyeflower/eyeflower.json';
 import orangeFlower from 'assets/about_animation/orangeflower/orangeflower.json';
 import pinkFlower from 'assets/about_animation/pinkflower/pinkflower.json';
-import groupPurpleFlower from 'assets/about_animation/group_purpleflower/group_purpleflower.tsx';
+import groupPurpleFlower from 'assets/about_animation/group_purpleflower/group_purpleflower.json';
 import singlePurpleFlower from 'assets/about_animation/single_purpleflower/single_purpleflower.json';
 
 //lottieAnimation settings
