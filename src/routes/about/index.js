@@ -6,6 +6,46 @@ import styles from 'routes/about/index.module.scss';
 import Button from 'components/button';
 import Lottie from 'react-lottie';
 import eyeFlower from 'assets/about_animation/eyeflower/eyeflower.json';
+import orangeFlower from 'assets/about_animation/orangeflower/orangeflower.json';
+import pinkFlower from 'assets/about_animation/pinkflower/pinkflower.json';
+import groupPurpleFlower from 'assets/about_animation/group_purpleflower/group_purpleflower.json';
+
+//lottieAnimation settings
+const eyeFlowerSettings = {
+  loop: true,
+  autoplay: true,
+  animationData: eyeFlower,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
+
+const orangeFlowerSettings = {
+  loop: true,
+  autoplay: true,
+  animationData: orangeFlower,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
+
+const pinkFlowerSettings = {
+  loop: true,
+  autoplay: true,
+  animationData: pinkFlower,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
+
+const groupPurpleFlowerSettings = {
+  loop: true,
+  autoplay: true,
+  animationData: groupPurpleFlower,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
 
 const transition = {
   duration: 1,
@@ -66,16 +106,6 @@ const item = {
 
 export default function About() {
   const location = useLocation();
-
-  //lottieAnimation settings
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: eyeFlower,
-    rendererSettings: {
-      preserveAspectRatio: 'xMidYMid slice',
-    },
-  };
 
   return (
     <div>
@@ -147,7 +177,16 @@ export default function About() {
           </div>
         </motion.div>
         <div className={styles.eyeFlower}>
-          <Lottie options={defaultOptions} />
+          <Lottie options={eyeFlowerSettings} />
+        </div>
+        <div className={styles.orangeFlower}>
+          <Lottie options={orangeFlowerSettings} />
+        </div>
+        <div className={styles.pinkFlower}>
+          <Lottie options={pinkFlowerSettings} />
+        </div>
+        <div className={styles.groupPurpleFlower}>
+          <Lottie options={groupPurpleFlowerSettings} />
         </div>
       </motion.section>
       <div className={cn('noise', styles.noise)} />

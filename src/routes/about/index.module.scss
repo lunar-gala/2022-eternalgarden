@@ -13,14 +13,6 @@
   z-index: 3;
 }
 
-.eyeFlower {
-  position: absolute;
-  transform: translateX(-250px);
-
-  bottom: 0;
-  left: 0;
-}
-
 .navbar {
   display: flex;
   align-items: center;
@@ -58,6 +50,34 @@
 .noise {
   z-index: 3;
   pointer-events: none;
+}
+
+.eyeFlower {
+  position: absolute;
+  transform: translateX(-250px);
+  bottom: 0;
+  left: 0;
+}
+
+.orangeFlower {
+  position: absolute;
+  transform: translate(240px, 300px);
+  bottom: 0;
+  right: 0;
+}
+
+.pinkFlower {
+  position: absolute;
+  transform: translateY(230px);
+  bottom: 0;
+  right: 20px;
+}
+
+.groupPurpleFlower {
+  position: absolute;
+  transform: translateY(230px);
+  bottom: 0;
+  left: 20px;
 }
 
 @media screen and (max-width: 768px) {
