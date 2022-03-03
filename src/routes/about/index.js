@@ -105,6 +105,19 @@ const items = {
   },
 };
 
+const flower = {
+  hidden: {
+    opacity: 0,
+    // scale: 0.8,
+    // translateY: '200px',
+  },
+  visible: {
+    opacity: 1,
+    // scale: 1,
+    // translateY: '0px',
+  },
+};
+
 const item = {
   hidden: {
     opacity: 0,
@@ -181,21 +194,29 @@ export default function About() {
             </motion.p>
           </div>
         </motion.div>
-        <div className={styles.eyeFlower}>
-          <Lottie options={eyeFlowerSettings} />
-        </div>
-        <div className={styles.orangeFlower}>
-          <Lottie options={orangeFlowerSettings} />
-        </div>
-        <div className={styles.pinkFlower}>
-          <Lottie options={pinkFlowerSettings} />
-        </div>
-        <div className={styles.singlePurpleFlower}>
-          <Lottie options={singlePurpleFlowerSettings} />
-        </div>
-        <div className={styles.groupPurpleFlower}>
-          <Lottie options={groupPurpleFlowerSettings} />
-        </div>
+        <motion.div
+          variants={items}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          transition={{ ...transition, delay: 0.1 }}
+        >
+          <motion.div className={styles.eyeFlower} variants={flower}>
+            <Lottie options={eyeFlowerSettings} />
+          </motion.div>
+          <motion.div className={styles.orangeFlower} variants={flower}>
+            <Lottie options={orangeFlowerSettings} />
+          </motion.div>
+          <motion.div className={styles.pinkFlower} variants={flower}>
+            <Lottie options={pinkFlowerSettings} />
+          </motion.div>
+          <motion.div className={styles.singlePurpleFlower} variants={flower}>
+            <Lottie options={singlePurpleFlowerSettings} />
+          </motion.div>
+          <motion.div className={styles.groupPurpleFlower} variants={flower}>
+            <Lottie options={groupPurpleFlowerSettings} />
+          </motion.div>
+        </motion.div>
       </motion.section>
       <div className={cn('noise', styles.noise)} />
     </div>

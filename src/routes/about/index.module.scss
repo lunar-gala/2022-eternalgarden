@@ -86,18 +86,31 @@
   bottom: 0;
   left: 0px;
 }
+@media screen and (max-width: 1200px) {
+  .eyeFlower {
+    display: none;
+  }
+}
 
 @media screen and (max-width: 768px) {
+  .pinkFlower {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 414px) {
   .header {
-    margin-top: $spacing-7;
-  }
-
-  .subheader {
     margin-top: $spacing-8;
-    font-size: $font-size-3;
+  }
+  .singlePurpleFlower {
+    transform: translate(-150px, 180px);
   }
 
-  .content {
-    margin: $spacing-7 0;
+  .groupPurpleFlower {
+    transform: translate(-20px, 225px);
+  }
+
+  .orangeFlower {
+    transform: translate(220px, 250px);
   }
 }

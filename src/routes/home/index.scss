@@ -33,7 +33,7 @@
     position: absolute;
     left: 50%;
     bottom: -60vw;
-    width: 150vw;
+    width: 150%;
     height: auto;
     transform: translate(-50%, -50%);
     overflow: hidden;
@@ -79,6 +79,10 @@
     &-logo {
       width: 100%;
       max-width: 400px;
+    }
+
+    &-flowers {
+      width: 125%;
     }
   }
 }
