@@ -164,25 +164,20 @@ export default function About() {
             ABOUT
           </motion.h1>
           <motion.h2 className={cn('h4', styles.subheader)} variants={item}>
-            EXISTENCE IS INTERDEPENDENT.
+            A RETURN TO THE ETERNAL GARDEN
           </motion.h2>
           <div className={styles.content}>
             <motion.p className="body" variants={item}>
-              Born in 1996, Lunar Gala is an annual student-run fashion show
-              that showcases brilliant artistry in design, modeling, and
-              production, and dance performance. The show was originally
-              inspired by the Taiwanese Student Association’s Lunar New Year
-              tradition of wearing new clothes. Over the years, it has evolved
-              to become the largest fashion event in Pittsburgh, a unique
-              platform to display innovative and avant.
+              A garden breathes within each of us every night and day. Flower
+              are perpetually blooming to the ardor of our youth where the
+              droplets of our past are scattered across the grass. Behold, as
+              the start gleaming over us, We enter into the familiar yet
+              mysterious world to rediscover our own inner child.
             </motion.p>
             <motion.p className="body" variants={item}>
-              Our designers are unafraid of freely expressing themselves and
-              taking risks. They explore our society’s most pressing current
-              events and cultural values to bring them to life. Some of the
-              unconventional materials that they use range from technological
-              mood-sensing chips or glow-in-the-dark resin to robust sheet
-              metal.
+              Lunar Gala is back again with verdant lines, brimming with
+              artistic ingenuity, growing into another new rosy dawn. Get ready
+              for the journey.
             </motion.p>
           </div>
         </motion.div>

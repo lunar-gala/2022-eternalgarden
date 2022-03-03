@@ -30,24 +30,29 @@
   flex-direction: column;
   align-items: flex-start;
   margin-top: 1.5rem;
-  // font-size: 4rem;
-  // font-family: 'Cormorant';
-  // line-height: 80%;
-  // letter-spacing: -0.03em;
 }
 
-.item {
+.item,
+.disabled,
+.highlight {
   display: inline-flex;
   cursor: pointer;
   text-decoration: none;
-  color: $off-black;
+
   margin: 0;
   transition: opacity 0.1s, transform 0.3s;
 }
 
 .item:hover {
-  opacity: 0.9 !important;
   transform: translateX(2px);
+}
+
+.active {
+  color: $off-black;
+}
+
+.active:hover {
+  color: $solid-accent;
 }
 
 .disabled {
@@ -61,6 +66,10 @@
 
 .highlight {
   color: $solid-accent;
+}
+
+.highlight:hover {
+  opacity: 0.9 !important;
 }
 
 .item:not(:last-child) {

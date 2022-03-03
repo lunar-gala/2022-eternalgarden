@@ -13,7 +13,7 @@ const container = {
 
 const preloaderTransition = {
   duration: 1,
-  ease: [0.85, 0, 0.15, 1],
+  ease: [0.85, 0, 0.55, 1],
 };
 
 const menuTransition = {

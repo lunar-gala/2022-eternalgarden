@@ -96,7 +96,10 @@ export default function Menu() {
             animate="visible"
             exit="hidden"
           >
-            <motion.h3 className={cn(styles.item)} variants={item}>
+            <motion.h3
+              className={cn(styles.item, styles.active)}
+              variants={item}
+            >
               <Link
                 to="/"
                 className={cn(styles.item)}
@@ -105,7 +108,10 @@ export default function Menu() {
                 HOME
               </Link>
             </motion.h3>
-            <motion.h3 className={styles.item} variants={item}>
+            <motion.h3
+              className={cn(styles.item, styles.active)}
+              variants={item}
+            >
               <Link
                 to="/about"
                 state={{ previousLocation: '/menu' }}
@@ -114,17 +120,11 @@ export default function Menu() {
                 ABOUT
               </Link>
             </motion.h3>
-            <motion.h3
-              className={cn(styles.item, styles.disabled)}
-              variants={item}
-            >
+            <motion.h3 className={cn(styles.disabled)} variants={item}>
               LINES
               <span className={cn('h5', styles.highlight)}>COMING 3/15</span>
             </motion.h3>
-            <motion.h3
-              className={cn(styles.item, styles.disabled)}
-              variants={item}
-            >
+            <motion.h3 className={cn(styles.disabled)} variants={item}>
               PEOPLE
               <span className={cn('h5', styles.highlight)}>COMING 3/18</span>
             </motion.h3>

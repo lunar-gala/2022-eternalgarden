@@ -139,7 +139,6 @@ export default function Home() {
             location.state?.previousLocation == undefined
               ? preloaderTransition.ease
               : menuTransition.ease,
-          duration: 1,
         }}
       >
         <motion.img
@@ -157,7 +156,6 @@ export default function Home() {
               location.state?.previousLocation == undefined
                 ? preloaderTransition.ease
                 : menuTransition.ease,
-            duration: 1,
           }}
         />
         <motion.div
