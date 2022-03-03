@@ -13,6 +13,7 @@ import logo from 'assets/images/logo.svg';
 import Button from 'components/button';
 import {
   container,
+  containerMobile,
   buttonVariants,
   buttonTransition1,
   buttonTransition2,
@@ -44,6 +45,10 @@ export default function Home() {
   const aspectRatioRange = [0.5625, 1, 4.83];
   const clipRange = [38, 44, 48];
   const clipWidth = useTransform(aspectRatio, aspectRatioRange, clipRange);
+
+  // isMobile
+  const isMobile = size?.width < 1000;
+  console.log('isMobile = ', isMobile);
 
   // listen for aspect ratio size
   useEffect(() => {
@@ -123,12 +128,7 @@ export default function Home() {
       </motion.div>
       <motion.div
         className="home-main"
-        variants={{
-          ...container,
-          loading: {
-            clipPath: `inset(40% ${clipWidth.get()}% 40% ${clipWidth.get()}% round 350px 350px 0% 0%)`,
-          },
-        }}
+        variants={isMobile ? containerMobile : container}
         initial={location.state?.previousLocation ? 'exit' : 'loading'}
         animate={controls}
         exit="exit"
@@ -181,10 +181,7 @@ export default function Home() {
         <div className="noise" />
       </motion.div>
       {loading && !location.state?.previousLocation && (
-        <motion.div
-          className="progress"
-          style={{ left: `${clipWidth.get()}%`, right: `${clipWidth.get()}%` }}
-        >
+        <motion.div className="progress">
           <motion.div
             className="progress-bar"
             initial={{

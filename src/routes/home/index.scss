@@ -54,9 +54,9 @@
 
 .progress {
   position: absolute;
-  left: 40%;
+  left: 38%;
+  right: 38%;
   bottom: calc(40% - 16px);
-  right: 40%;
   height: 4px;
   background-color: #99daff;
   border-radius: $spacing-4;
@@ -88,7 +88,7 @@
 }
 
 // convert to desktop type styles
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   .home {
     &-logo {
       max-width: 450px;
@@ -108,5 +108,10 @@
       top: 2rem;
       right: 2rem;
     }
+  }
+
+  .progress {
+    left: 44%;
+    right: 44%;
   }
 }

@@ -54,37 +54,33 @@
 
 .eyeFlower {
   position: absolute;
-  transform: translateX(-250px);
   bottom: 0;
-  left: 0;
+  left: -250px;
 }
 
 .orangeFlower {
   position: absolute;
-  transform: translate(240px, 300px);
-  bottom: 0;
-  right: 0;
+  bottom: -300px;
+  right: -240px;
 }
 
 .pinkFlower {
   position: absolute;
-  transform: translateY(230px);
-  bottom: 0;
+  bottom: -230px;
   right: 20px;
 }
 
 .groupPurpleFlower {
   position: absolute;
-  transform: translateY(275px);
-  bottom: 0;
+  bottom: -275px;
   left: 0;
 }
 
 .singlePurpleFlower {
   position: absolute;
-  transform: translate(-200px, 200px);
-  bottom: 0;
-  left: 0px;
+
+  bottom: -200px;
+  left: -200px;
 }
 @media screen and (max-width: 1200px) {
   .eyeFlower {
@@ -103,14 +99,15 @@
     margin-top: $spacing-8;
   }
   .singlePurpleFlower {
-    transform: translate(-150px, 180px);
+    bottom: -240px;
+    left: -200px;
   }
 
   .groupPurpleFlower {
-    transform: translate(-20px, 225px);
+    display: none;
   }
 
   .orangeFlower {
-    transform: translate(220px, 250px);
+    left: 140px;
   }
 }

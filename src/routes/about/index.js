@@ -89,7 +89,7 @@ const items = {
     opacity: 0,
     transition: {
       when: 'afterChildren',
-      staggerChildren: 0.02,
+      staggerChildren: 0.05,
       ease: 'easeOut',
       delay: 0.07,
     },
@@ -98,7 +98,28 @@ const items = {
     opacity: 1,
     transition: {
       when: 'beforeChildren',
-      staggerChildren: 0.02,
+      staggerChildren: 0.05,
+      delay: 0.07,
+      ease: 'easeOut',
+    },
+  },
+};
+
+const flowerStagger = {
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: 'afterChildren',
+      staggerChildren: 0.05,
+      ease: 'easeOut',
+      delay: 0.07,
+    },
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      when: 'beforeChildren',
+      staggerChildren: 0.05,
       delay: 0.07,
       ease: 'easeOut',
     },
@@ -108,13 +129,9 @@ const items = {
 const flower = {
   hidden: {
     opacity: 0,
-    // scale: 0.8,
-    // translateY: '200px',
   },
   visible: {
     opacity: 1,
-    // scale: 1,
-    // translateY: '0px',
   },
 };
 
@@ -195,7 +212,7 @@ export default function About() {
           </div>
         </motion.div>
         <motion.div
-          variants={items}
+          variants={flowerStagger}
           initial="hidden"
           animate="visible"
           exit="hidden"
