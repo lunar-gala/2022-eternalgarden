@@ -1,0 +1,113 @@
+@import '../../styles/variables.scss';
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 4rem);
+  width: calc(100vw - 4rem);
+  padding: $spacing-7;
+  text-align: center;
+  background: $gradient-accent;
+  color: $white;
+  z-index: 3;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.items {
+  display: flex;
+  justify-content: center;
+  flex-flow: column;
+}
+
+.header {
+  margin-top: $spacing-4;
+}
+
+.subheader {
+  margin-top: 10vh;
+}
+
+.content {
+  // margin: $spacing-6 25%;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+
+  line-height: $line-height-2;
+}
+
+.content p {
+  max-width: 600px;
+  margin: 0 auto $spacing-7 auto;
+}
+
+.noise {
+  z-index: 3;
+  pointer-events: none;
+}
+
+.eyeFlower {
+  position: absolute;
+  bottom: 0;
+  left: -250px;
+}
+
+.orangeFlower {
+  position: absolute;
+  bottom: -300px;
+  right: -240px;
+}
+
+.pinkFlower {
+  position: absolute;
+  bottom: -230px;
+  right: 20px;
+}
+
+.groupPurpleFlower {
+  position: absolute;
+  bottom: -275px;
+  left: 0;
+}
+
+.singlePurpleFlower {
+  position: absolute;
+
+  bottom: -200px;
+  left: -200px;
+}
+@media screen and (max-width: 1200px) {
+  .eyeFlower {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .pinkFlower {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .header {
+    margin-top: $spacing-8;
+  }
+  .singlePurpleFlower {
+    bottom: -240px;
+    left: -200px;
+  }
+
+  .groupPurpleFlower {
+    display: none;
+  }
+
+  .orangeFlower {
+    left: 140px;
+  }
+}

@@ -1,0 +1,34 @@
+@import '../../styles/variables';
+
+.btn {
+  display: inline-block;
+  color: $solid-accent;
+  padding: 6px 16px;
+  border: 1px solid $solid-accent;
+  border-radius: $spacing-7;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.1s;
+
+  &:hover {
+    transform: scale(1.05);
+    background: $solid-accent;
+    color: $off-white;
+  }
+
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
+}
+
+.btnWhite {
+  background: transparent;
+  border: 1px solid $white;
+  color: $white;
+
+  &:hover {
+    background: $gradient-accent;
+    opacity: 0.8;
+  }
+}

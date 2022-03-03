@@ -1,0 +1,25 @@
+@import '/src/styles/variables';
+
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: $off-black;
+  z-index: 1;
+
+  &-clip {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 100vw;
+    height: 100vh;
+    transform: translate(-50%, -50%);
+    clip-path: inset(0% 0% 0% 0% round 50%);
+    position: absolute;
+    background: #fff;
+    opacity: 1;
+    z-index: 2;
+  }
+}
