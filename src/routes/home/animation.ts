@@ -16,6 +16,7 @@ const container = {
 
 const containerMobile = {
   loading: {
+    opacity: '0%',
     // clipPath: 'inset(40% 38% 40% 38% round 350px 350px 0% 0%)',
   },
   show: {
@@ -23,6 +24,7 @@ const containerMobile = {
   },
   exit: {
     // clipPath: 'inset(100% 2% 0% 2% round 300px 300px 0% 0%)',
+    opacity: '0%',
   },
 };
 
