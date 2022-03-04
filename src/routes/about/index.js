@@ -170,18 +170,26 @@ export default function About() {
               <Button type="white">Explore</Button>
             </motion.div>
           </Link>
-          <Link to="/" state={{ previousLocation: '/about' }}>
-            <motion.div
-              className={styles.wrapper}
-              variants={button}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              transition={{ ...transition, delay: 0.1 }}
-            >
-              <Button type="white">Tickets</Button>
-            </motion.div>
-          </Link>
+          {/* <Link to="/" state={{ previousLocation: '/about' }}> */}
+          <motion.div
+            className={styles.wrapper}
+            variants={button}
+            initial="hidden"
+            animate="visible"
+            exit="hidden"
+            transition={{ ...transition, delay: 0.1 }}
+          >
+            <Button type="white">
+              <a
+                href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Tickets
+              </a>
+            </Button>
+          </motion.div>
+          {/* </Link> */}
         </div>
         <motion.div
           className={styles.items}
