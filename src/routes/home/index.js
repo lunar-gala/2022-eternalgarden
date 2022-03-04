@@ -133,10 +133,9 @@ export default function Home() {
         animate={controls}
         exit="exit"
         transition={{
-          ...preloaderTransition,
-          ...menuTransition,
+          duration: 1,
           ease:
-            location.state?.previousLocation == undefined
+            location.state?.previousLocation === undefined
               ? preloaderTransition.ease
               : menuTransition.ease,
         }}
@@ -150,10 +149,9 @@ export default function Home() {
           animate={controls}
           exit="loading"
           transition={{
-            ...preloaderTransition,
-            ...menuTransition,
+            duration: 1,
             ease:
-              location.state?.previousLocation == undefined
+              location.state?.previousLocation === undefined
                 ? preloaderTransition.ease
                 : menuTransition.ease,
           }}
@@ -169,7 +167,7 @@ export default function Home() {
             ...preloaderTransition,
             ...menuTransition,
             ease:
-              location.state?.previousLocation == undefined
+              location.state?.previousLocation === undefined
                 ? preloaderTransition.ease
                 : menuTransition.ease,
             duration: 1,

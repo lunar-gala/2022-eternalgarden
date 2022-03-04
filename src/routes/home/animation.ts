@@ -1,7 +1,7 @@
 // framer motion variants
 const container = {
   loading: {
-    clipPath: 'inset(40% 44% 40% 44% round 350px 350px 0% 0%)',
+    clipPath: 'inset(40% 44% 40% 44% round 450px 450px 0% 0%)',
   },
   show: {
     clipPath: 'inset(8% 2% 0% 2% round 300px 300px 0% 0%)',
@@ -13,7 +13,7 @@ const container = {
 
 const containerMobile = {
   loading: {
-    clipPath: 'inset(40% 38% 40% 38% round 350px 350px 0% 0%)',
+    clipPath: 'inset(40% 38% 40% 38% round 450px 450px 0% 0%)',
   },
   show: {
     clipPath: 'inset(8% 2% 0% 2% round 300px 300px 0% 0%)',

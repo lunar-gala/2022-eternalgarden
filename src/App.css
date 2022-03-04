@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 .noise {
@@ -8,5 +10,6 @@ body {
   width: 100vw;
   height: 100vh;
   filter: contrast(1000%) brightness(100%) grayscale(100%) opacity(0.1);
-  background:  linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url(./assets/images/noise.svg);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    url(./assets/images/noise.svg);
 }
