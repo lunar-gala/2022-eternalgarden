@@ -56,14 +56,10 @@ export default function Home() {
       }px 0% 0%)`,
     },
     show: {
-      clipPath: `inset(8% 2% 0% 2% round ${0.21 * size?.width}px ${
-        0.21 * size?.width
-      }px 0% 0%)`,
+      clipPath: `inset(8% 2% 0% 2% round 300px 300px 0% 0%)`,
     },
     exit: {
-      clipPath: `inset(100% 2% 0% 2% round ${0.21 * size?.width}px ${
-        0.21 * size?.width
-      }px 0% 0%)`,
+      clipPath: `inset(100% 2% 0% 2% round 300px 300px 0% 0%)`,
     },
   };
   const mobileContainerVariants = {

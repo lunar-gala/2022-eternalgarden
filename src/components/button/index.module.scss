@@ -14,11 +14,15 @@
     transform: scale(1.05);
     background: $solid-accent;
     color: $off-white;
+
+    a {
+      color: $off-white;
+    }
   }
 
-  & a {
+  a {
     text-decoration: none;
-    color: inherit;
+    color: $solid-accent;
   }
 }
 
