@@ -51,8 +51,8 @@ export default function Home() {
 
   const containerVariants = {
     loading: {
-      clipPath: `inset(40% 44% 40% 44% round ${0.06 * size?.width}px ${
-        0.06 * size?.width
+      clipPath: `inset(40% 44% 40% 44% round ${0.059 * size?.width}px ${
+        0.059 * size?.width
       }px 0% 0%)`,
     },
     show: {
