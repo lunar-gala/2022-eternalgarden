@@ -13,7 +13,6 @@ import logo from 'assets/images/logo.svg';
 import Button from 'components/button';
 import {
   container,
-  containerMobile,
   buttonVariants,
   buttonTransition1,
   buttonTransition2,
@@ -49,6 +48,42 @@ export default function Home() {
   // isMobile
   const isMobile = size?.width < 1000;
   console.log('isMobile = ', isMobile);
+
+  const containerVariants = {
+    loading: {
+      clipPath: `inset(40% 44% 40% 44% round ${0.06 * size?.width}px ${
+        0.06 * size?.width
+      }px 0% 0%)`,
+    },
+    show: {
+      clipPath: `inset(8% 2% 0% 2% round ${0.21 * size?.width}px ${
+        0.21 * size?.width
+      }px 0% 0%)`,
+    },
+    exit: {
+      clipPath: `inset(100% 2% 0% 2% round ${0.21 * size?.width}px ${
+        0.21 * size?.width
+      }px 0% 0%)`,
+    },
+  };
+  const mobileContainerVariants = {
+    loading: {
+      clipPath: `inset(40% 38% 40% 38% round ${0.12 * size?.width}px ${
+        0.12 * size?.width
+      }px 0% 0%)`,
+    },
+    show: {
+      clipPath: `inset(8% 2% 0% 2% round ${0.47 * size?.width}px ${
+        0.47 * size?.width
+      }px 0% 0%)`,
+    },
+    exit: {
+      clipPath: `inset(100% 2% 0% 2% round ${0.47 * size?.width}px ${
+        0.47 * size?.width
+      }px 0% 0%)`,
+    },
+  };
+  console.log('loadingInset', containerVariants);
 
   // listen for aspect ratio size
   useEffect(() => {
@@ -128,15 +163,14 @@ export default function Home() {
       </motion.div>
       <motion.div
         className="home-main"
-        variants={isMobile ? containerMobile : container}
+        variants={isMobile ? mobileContainerVariants : containerVariants}
         initial={location.state?.previousLocation ? 'exit' : 'loading'}
         animate={controls}
         exit="exit"
         transition={{
-          ...preloaderTransition,
-          ...menuTransition,
+          duration: 1,
           ease:
-            location.state?.previousLocation == undefined
+            location.state?.previousLocation === undefined
               ? preloaderTransition.ease
               : menuTransition.ease,
         }}
@@ -150,10 +184,9 @@ export default function Home() {
           animate={controls}
           exit="loading"
           transition={{
-            ...preloaderTransition,
-            ...menuTransition,
+            duration: 1,
             ease:
-              location.state?.previousLocation == undefined
+              location.state?.previousLocation === undefined
                 ? preloaderTransition.ease
                 : menuTransition.ease,
           }}
@@ -169,7 +202,7 @@ export default function Home() {
             ...preloaderTransition,
             ...menuTransition,
             ease:
-              location.state?.previousLocation == undefined
+              location.state?.previousLocation === undefined
                 ? preloaderTransition.ease
                 : menuTransition.ease,
             duration: 1,
