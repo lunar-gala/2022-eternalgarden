@@ -207,7 +207,20 @@ export default function Home() {
           <Lottie options={defaultOptions} />
         </motion.div>
         {/* noise on top of flowers + logo, so it is last */}
-        <div className="noise" />
+        <motion.div
+          className="noise"
+          variants={isMobile ? mobileContainerVariants : containerVariants}
+          initial={location.state?.previousLocation ? 'exit' : 'loading'}
+          animate={controls}
+          exit="exit"
+          transition={{
+            duration: 1,
+            ease:
+              location.state?.previousLocation === undefined
+                ? preloaderTransition.ease
+                : menuTransition.ease,
+          }}
+        />
       </motion.div>
       {loading && !location.state?.previousLocation && (
         <motion.div className="progress">
