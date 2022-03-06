@@ -1,8 +1,8 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
-import Home from './routes/home/home';
-import About from './routes/about/about';
-import Lines from './routes/lines/lines';
+import Home from './routes/home/index';
+import About from './routes/about/index';
+import Lines from './routes/lines/index';
 import './styles/main.scss';
 
 function App() {

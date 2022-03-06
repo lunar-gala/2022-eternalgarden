@@ -1,0 +1,118 @@
+@import '../../styles/variables.scss';
+
+.home {
+  position: relative;
+  overflow: hidden;
+  background: $off-white;
+  width: 100vw;
+  height: 100vh;
+
+  &-main {
+    width: calc(100vw);
+    height: calc(100vh);
+    background: $gradient-accent;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 1;
+    z-index: 2;
+    pointer-events: none;
+  }
+
+  &-logo {
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    max-width: 100%;
+    width: 70%;
+    height: auto;
+    transform: translate(-50%, -50%);
+  }
+
+  &-flowers {
+    position: absolute;
+    left: 50%;
+    bottom: -60vw;
+    width: 150%;
+    height: auto;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+  }
+
+  &-nav-left {
+    position: absolute;
+    top: $spacing-5;
+    left: $spacing-5;
+  }
+
+  &-nav-right {
+    position: absolute;
+    top: $spacing-5;
+    right: $spacing-5;
+  }
+}
+
+.progress {
+  position: absolute;
+  left: 38%;
+  right: 38%;
+  bottom: calc(40% - 16px);
+  height: 4px;
+  background-color: #99daff;
+  border-radius: $spacing-4;
+
+  &-bar {
+    position: absolute;
+    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: $solid-accent;
+    opacity: 1;
+  }
+}
+
+// convert to desktop type styles
+@media only screen and (min-width: 768px) {
+  .home {
+    &-logo {
+      width: 100%;
+      max-width: 400px;
+    }
+
+    &-flowers {
+      width: 125%;
+    }
+  }
+}
+
+// convert to desktop type styles
+@media only screen and (min-width: 1000px) {
+  .home {
+    &-logo {
+      max-width: 450px;
+    }
+
+    &-flowers {
+      width: 125%;
+      bottom: -50vw;
+    }
+
+    &-nav-left {
+      top: 2rem;
+      left: 2rem;
+    }
+
+    &-nav-right {
+      top: 2rem;
+      right: 2rem;
+    }
+  }
+
+  .progress {
+    left: 44%;
+    right: 44%;
+  }
+}

@@ -1,20 +1,16 @@
-/* .bg-noise {
-    position: fixed;
-    width: 100vw;
-    height: 100vh;
-    filter: contrast(300%) brightness(330%) grayscale(100%) opacity(0.5);
-    background: 
-        linear-gradient(0deg, rgba(0,0,0,0.2), rgba(0,0,0,0.2)),
-        url(./assets/images/noise.svg);
-} */
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+}
 
 .noise {
   position: fixed;
   width: 100vw;
   height: 100vh;
-  pointer-events: none;
-  z-index: 10000;
   filter: contrast(1000%) brightness(100%) grayscale(100%) opacity(0.1);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(./assets/images/noise.svg);
+  z-index: 1;
 }

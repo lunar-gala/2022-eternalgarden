@@ -1,3 +1,5 @@
+// Karla has a variable font
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&display=swap');
 @import './variables';
 
 /**
@@ -26,17 +28,6 @@
   font-weight: 500;
   font-style: normal;
 }
-
-// karla has a variable font
-@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;500;600&display=swap');
-// @font-face {
-//     font-family: 'Karla';
-//     src: url('./fonts/Karla-VariableFont_wght.woff2') format('woff2-variations'),
-//         url('./fonts/Karla-VariableFont_wght.woff') format('woff-variations');
-//     font-weight: 100 900;
-//     font-stretch: 75% 125%;
-//     font-style: normal;
-// }
 
 /**
  * Typography
@@ -71,7 +62,7 @@ h3,
 h4,
 .h4 {
   font-family: 'Cormorant';
-  font-size: $font-size-2;
+  font-size: $font-size-3;
   font-weight: 500;
   letter-spacing: $letter-spacing-1;
   line-height: $line-height-1;
@@ -81,9 +72,11 @@ h5,
 .h5 {
   font-family: 'Karla';
   font-size: $font-size-1;
-  font-variation-settings: 'wght' 600;
+  font-variation-settings: 'wght' 500;
   letter-spacing: $letter-spacing-0;
   line-height: $line-height-2;
+  padding: 0;
+  margin: 0;
 }
 
 p,
@@ -124,6 +117,6 @@ p,
 
   p,
   .body {
-    font-size: $font-size-1;
+    font-size: $font-size-2;
   }
 }
