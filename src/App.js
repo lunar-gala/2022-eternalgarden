@@ -7,6 +7,7 @@ import { AnimatePresence } from 'framer-motion';
 import Home from 'routes/home';
 import Menu from 'routes/menu';
 import About from 'routes/about';
+import Lines from 'routes/lines';
 import Guide from 'routes/guide';
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/about" element={<About />} />
+          <Route path="/lines" element={<Lines />} />
           <Route path="/guide" element={<Guide />} />
         </Routes>
       </AnimatePresence>

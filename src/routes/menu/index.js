@@ -120,9 +120,17 @@ export default function Menu() {
                 ABOUT
               </Link>
             </motion.h3>
-            <motion.h3 className={cn(styles.disabled)} variants={item}>
-              LINES
-              <span className={cn('h5', styles.highlight)}>COMING 3/15</span>
+            <motion.h3
+              className={cn(styles.item, styles.active)}
+              variants={item}
+            >
+              <Link
+                to="/lines"
+                state={{ previousLocation: '/menu' }}
+                className={cn(styles.item)}
+              >
+                LINES
+              </Link>
             </motion.h3>
             <motion.h3 className={cn(styles.disabled)} variants={item}>
               PEOPLE

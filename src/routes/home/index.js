@@ -12,7 +12,6 @@ import useWindowSize, { Size } from 'hooks/useWindowSize';
 import logo from 'assets/images/logo.svg';
 import Button from 'components/button';
 import {
-  container,
   buttonVariants,
   buttonTransition1,
   buttonTransition2,

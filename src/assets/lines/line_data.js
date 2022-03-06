@@ -1,6 +1,6 @@
 // images for testing... will figure out better way to import images later
-import IMG_1 from '../images/lines/PNTX1062-1.jpeg';
-import IMG_2 from '../images/lines/PNTX1189.jpeg';
+import IMG_1 from './img/Earth_to_bex/1189-Web.jpeg';
+import IMG_2 from './img/Earth_to_bex/1213-Web.jpeg';
 
 export const LINE_INFO = [
   {

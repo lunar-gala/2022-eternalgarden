@@ -1,27 +1,38 @@
 @import '../../styles/variables.scss';
 
+.noise {
+  z-index: 4;
+  pointer-events: none;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.wrapper {
+  display: inline-block;
+}
+
 .lines {
+  color: $white;
+  z-index: 3;
+  padding: 0px;
+
   &-main {
-    width: 100%;
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    text-align: center;
     background: $gradient-accent;
-    position: absolute;
+    overflow-y: auto;
+    width: 100%;
+    height: 100%;
+    padding: 0;
     opacity: 1;
     display: flex;
     justify-content: center;
-  }
-
-  &-nav-left {
-    z-index: 1000;
-    position: fixed;
-    top: $spacing-5;
-    left: $spacing-5;
-  }
-
-  &-nav-right {
-    z-index: 1000;
-    position: fixed;
-    top: $spacing-5;
-    right: $spacing-5;
   }
 
   &-list {
@@ -58,9 +69,11 @@
     );
     position: fixed;
     bottom: 0;
+    left: 0;
     width: 100%;
     height: $spacing-12;
     pointer-events: none;
+    overflow: overlay;
   }
 }
 
