@@ -1,4 +1,3 @@
-import { AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import cn from 'classnames';

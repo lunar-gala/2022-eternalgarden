@@ -19,7 +19,7 @@ export default function Lines() {
       exit="hidden"
       transition={{ ...transition, delay: 0, duration: 0.3 }}
     >
-      <Link to="/menu" state={{ previousLocation: '/' }}>
+      <Link to="/menu" state={{ previousLocation: '/lines' }}>
         <motion.div
           className="home-nav-left"
           variants={button}

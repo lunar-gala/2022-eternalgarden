@@ -64,6 +64,10 @@
     }
   }
 
+  &-item:last-child {
+    padding-bottom: 1em;
+  }
+
   &-gradient {
     background: linear-gradient(
       180deg,
