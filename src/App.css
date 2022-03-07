@@ -12,4 +12,5 @@ body {
   filter: contrast(1000%) brightness(100%) grayscale(100%) opacity(0.1);
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
     url(./assets/images/noise.svg);
+  z-index: 1;
 }
