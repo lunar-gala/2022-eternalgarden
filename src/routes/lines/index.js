@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import cn from 'classnames';
 import { Link } from 'react-router-dom';
 
 import './index.scss';

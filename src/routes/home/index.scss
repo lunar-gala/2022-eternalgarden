@@ -44,12 +44,14 @@
     position: absolute;
     top: $spacing-5;
     left: $spacing-5;
+    z-index: 5;
   }
 
   &-nav-right {
     position: absolute;
     top: $spacing-5;
     right: $spacing-5;
+    z-index: 5;
   }
 }
 

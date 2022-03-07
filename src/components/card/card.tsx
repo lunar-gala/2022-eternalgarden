@@ -31,30 +31,12 @@ export default function Button({
   return (
     <AnimateSharedLayout>
       {open && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          onClick={() => setOpen(false)}
-          className={classes}
-        >
+        <motion.div onClick={() => setOpen(false)} className={classes}>
           <motion.div className="card-main">
-            <motion.h1
-              layoutId={`line-item-${index}`}
-              className="card-heading"
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
+            <motion.p layoutId={`line-item-${index}`} className="card-heading">
               {name}
-            </motion.h1>
-            <motion.div
-              className="card-content"
-              transition={{ delay: 0.2 }}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-            >
+            </motion.p>
+            <motion.div className="card-content" transition={{ delay: 0.2 }}>
               <h2 className="card-designers">{designers.join(', ')}</h2>
               <p className="card-description">{description}</p>
               <div className="card-images">
