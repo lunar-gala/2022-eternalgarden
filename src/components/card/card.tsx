@@ -33,7 +33,12 @@ export default function Button({
       {open && (
         <motion.div onClick={() => setOpen(false)} className={classes}>
           <motion.div className="card-main">
-            <motion.p layoutId={`line-item-${index}`} className="card-heading">
+            <motion.p
+              onClick={() => setOpen(false)}
+              layout="position"
+              layoutId={`line-item-${index}`}
+              className="card-heading"
+            >
               {name}
             </motion.p>
             <motion.div className="card-content" transition={{ delay: 0.2 }}>
@@ -52,7 +57,9 @@ export default function Button({
         </motion.div>
       )}
       <li onClick={() => setOpen(true)} className="lines-item">
-        <motion.p layoutId={`line-item-${index}`}>{name}</motion.p>
+        <motion.p layout="position" layoutId={`line-item-${index}`}>
+          {name}
+        </motion.p>
       </li>
     </AnimateSharedLayout>
   );
