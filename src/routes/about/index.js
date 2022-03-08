@@ -110,7 +110,7 @@ const flowerStagger = {
     opacity: 0,
     transition: {
       when: 'afterChildren',
-      staggerChildren: 0.05,
+      staggerChildren: 0.02,
       ease: 'easeOut',
       delay: 0.07,
     },
@@ -119,7 +119,7 @@ const flowerStagger = {
     opacity: 1,
     transition: {
       when: 'beforeChildren',
-      staggerChildren: 0.05,
+      staggerChildren: 0.02,
       delay: 0.07,
       ease: 'easeOut',
     },
