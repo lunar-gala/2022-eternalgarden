@@ -18,7 +18,6 @@ interface Props {
   index: number;
 }
 
-<<<<<<< HEAD
 const items = {
   hidden: {
     opacity: 0,
@@ -47,8 +46,6 @@ const item = {
   },
 };
 
-=======
->>>>>>> 9278e2334d74a4c39de28f0ec22f6c231eda87e8
 export default function Card({
   className = '',
   name = '',
@@ -76,7 +73,6 @@ export default function Card({
 
   return (
     <AnimateSharedLayout>
-<<<<<<< HEAD
       {open && (
         <motion.div onClick={() => setContent(false)} className={classes}>
           <motion.div className="card-main">
@@ -117,49 +113,6 @@ export default function Card({
         </motion.div>
       )}
       <li onClick={openCard} className="lines-item">
-=======
-      <AnimatePresence>
-        {title && (
-          <motion.p
-            onClick={() => setOpen(false)}
-            layout="position"
-            layoutId={`line-item-${index}`}
-            className="card-heading"
-            transition={{ duration: 0.5 }}
-          >
-            {name}
-          </motion.p>
-        )}
-      </AnimatePresence>
-
-      <AnimatePresence onExitComplete={() => setTitle(false)}>
-        {open && (
-          <motion.div onClick={() => setOpen(false)} className={classes}>
-            <motion.div className="card-main">
-              <motion.div
-                className="card-content"
-                transition={transition}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                exit={{ opacity: 0 }}
-              >
-                <h2 className="card-designers">{designers.join(', ')}</h2>
-                <p className="card-description">{description}</p>
-                <div className="card-images">
-                  {images.map((img, index) => (
-                    <img
-                      src={img}
-                      alt={`${name} line shoot number ${index + 1}`}
-                    />
-                  ))}
-                </div>
-              </motion.div>
-            </motion.div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <li onClick={openCard} className="lines-item" key={name}>
->>>>>>> 9278e2334d74a4c39de28f0ec22f6c231eda87e8
         <motion.p layout="position" layoutId={`line-item-${index}`}>
           {name}
         </motion.p>
