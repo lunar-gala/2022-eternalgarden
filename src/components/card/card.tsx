@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import classNames from 'classnames';
 import './card.scss';
-import { motion, AnimateSharedLayout } from 'framer-motion';
+import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 
 interface Props {
   className?: string;
@@ -50,6 +50,16 @@ export default function Card({
   index,
 }: Props) {
   const [open, setOpen] = useState(false);
+  const [content, setContent] = useState(false);
+
+  const openCard = () => {
+    setOpen(true);
+    setContent(true);
+  };
+
+  const closeCard = () => {
+    setOpen(false);
+  };
 
   let classes = classNames({
     card: true,
@@ -59,42 +69,45 @@ export default function Card({
   return (
     <AnimateSharedLayout>
       {open && (
-        <motion.div onClick={() => setOpen(false)} className={classes}>
+        <motion.div onClick={() => setContent(false)} className={classes}>
           <motion.div className="card-main">
             <motion.p
-              onClick={() => setOpen(false)}
               layout="position"
               layoutId={`line-item-${index}`}
               className="card-heading"
             >
               {name}
             </motion.p>
-            <motion.div
-              className="card-content"
-              variants={items}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-            >
-              <motion.h2 variants={item} className="card-designers">
-                {designers.join(', ')}
-              </motion.h2>
-              <motion.p variants={item} className="card-description">
-                {description}
-              </motion.p>
-              <motion.div variants={item} className="card-images">
-                {images.map((img, index) => (
-                  <img
-                    src={img}
-                    alt={`${name} line shoot number ${index + 1}`}
-                  />
-                ))}
-              </motion.div>
-            </motion.div>
+            <AnimatePresence onExitComplete={closeCard}>
+              {content && (
+                <motion.div
+                  className="card-content"
+                  variants={items}
+                  initial="hidden"
+                  animate="visible"
+                  exit="hidden"
+                >
+                  <motion.h2 variants={item} className="card-designers">
+                    {designers.join(', ')}
+                  </motion.h2>
+                  <motion.p variants={item} className="card-description">
+                    {description}
+                  </motion.p>
+                  <motion.div variants={item} className="card-images">
+                    {images.map((img, index) => (
+                      <img
+                        src={img}
+                        alt={`${name} line shoot number ${index + 1}`}
+                      />
+                    ))}
+                  </motion.div>
+                </motion.div>
+              )}
+            </AnimatePresence>
           </motion.div>
         </motion.div>
       )}
-      <li onClick={() => setOpen(true)} className="lines-item">
+      <li onClick={openCard} className="lines-item">
         <motion.p layout="position" layoutId={`line-item-${index}`}>
           {name}
         </motion.p>
