@@ -4,11 +4,6 @@ import classNames from 'classnames';
 import './card.scss';
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 
-const transition = {
-  duration: 0.5,
-  delay: 0.5,
-  ease: 'easeOut',
-};
 interface Props {
   className?: string;
   name?: string;
@@ -95,9 +90,11 @@ export default function Card({
                   <motion.h2 variants={item} className="card-designers">
                     {designers.join(', ')}
                   </motion.h2>
-                  <motion.p variants={item} className="card-description">
-                    {description}
-                  </motion.p>
+                  <motion.p
+                    variants={item}
+                    className="card-description"
+                    dangerouslySetInnerHTML={{ __html: description }}
+                  ></motion.p>
                   <motion.div variants={item} className="card-images">
                     {images.map((img, index) => (
                       <img
