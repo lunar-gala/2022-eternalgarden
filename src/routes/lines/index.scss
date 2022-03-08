@@ -1,7 +1,7 @@
 @import '../../styles/variables.scss';
 
 .noise {
-  z-index: 4;
+  z-index: 1000;
   pointer-events: none;
 }
 
@@ -13,6 +13,58 @@
 
 .wrapper {
   display: inline-block;
+}
+
+.flowers {
+  z-index: 200;
+  position: fixed;
+  bottom: 0;
+  width: 100vw;
+
+  &-right {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+
+    * {
+      position: absolute;
+    }
+
+    &-blue {
+      bottom: 0px;
+      right: 0px;
+    }
+
+    &-dragonfly {
+      bottom: 550px;
+      right: 90px;
+    }
+  }
+
+  &-left {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+
+    * {
+      position: absolute;
+    }
+
+    &-blue {
+      left: -130px;
+      bottom: -85px;
+    }
+
+    &-red__big {
+      left: -160px;
+      bottom: 380px;
+    }
+
+    &-red__small {
+      bottom: 405px;
+      left: -55px;
+    }
+  }
 }
 
 .lines {

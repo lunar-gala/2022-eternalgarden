@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -6,10 +6,32 @@ import './index.scss';
 import Button from '../../components/button/index';
 import Card from '../../components/card/card';
 import { LINE_INFO } from 'assets/lines/line_data';
-import { transition, button, container } from './animation';
+import {
+  transition,
+  button,
+  container,
+  leftFlowers,
+  rightFlowers,
+} from './animation';
+
+import blueFlowerLeft from 'assets/lines_animation/blue_flower_left.svg';
+import blueFlowerRight from 'assets/lines_animation/blue_flowers_right.svg';
+import dragonfly from 'assets/lines_animation/dragonfly.svg';
+import redFlowerSmall from 'assets/lines_animation/red_flower_small.svg';
+import redFlowerBig from 'assets/lines_animation/red_flower_big.svg';
 
 export default function Lines() {
   const controls = useAnimation();
+  const [cardOpen, setCardOpen] = useState(false);
+
+  useEffect(() => {
+    if (cardOpen) {
+      controls.start('shifted');
+    } else {
+      controls.start('positioned');
+    }
+  }, [controls, cardOpen]);
+
   return (
     <motion.section
       className="lines"
@@ -53,9 +75,35 @@ export default function Lines() {
         {/* noise on top of flowers + logo, so it is last */}
         <ul className="lines-list">
           {LINE_INFO.map((line, index) => {
-            return <Card index={index} {...line} />;
+            return <Card index={index} {...line} setCardOpen={setCardOpen} />;
           })}
         </ul>
+        <motion.div className="flowers">
+          <motion.div
+            className="flowers-left"
+            initial="positioned"
+            exit="positioned"
+            animate={controls}
+            variants={leftFlowers}
+          >
+            <motion.img className="flowers-left-blue" src={blueFlowerLeft} />
+            <motion.img className="flowers-left-red__big" src={redFlowerBig} />
+            <motion.img
+              className="flowers-left-red__small"
+              src={redFlowerSmall}
+            />
+          </motion.div>
+          <motion.div
+            className="flowers-right"
+            initial="positioned"
+            exit="positioned"
+            animate={controls}
+            variants={rightFlowers}
+          >
+            <motion.img className="flowers-right-blue" src={blueFlowerRight} />
+            <motion.img className="flowers-right-dragonfly" src={dragonfly} />
+          </motion.div>
+        </motion.div>
         <div className="lines-gradient"></div>
         <div className="noise" />
       </motion.div>

@@ -4,15 +4,6 @@ import classNames from 'classnames';
 import './card.scss';
 import { motion, AnimateSharedLayout, AnimatePresence } from 'framer-motion';
 
-interface Props {
-  className?: string;
-  name?: string;
-  designers?: Array<string>;
-  description?: string;
-  images?: Array<string>;
-  index: number;
-}
-
 const items = {
   hidden: {
     opacity: 0,
@@ -48,17 +39,23 @@ export default function Card({
   description = '',
   images = [],
   index,
-}: Props) {
+  setCardOpen,
+}) {
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState(false);
 
   const openCard = () => {
     setOpen(true);
     setContent(true);
+    setCardOpen(true);
   };
 
   const closeCard = () => {
-    setOpen(false);
+    setContent(false);
+    setTimeout(() => {
+      setCardOpen(false);
+      setOpen(false);
+    }, 300);
   };
 
   let classes = classNames({
@@ -69,7 +66,7 @@ export default function Card({
   return (
     <AnimateSharedLayout>
       {open && (
-        <motion.div onClick={() => setContent(false)} className={classes}>
+        <motion.div onClick={closeCard} className={classes}>
           <motion.div className="card-main">
             <motion.p
               layout="position"
@@ -78,7 +75,7 @@ export default function Card({
             >
               {name}
             </motion.p>
-            <AnimatePresence onExitComplete={closeCard}>
+            <AnimatePresence>
               {content && (
                 <motion.div
                   className="card-content"

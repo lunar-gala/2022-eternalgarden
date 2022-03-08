@@ -25,4 +25,22 @@ const container = {
   },
 };
 
-export { transition, button, container };
+const leftFlowers = {
+  positioned: {
+    x: 0,
+  },
+  shifted: {
+    x: '-45px',
+  },
+};
+
+const rightFlowers = {
+  positioned: {
+    x: 0,
+  },
+  shifted: {
+    x: '45px',
+  },
+};
+
+export { transition, button, container, leftFlowers, rightFlowers };
