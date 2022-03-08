@@ -22,15 +22,6 @@ import redFlowerBig from 'assets/lines_animation/red_flower_big.svg';
 
 export default function Lines() {
   const controls = useAnimation();
-  const [cardOpen, setCardOpen] = useState(false);
-
-  useEffect(() => {
-    if (cardOpen) {
-      controls.start('shifted');
-    } else {
-      controls.start('positioned');
-    }
-  }, [controls, cardOpen]);
 
   return (
     <motion.section
@@ -71,11 +62,11 @@ export default function Lines() {
           </a>
         </Button>
       </motion.div>
-      <motion.div className="lines-main" initial="loading" animate={controls}>
+      <div className="lines-main">
         {/* noise on top of flowers + logo, so it is last */}
         <ul className="lines-list">
           {LINE_INFO.map((line, index) => {
-            return <Card index={index} {...line} setCardOpen={setCardOpen} />;
+            return <Card index={index} {...line} controls={controls} />;
           })}
         </ul>
         <motion.div className="flowers">
@@ -106,7 +97,7 @@ export default function Lines() {
         </motion.div>
         <div className="lines-gradient"></div>
         <div className="noise" />
-      </motion.div>
+      </div>
     </motion.section>
   );
 }

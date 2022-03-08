@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useState } from 'react';
 import classNames from 'classnames';
 import './card.scss';
@@ -39,23 +39,31 @@ export default function Card({
   description = '',
   images = [],
   index,
-  setCardOpen,
+  controls,
 }) {
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState(false);
 
+  useEffect(() => {
+    if (open) {
+      controls.start('shifted');
+    } else {
+      controls.start('positioned');
+    }
+  }, [controls, open]);
+
   const openCard = () => {
     setOpen(true);
     setContent(true);
-    setCardOpen(true);
+    // setCardOpen(true);
   };
 
   const closeCard = () => {
     setContent(false);
     setTimeout(() => {
-      setCardOpen(false);
       setOpen(false);
-    }, 300);
+      // setCardOpen(false);
+    }, 500);
   };
 
   let classes = classNames({
