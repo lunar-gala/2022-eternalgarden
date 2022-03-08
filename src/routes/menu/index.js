@@ -59,7 +59,6 @@ const logo = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 1,
       ease: 'easeOut',
       duration: 0.3,
       delay: 0.6,

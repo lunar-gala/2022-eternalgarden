@@ -13,7 +13,35 @@ interface Props {
   index: number;
 }
 
-export default function Button({
+const items = {
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: 'afterChildren',
+      staggerChildren: 0.02,
+      staggerDirection: -1,
+    },
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      when: 'beforeChildren',
+      staggerChildren: 0.02,
+      staggerDirection: 1,
+    },
+  },
+};
+
+const item = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
+
+export default function Card({
   className = '',
   name = '',
   designers = [],
@@ -41,17 +69,27 @@ export default function Button({
             >
               {name}
             </motion.p>
-            <motion.div className="card-content" transition={{ delay: 0.2 }}>
-              <h2 className="card-designers">{designers.join(', ')}</h2>
-              <p className="card-description">{description}</p>
-              <div className="card-images">
+            <motion.div
+              className="card-content"
+              variants={items}
+              initial="hidden"
+              animate="visible"
+              exit="hidden"
+            >
+              <motion.h2 variants={item} className="card-designers">
+                {designers.join(', ')}
+              </motion.h2>
+              <motion.p variants={item} className="card-description">
+                {description}
+              </motion.p>
+              <motion.div variants={item} className="card-images">
                 {images.map((img, index) => (
                   <img
                     src={img}
                     alt={`${name} line shoot number ${index + 1}`}
                   />
                 ))}
-              </div>
+              </motion.div>
             </motion.div>
           </motion.div>
         </motion.div>
