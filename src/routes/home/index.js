@@ -21,6 +21,7 @@ import {
   flowerVariants,
   menuTransition,
   preloaderTransition,
+  subheader,
 } from 'routes/home/animation';
 import Lottie from 'react-lottie';
 import animationData from 'assets/home_animation/test.json';
@@ -87,7 +88,6 @@ export default function Home() {
   }, [controls]);
 
   console.log(loading);
-  // console.log(loading);
   return (
     <motion.div className="home">
       <Link to="/menu" state={{ previousLocation: '/' }}>
@@ -141,10 +141,8 @@ export default function Home() {
               : menuTransition.ease,
         }}
       >
-        <motion.img
+        <motion.div
           className="home-logo"
-          src={logo}
-          alt="logo"
           variants={logoVariants}
           initial="loading"
           animate={controls}
@@ -157,12 +155,26 @@ export default function Home() {
                 ? preloaderTransition.ease
                 : menuTransition.ease,
           }}
-        />
+        >
+          <motion.img src={logo} alt="logo" />
+
+          <motion.h5
+            className={loading ? '' : ' showSubheader'}
+            // variant={subheader}
+            // initial="loading"
+            // animate={controls}
+            // exit="loading"
+            // exit="exit"
+          >
+            Carnegie Music Hall • March 20 6:30pm EST
+          </motion.h5>
+        </motion.div>
+
         <motion.div
           variants={flowerVariants}
           initial="loading"
-          exit="loading"
           animate={controls}
+          exit="loading"
           className="home-flowers"
           alt="flowers"
           transition={{

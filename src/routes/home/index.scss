@@ -23,11 +23,43 @@
     position: absolute;
     left: 50%;
     top: 40%;
-    max-width: 100%;
-    width: 70%;
-    height: auto;
+    width: 80%;
+
     transform: translate(-50%, -50%);
+
+    h5 {
+      margin-top: 20px;
+      text-align: center;
+      color: $off-white;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: opacity 1.5s;
+    }
+
+    img {
+      max-width: 100%;
+
+      // width: 20%;
+      // height: auto;
+      margin: 0 auto;
+      display: flex;
+      // width: 80%;
+      justify-self: center;
+    }
   }
+
+  .showSubheader {
+    opacity: 1 !important;
+  }
+
+  // &-subheader {
+  //   position: absolute;
+  //   left: 50%;
+  //   top: 60%;
+  //   width: 100%;
+  // transform: translate(-50%, -100%);
+  //   text-align: center;
+  // }
 
   &-flowers {
     position: absolute;
@@ -78,7 +110,7 @@
   .home {
     &-logo {
       width: 100%;
-      max-width: 400px;
+      max-width: 450px;
     }
 
     &-flowers {
@@ -91,7 +123,7 @@
 @media only screen and (min-width: 1000px) {
   .home {
     &-logo {
-      max-width: 450px;
+      width: 100%;
     }
 
     &-flowers {

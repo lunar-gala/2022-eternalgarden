@@ -128,6 +128,10 @@ export default function Menu() {
               PEOPLE
               <span className={cn('h5', styles.highlight)}>COMING 3/18</span>
             </motion.h3>
+            <motion.h3 className={cn(styles.disabled)} variants={item}>
+              MERCH
+              <span className={cn('h5', styles.highlight)}>COMING SOON</span>
+            </motion.h3>
             <motion.h3
               className={cn(styles.item, styles.highlight)}
               variants={item}
@@ -138,6 +142,30 @@ export default function Menu() {
                 rel="noopener noreferrer"
               >
                 TICKETS
+              </a>
+            </motion.h3>
+            <motion.h3
+              className={cn(styles.item, styles.highlight)}
+              variants={item}
+            >
+              <a
+                href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                FLOWER SALE
+              </a>
+            </motion.h3>
+            <motion.h3
+              className={cn(styles.item, styles.highlight)}
+              variants={item}
+            >
+              <a
+                href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                LIVESTREAM
               </a>
             </motion.h3>
           </motion.div>
