@@ -10,13 +10,14 @@
   &-main {
     width: calc(100vw);
     height: calc(100vh);
-    background: $gradient-accent;
+    background: $gradient-home;
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
     opacity: 1;
     z-index: 2;
+    pointer-events: none;
   }
 
   &-logo {

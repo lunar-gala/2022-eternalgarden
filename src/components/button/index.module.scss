@@ -14,11 +14,15 @@
     transform: scale(1.05);
     background: $solid-accent;
     color: $off-white;
+
+    a {
+      color: $off-white;
+    }
   }
 
-  & a {
+  a {
     text-decoration: none;
-    color: inherit;
+    color: $solid-accent;
   }
 }
 
@@ -30,5 +34,26 @@
   &:hover {
     background: $gradient-accent;
     opacity: 0.8;
+  }
+
+  a {
+    color: inherit;
+  }
+}
+
+@media (pointer: coarse) {
+  .btn:hover {
+    transform: none;
+    background: transparent;
+    color: $off-white;
+    opacity: 1;
+    color: $solid-accent;
+  }
+
+  .btnWhite:hover {
+    background: transparent;
+    color: $off-white;
+    opacity: 1;
+    // background: yellow;
   }
 }

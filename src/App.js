@@ -16,9 +16,9 @@ export default function App() {
     <main className="App">
       <AnimatePresence exitBeforeEnter>
         <Routes location={location} key={location.pathname}>
-          <Route path="/" element={<Home />} />
-          <Route path="/menu"  element={<Menu />} />
-          <Route path="/about"  element={<About />} />
+          <Route exact path="/" element={<Home />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/about" element={<About />} />
           <Route path="/guide" element={<Guide />} />
         </Routes>
       </AnimatePresence>
