@@ -20,6 +20,7 @@
   position: fixed;
   bottom: 0;
   width: 100vw;
+  pointer-events: none;
 
   &-right {
     position: absolute;

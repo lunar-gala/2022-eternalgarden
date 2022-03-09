@@ -40,6 +40,8 @@ export default function Card({
   images = [],
   index,
   controls,
+  onSelect,
+  selected,
 }) {
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState(false);
@@ -47,12 +49,16 @@ export default function Card({
   useEffect(() => {
     if (open) {
       controls.start('shifted');
+
+      console.log(open);
+      console.log(selected);
     } else {
       controls.start('positioned');
     }
   }, [controls, open]);
 
   const openCard = () => {
+    onSelect(true);
     setOpen(true);
     setContent(true);
     // setCardOpen(true);
@@ -62,6 +68,8 @@ export default function Card({
     setContent(false);
     setTimeout(() => {
       setOpen(false);
+      onSelect(false);
+
       // setCardOpen(false);
     }, 500);
   };
@@ -70,7 +78,6 @@ export default function Card({
     card: true,
     [className]: true,
   });
-
   return (
     <AnimateSharedLayout>
       {open && (
@@ -103,8 +110,9 @@ export default function Card({
                   <motion.div variants={item} className="card-images">
                     {images.map((img, index) => (
                       <img
+                        key={index}
                         src={img}
-                        alt={`${name} line shoot number ${index + 1}`}
+                        alt={`${name} line shoot number ${index}`}
                       />
                     ))}
                   </motion.div>
@@ -115,7 +123,11 @@ export default function Card({
         </motion.div>
       )}
       <li onClick={openCard} className="lines-item">
-        <motion.p layout="position" layoutId={`line-item-${index}`}>
+        <motion.p
+          animate={{ opacity: selected ? 0 : 1 }}
+          layout="position"
+          layoutId={`line-item-${index}`}
+        >
           {name}
         </motion.p>
       </li>

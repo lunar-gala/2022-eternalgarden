@@ -22,6 +22,7 @@ import redFlowerBig from 'assets/lines_animation/red_flower_big.svg';
 
 export default function Lines() {
   const controls = useAnimation();
+  const [selected, setSelected] = useState(false);
 
   return (
     <motion.section
@@ -66,7 +67,17 @@ export default function Lines() {
         {/* noise on top of flowers + logo, so it is last */}
         <ul className="lines-list">
           {LINE_INFO.map((line, index) => {
-            return <Card index={index} {...line} controls={controls} />;
+            console.log(line.id);
+            return (
+              <Card
+                key={line.id || index}
+                index={line.id || index}
+                {...line}
+                selected={selected}
+                onSelect={setSelected}
+                controls={controls}
+              />
+            );
           })}
         </ul>
         <motion.div className="flowers">
