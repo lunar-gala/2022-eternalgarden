@@ -120,6 +120,20 @@ export default function Menu() {
                 ABOUT
               </Link>
             </motion.h3>
+
+            <motion.h3
+              className={cn(styles.item, styles.active)}
+              variants={item}
+            >
+              <a
+                className={cn(styles.item)}
+                href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                TICKETS
+              </a>
+            </motion.h3>
             <motion.h3 className={cn(styles.disabled)} variants={item}>
               LINES
               <span className={cn('h5', styles.highlight)}>COMING 3/15</span>
@@ -128,7 +142,11 @@ export default function Menu() {
               PEOPLE
               <span className={cn('h5', styles.highlight)}>COMING 3/18</span>
             </motion.h3>
-            <motion.h3
+            <motion.h3 className={cn(styles.disabled)} variants={item}>
+              MERCH
+              <span className={cn('h5', styles.highlight)}>COMING SOON</span>
+            </motion.h3>
+            {/* <motion.h3
               className={cn(styles.item, styles.highlight)}
               variants={item}
             >
@@ -137,9 +155,9 @@ export default function Menu() {
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                TICKETS
+                FLOWER SALE
               </a>
-            </motion.h3>
+            </motion.h3> */}
           </motion.div>
         </div>
         <motion.div

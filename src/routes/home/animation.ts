@@ -11,13 +11,24 @@ const container = {
   },
 };
 
+const subheader = {
+  loading: {
+    opacity: 0,
+    background: 'yellow',
+  },
+  show: {
+    opacity: 1,
+    background: 'yellow',
+  },
+};
+
 const preloaderTransition = {
-  duration: 1,
-  ease: [0.85, 0, 0.55, 1],
+  duration: 0.7,
+  ease: [0.76, 0, 0.24, 1],
 };
 
 const menuTransition = {
-  duration: 1,
+  duration: 0.7,
   ease: [0.16, 1, 0.3, 1],
 };
 
@@ -53,6 +64,7 @@ const logoVariants = {
   },
   show: {
     scale: 1,
+
     top: '40%',
     y: '-50%',
     x: '-50%',
@@ -70,6 +82,7 @@ const flowerVariants = {
 
 export {
   container,
+  subheader,
   buttonVariants,
   buttonTransition1,
   buttonTransition2,
