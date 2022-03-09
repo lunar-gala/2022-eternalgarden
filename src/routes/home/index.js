@@ -109,7 +109,7 @@ export default function Home() {
       timer = setTimeout(() => {
         setLoading(false);
         controls.start('show');
-      }, 3000);
+      }, 2000);
     }
 
     // cleanup timer on unmount
@@ -242,7 +242,7 @@ export default function Home() {
               width: 0,
             }}
             animate={{ width: '100%' }}
-            transition={{ duration: 3 }}
+            transition={{ duration: 2 }}
           />
         </motion.div>
       )}

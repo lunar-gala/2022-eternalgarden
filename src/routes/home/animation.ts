@@ -23,12 +23,12 @@ const subheader = {
 };
 
 const preloaderTransition = {
-  duration: 1,
-  ease: [0.85, 0, 0.55, 1],
+  duration: 0.7,
+  ease: [0.76, 0, 0.24, 1],
 };
 
 const menuTransition = {
-  duration: 1,
+  duration: 0.7,
   ease: [0.16, 1, 0.3, 1],
 };
 
