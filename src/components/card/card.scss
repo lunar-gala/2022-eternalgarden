@@ -35,9 +35,9 @@
   &-heading {
     text-align: center;
     text-transform: uppercase;
-    font-family: Faubourg;
-    line-height: $line-height-1;
-    font-size: $font-size-5;
+    // font-family: Faubourg;
+    // line-height: $line-height-1;
+    // font-size: $font-size-5;
     color: $white;
     margin-top: 1em;
     position: absolute;
@@ -47,16 +47,16 @@
 
   &-designers {
     font-family: Cormorant;
-    font-size: $font-size-3;
+    // font-size: $font-size-3;
     text-transform: capitalize;
     margin: 0 auto;
   }
 
   &-description {
-    font-family: Karla;
-    font-size: $font-size-1;
+    // font-family: Karla;
+    // font-size: $font-size-1;
     width: 45%;
-    margin: $spacing-4 auto;
+    margin: $spacing-4 auto $spacing-8 auto;
   }
 
   &-images {
@@ -72,8 +72,20 @@
       height: 50vh;
       margin: 0 0.15em;
       border: 1px solid $off-white;
+      border-radius: 8px;
     }
   }
+}
+
+.lines-item {
+  transition: 0.2s;
+}
+.lines-item:hover {
+  transform: scale(1.01);
+}
+
+.lines-item:active {
+  transform: scale(1);
 }
 
 // convert to desktop type styles
