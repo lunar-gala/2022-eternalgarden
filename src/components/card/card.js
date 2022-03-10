@@ -24,10 +24,10 @@ const items = {
 };
 
 const item = {
-  lineOpen: {
+  lineList: {
     opacity: 1,
   },
-  lineList: {
+  lineOpen: {
     opacity: 0,
   },
 };
@@ -46,20 +46,21 @@ export default function Card({
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState(false);
 
-  useEffect(() => {
-    if (open) {
-      controls.start('lineList');
+  // useEffect(() => {
+  //   if (open) {
+  //     controls.start('lineOpen');
 
-      console.log(open);
-      // console.log(selected);
-    } else {
-      controls.start('lineOpen');
-    }
-  }, [controls, open]);
+  //     console.log(open);
+  //     // console.log(selected);
+  //   } else {
+  //     controls.start('lineList');
+  //   }
+  // }, [controls, open]);
 
   const openCard = () => {
     // onSelect(true);
     setOpen(true);
+    controls.start('lineOpen');
     setContent(true);
     // setCardOpen(true);
   };
@@ -68,6 +69,7 @@ export default function Card({
     setContent(false);
     setTimeout(() => {
       setOpen(false);
+      controls.start('lineList');
       // onSelect(false);
 
       // setCardOpen(false);
@@ -123,8 +125,8 @@ export default function Card({
       )}
       <li onClick={openCard} className="lines-item">
         <motion.p
-          initial="lineOpen"
-          exit="lineOpen"
+          initial="lineList"
+          exit="lineList"
           animate={controls}
           variants={item}
           layout="position"

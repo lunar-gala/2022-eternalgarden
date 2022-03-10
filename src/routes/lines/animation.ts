@@ -26,19 +26,19 @@ const container = {
 };
 
 const leftFlowers = {
-  lineOpen: {
+  lineList: {
     x: 0,
   },
-  lineList: {
+  lineOpen: {
     x: '-45px',
   },
 };
 
 const rightFlowers = {
-  lineOpen: {
+  lineList: {
     x: 0,
   },
-  lineList: {
+  lineOpen: {
     x: '45px',
   },
 };

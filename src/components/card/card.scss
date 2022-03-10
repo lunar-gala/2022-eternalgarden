@@ -9,12 +9,11 @@
   position: fixed;
   top: 0;
   left: 0;
-  overflow-y: auto;
+  overflow-y: scroll;
   overflow-x: hidden;
   z-index: 100;
 
   &-main {
-    width: 95vw;
     margin: auto;
     display: flex;
     justify-content: center;
@@ -80,10 +79,6 @@
 // convert to desktop type styles
 @media only screen and (min-width: 1200px) {
   .card {
-    &-main {
-      width: 75vw;
-    }
-
     &-heading {
       font-size: $font-size-7;
     }
