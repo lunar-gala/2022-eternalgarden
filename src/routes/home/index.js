@@ -195,7 +195,7 @@ export default function Home() {
             // exit="loading"
             // exit="exit"
           >
-            Carnegie Music Hall • March 20 6:30pm EST
+            Carnegie Music Hall • March 20 7:30pm EST
           </motion.h5>
         </motion.div>
 

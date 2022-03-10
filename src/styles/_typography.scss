@@ -5,6 +5,7 @@
 /**
  * Importing Faubourg, Cormorant, and Karla
 */
+
 @font-face {
   font-family: 'Faubourg';
   src: url('../assets/fonts/Faubourg-Display.woff2') format('woff2'),
@@ -27,6 +28,11 @@
     url('../assets/fonts/Cormorant-Medium.woff') format('woff');
   font-weight: 500;
   font-style: normal;
+}
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 /**

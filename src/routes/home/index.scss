@@ -72,6 +72,18 @@
     overflow: hidden;
   }
 
+  @media only screen and (min-width: 1000px) {
+    &-flowers {
+      position: absolute;
+      left: 50%;
+
+      width: 150%;
+      height: auto;
+      transform: translate(-50%, -50%);
+      overflow: hidden;
+    }
+  }
+
   &-nav-left {
     position: absolute;
     top: $spacing-5;
