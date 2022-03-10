@@ -83,8 +83,8 @@ export default function Lines() {
         <motion.div className="flowers">
           <motion.div
             className="flowers-left"
-            initial="positioned"
-            exit="positioned"
+            initial="lineOpen"
+            exit="lineOpen"
             animate={controls}
             variants={leftFlowers}
           >
@@ -97,8 +97,8 @@ export default function Lines() {
           </motion.div>
           <motion.div
             className="flowers-right"
-            initial="positioned"
-            exit="positioned"
+            initial="lineOpen"
+            exit="lineOpen"
             animate={controls}
             variants={rightFlowers}
           >

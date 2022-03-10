@@ -24,11 +24,11 @@ const items = {
 };
 
 const item = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
+  lineOpen: {
     opacity: 1,
+  },
+  lineList: {
+    opacity: 0,
   },
 };
 
@@ -48,17 +48,17 @@ export default function Card({
 
   useEffect(() => {
     if (open) {
-      controls.start('shifted');
+      controls.start('lineList');
 
       console.log(open);
-      console.log(selected);
+      // console.log(selected);
     } else {
-      controls.start('positioned');
+      controls.start('lineOpen');
     }
   }, [controls, open]);
 
   const openCard = () => {
-    onSelect(true);
+    // onSelect(true);
     setOpen(true);
     setContent(true);
     // setCardOpen(true);
@@ -68,7 +68,7 @@ export default function Card({
     setContent(false);
     setTimeout(() => {
       setOpen(false);
-      onSelect(false);
+      // onSelect(false);
 
       // setCardOpen(false);
     }, 500);
@@ -99,15 +99,14 @@ export default function Card({
                   animate="visible"
                   exit="hidden"
                 >
-                  <motion.h2 variants={item} className="card-designers">
+                  <motion.h2 className="card-designers">
                     {designers.join(', ')}
                   </motion.h2>
                   <motion.p
-                    variants={item}
                     className="card-description"
                     dangerouslySetInnerHTML={{ __html: description }}
                   ></motion.p>
-                  <motion.div variants={item} className="card-images">
+                  <motion.div className="card-images">
                     {images.map((img, index) => (
                       <img
                         key={index}
@@ -124,7 +123,10 @@ export default function Card({
       )}
       <li onClick={openCard} className="lines-item">
         <motion.p
-          animate={{ opacity: selected ? 0 : 1 }}
+          initial="lineOpen"
+          exit="lineOpen"
+          animate={controls}
+          variants={item}
           layout="position"
           layoutId={`line-item-${index}`}
         >
