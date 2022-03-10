@@ -7,6 +7,19 @@
   width: 100vw;
   height: 100vh;
 
+  .logo-container {
+    position: absolute;
+    color: white;
+    width: 50px;
+    top: 10%;
+    left: 50%;
+    transform: translateX(-50%);
+
+    // img {
+    //   color: white;
+    // }
+  }
+
   &-main {
     width: calc(100vw);
     height: calc(100vh);

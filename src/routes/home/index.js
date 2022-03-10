@@ -10,6 +10,7 @@ import {
 import { Link, useLocation } from 'react-router-dom';
 import useWindowSize, { Size } from 'hooks/useWindowSize';
 import logo from 'assets/images/logo.svg';
+import LGLogo from 'assets/icons/lg-logo.svg';
 import Button from 'components/button';
 import {
   container,
@@ -157,6 +158,7 @@ export default function Home() {
           </a>
         </Button>
       </motion.div>
+
       <motion.div
         className="home-main"
         variants={isMobile ? mobileContainerVariants : containerVariants}
@@ -187,18 +189,13 @@ export default function Home() {
         >
           <motion.img src={logo} alt="logo" />
 
-          <motion.h5
-            className={loading ? '' : ' showSubheader'}
-            // variant={subheader}
-            // initial="loading"
-            // animate={controls}
-            // exit="loading"
-            // exit="exit"
-          >
+          <motion.h5 className={loading ? '' : ' showSubheader'}>
             Carnegie Music Hall • March 20 7:30pm EST
           </motion.h5>
         </motion.div>
-
+        <div className="logo-container">
+          <img src={LGLogo}></img>
+        </div>
         <motion.div
           variants={flowerVariants}
           initial="loading"
