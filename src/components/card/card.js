@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { useState } from 'react';
 import classNames from 'classnames';
 import './card.scss';
@@ -40,29 +40,14 @@ export default function Card({
   images = [],
   index,
   controls,
-  onSelect,
-  selected,
 }) {
   const [open, setOpen] = useState(false);
   const [content, setContent] = useState(false);
 
-  // useEffect(() => {
-  //   if (open) {
-  //     controls.start('lineOpen');
-
-  //     console.log(open);
-  //     // console.log(selected);
-  //   } else {
-  //     controls.start('lineList');
-  //   }
-  // }, [controls, open]);
-
   const openCard = () => {
-    // onSelect(true);
     setOpen(true);
     controls.start('lineOpen');
     setContent(true);
-    // setCardOpen(true);
   };
 
   const closeCard = () => {
@@ -70,9 +55,6 @@ export default function Card({
     setTimeout(() => {
       setOpen(false);
       controls.start('lineList');
-      // onSelect(false);
-
-      // setCardOpen(false);
     }, 500);
   };
 

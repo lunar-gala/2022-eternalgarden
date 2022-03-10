@@ -22,7 +22,6 @@ import redFlowerBig from 'assets/lines_animation/red_flower_big.svg';
 
 export default function Lines() {
   const controls = useAnimation();
-  const [selected, setSelected] = useState(false);
 
   return (
     <motion.section
@@ -73,8 +72,6 @@ export default function Lines() {
                 key={line.id || index}
                 index={line.id || index}
                 {...line}
-                selected={selected}
-                onSelect={setSelected}
                 controls={controls}
               />
             );
