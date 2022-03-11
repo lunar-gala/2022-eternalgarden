@@ -5,7 +5,6 @@
   height: 100%;
   margin: auto;
   padding: 0px;
-  // background: $gradient-accent;
   position: fixed;
   top: 0;
   left: 0;
@@ -27,8 +26,8 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    top: calc(2em + $spacing-6);
+    position: relative;
+    margin-top: $spacing-6;
     padding-bottom: 1em;
   }
 
@@ -37,11 +36,9 @@
     text-transform: uppercase;
     font-family: Faubourg;
     line-height: $line-height-1;
-    font-size: $font-size-5;
     color: $white;
     margin-top: 1em;
-    position: absolute;
-    top: 0;
+    margin-bottom: 0;
     z-index: 101;
   }
 
@@ -72,15 +69,6 @@
       height: 50vh;
       margin: 0 0.15em;
       border: 1px solid $off-white;
-    }
-  }
-}
-
-// convert to desktop type styles
-@media only screen and (min-width: 1200px) {
-  .card {
-    &-heading {
-      font-size: $font-size-7;
     }
   }
 }

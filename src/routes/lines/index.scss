@@ -106,7 +106,6 @@
     width: auto;
 
     p {
-      font-size: $font-size-5;
       line-height: $line-height-1;
       font-family: Faubourg;
       margin: 0;
@@ -138,6 +137,11 @@
   }
 }
 
+.lines-item p,
+.card-heading {
+  font-size: 9vw;
+}
+
 // convert to desktop type styles
 @media only screen and (min-width: 1200px) {
   .lines {
@@ -154,11 +158,10 @@
     &-list {
       font-size: $font-size-7;
     }
+  }
 
-    &-item {
-      p {
-        font-size: $font-size-7;
-      }
-    }
+  .lines-item p,
+  .card-heading {
+    font-size: 7.5vw;
   }
 }
