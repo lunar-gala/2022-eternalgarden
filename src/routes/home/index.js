@@ -10,7 +10,7 @@ import {
 import { Link, useLocation } from 'react-router-dom';
 import useWindowSize, { Size } from 'hooks/useWindowSize';
 import logo from 'assets/images/logo.svg';
-import LGLogo from 'assets/icons/lg-logo.svg';
+import LGLogo from 'assets/icons/white-lg-logo.svg';
 import Button from 'components/button';
 import {
   container,
@@ -58,7 +58,7 @@ export default function Home() {
       }px 0% 0%)`,
     },
     show: {
-      clipPath: `inset(8% 2% 0% 2% round 300px 300px 0% 0%)`,
+      clipPath: `inset(4% 2% 0% 2% round 300px 300px 0% 0%)`,
     },
     exit: {
       clipPath: `inset(100% 2% 0% 2% round 300px 300px 0% 0%)`,
@@ -193,7 +193,7 @@ export default function Home() {
             Carnegie Music Hall • March 20 7:30pm EST
           </motion.h5>
         </motion.div>
-        <div className="logo-container">
+        <div className="LG-logo-container">
           <img src={LGLogo}></img>
         </div>
         <motion.div

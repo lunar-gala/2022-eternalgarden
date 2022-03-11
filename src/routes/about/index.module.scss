@@ -8,7 +8,8 @@
   width: calc(100vw - 4rem);
   padding: $spacing-7;
   text-align: center;
-  background: $gradient-accent;
+  background: $gradient-home;
+  // background: $gradient-accent;
   color: $white;
   z-index: 3;
 }

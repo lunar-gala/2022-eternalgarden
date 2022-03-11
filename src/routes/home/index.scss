@@ -7,16 +7,17 @@
   width: 100vw;
   height: 100vh;
 
-  .logo-container {
+  .LG-logo-container {
     position: absolute;
     color: white;
-    width: 50px;
-    top: 10%;
+
+    top: 6vh;
     left: 50%;
     transform: translateX(-50%);
 
     // img {
-    //   color: white;
+    //   width: 100px;
+    //   height: 200px;
     // }
   }
 
@@ -99,14 +100,14 @@
 
   &-nav-left {
     position: absolute;
-    top: $spacing-5;
-    left: $spacing-5;
+    top: 2vh;
+    left: 2vw;
   }
 
   &-nav-right {
     position: absolute;
-    top: $spacing-5;
-    right: $spacing-5;
+    top: 2vh;
+    right: 2vw;
   }
 }
 
@@ -142,6 +143,18 @@
     &-flowers {
       width: 125%;
     }
+
+    &-nav-left {
+      position: absolute;
+      top: 2vh;
+      left: 2vw;
+    }
+
+    &-nav-right {
+      position: absolute;
+      top: 2vh;
+      right: 2vw;
+    }
   }
 }
 
@@ -158,13 +171,13 @@
     }
 
     &-nav-left {
-      top: 2rem;
-      left: 2rem;
+      top: 4vh;
+      left: 2vw;
     }
 
     &-nav-right {
-      top: 2rem;
-      right: 2rem;
+      top: 4vh;
+      right: 2vw;
     }
   }
 
