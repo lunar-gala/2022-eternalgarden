@@ -206,16 +206,18 @@ export default function About() {
           </motion.h2>
           <div className={styles.content}>
             <motion.p className="body" variants={item}>
-              A garden breathes within each of us every night and day. Flower
-              are perpetually blooming to the ardor of our youth where the
-              droplets of our past are scattered across the grass. Behold, as
-              the start gleaming over us, We enter into the familiar yet
-              mysterious world to rediscover our own inner child.
+              A garden lives within each of us. We tend to the flowers, dance
+              across the grass, and feel the warmth of youth shine upon our
+              skin. In this mysterious yet familiar world, we rediscover our
+              inner child.
             </motion.p>
             <motion.p className="body" variants={item}>
-              Lunar Gala is back again with verdant lines, brimming with
-              artistic ingenuity, growing into another new rosy dawn. Get ready
-              for the journey.
+              Lunar Gala 2022 features 14 lines, each with their own story. Join
+              us on March 20th for a journey filled with artistry, play, and
+              wonder.
+            </motion.p>
+            <motion.p className="body" variants={item}>
+              Carnegie Music Hall<br></br>March 20th 6:30PM EST
             </motion.p>
           </div>
         </motion.div>
