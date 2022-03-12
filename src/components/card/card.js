@@ -70,7 +70,7 @@ export default function Card({
             <motion.p
               layout="position"
               layoutId={`line-item-${index}`}
-              className="card-heading"
+              className="card-heading h1"
             >
               {name}
             </motion.p>
@@ -83,9 +83,9 @@ export default function Card({
                   animate="visible"
                   exit="hidden"
                 >
-                  <motion.h2 className="card-designers">
+                  <motion.h4 className="card-designers">
                     {designers.join(', ')}
-                  </motion.h2>
+                  </motion.h4>
                   <motion.p
                     className="card-description"
                     dangerouslySetInnerHTML={{ __html: description }}
@@ -113,6 +113,7 @@ export default function Card({
           variants={item}
           layout="position"
           layoutId={`line-item-${index}`}
+          className="h1"
         >
           {name}
         </motion.p>

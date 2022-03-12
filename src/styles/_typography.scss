@@ -5,6 +5,7 @@
 /**
  * Importing Faubourg, Cormorant, and Karla
 */
+
 @font-face {
   font-family: 'Faubourg';
   src: url('../assets/fonts/Faubourg-Display.woff2') format('woff2'),
@@ -29,6 +30,12 @@
   font-style: normal;
 }
 
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+}
+
 /**
  * Typography
 */
@@ -36,6 +43,7 @@ h1,
 .h1 {
   font-family: 'Faubourg';
   font-size: $font-size-5;
+  // font-size: 70vw;
   font-weight: 400;
   letter-spacing: $letter-spacing-1;
   line-height: $line-height-1;
@@ -89,34 +97,33 @@ p,
 }
 
 // convert to desktop type styles
-@media only screen and (min-width: 1200px) {
-  h1,
-  .h1 {
-    font-size: $font-size-7;
-  }
 
-  h2,
-  .h2 {
-    font-size: $font-size-6;
-  }
+h1,
+.h1 {
+  font-size: $font-size-7;
+}
 
-  h3,
-  .h3 {
-    font-size: $font-size-5;
-  }
+h2,
+.h2 {
+  font-size: $font-size-6;
+}
 
-  h4,
-  .h4 {
-    font-size: $font-size-3;
-  }
+h3,
+.h3 {
+  font-size: $font-size-5;
+}
 
-  h5,
-  .h5 {
-    font-size: $font-size-1;
-  }
+h4,
+.h4 {
+  font-size: $font-size-3;
+}
 
-  p,
-  .body {
-    font-size: $font-size-2;
-  }
+h5,
+.h5 {
+  font-size: $font-size-1;
+}
+
+p,
+.body {
+  font-size: $font-size-2;
 }
