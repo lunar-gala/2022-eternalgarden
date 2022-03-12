@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
@@ -66,7 +66,6 @@ export default function Lines() {
         {/* noise on top of flowers + logo, so it is last */}
         <ul className="lines-list">
           {LINE_INFO.map((line, index) => {
-            console.log(line.id);
             return (
               <Card
                 key={line.id || index}

@@ -32,6 +32,16 @@ const item = {
   },
 };
 
+const firstItem = {
+  ...item,
+  lineList: {
+    opacity: 1,
+    transition: {
+      duration: 0,
+    },
+  },
+};
+
 export default function Card({
   className = '',
   name = '',
@@ -53,8 +63,8 @@ export default function Card({
   const closeCard = () => {
     setContent(false);
     setTimeout(() => {
-      setOpen(false);
       controls.start('lineList');
+      setOpen(false);
     }, 500);
   };
 
@@ -70,7 +80,7 @@ export default function Card({
             <motion.p
               layout="position"
               layoutId={`line-item-${index}`}
-              className="card-heading h1"
+              className="card-heading"
             >
               {name}
             </motion.p>
@@ -83,9 +93,9 @@ export default function Card({
                   animate="visible"
                   exit="hidden"
                 >
-                  <motion.h4 className="card-designers">
+                  <motion.h2 className="card-designers">
                     {designers.join(', ')}
-                  </motion.h4>
+                  </motion.h2>
                   <motion.p
                     className="card-description"
                     dangerouslySetInnerHTML={{ __html: description }}
@@ -110,10 +120,9 @@ export default function Card({
           initial="lineList"
           exit="lineList"
           animate={controls}
-          variants={item}
+          variants={open && index === 1 ? firstItem : item}
           layout="position"
           layoutId={`line-item-${index}`}
-          className="h1"
         >
           {name}
         </motion.p>

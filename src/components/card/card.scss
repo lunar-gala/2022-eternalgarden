@@ -47,11 +47,14 @@
     font-family: Cormorant;
     text-transform: capitalize;
     margin: 0 auto;
+    font-size: $font-size-3;
   }
 
   &-description {
     max-width: 700px;
     margin: $spacing-4 auto $spacing-8 auto;
+    font-size: $font-size-1;
+    line-height: 130%;
   }
 
   &-images {

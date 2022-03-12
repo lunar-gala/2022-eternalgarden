@@ -49,7 +49,7 @@ export const LINE_INFO = [
   {
     id: 1,
     name: 'experiri',
-    designers: ['Skylar McAuliffe', 'Asad Sheikh'],
+    designers: ['Skylar McAuliffe', 'Asad Sheikh', 'Lily Oberman'],
     images: [experiri_IMG_1, experiri_IMG_2, experiri_IMG_3],
     description:
       "Experiri is about experiencing the world through clothing. We use varied textures, concepts that excite and represent the senses, and materials that allow for and encourage interactivity with one’s environment. Play and comfort dominate our designs, which are meant to be worn not only on a runway, but also outside! Feel movement or change details while thinking about the ways our senses allow us to interpret what's going on around us.",

@@ -30,7 +30,7 @@ const leftFlowers = {
     x: 0,
   },
   lineOpen: {
-    x: '-45px',
+    x: '-65px',
   },
 };
 
@@ -39,7 +39,7 @@ const rightFlowers = {
     x: 0,
   },
   lineOpen: {
-    x: '45px',
+    x: '65px',
   },
 };
 
