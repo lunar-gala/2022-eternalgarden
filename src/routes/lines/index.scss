@@ -22,6 +22,10 @@
   width: 100vw;
   pointer-events: none;
 
+  div * {
+    transform: scale(0.7);
+  }
+
   &-right {
     position: absolute;
     right: 0;
@@ -32,8 +36,8 @@
     }
 
     &-blue {
-      bottom: 0px;
-      right: 0px;
+      bottom: -70px;
+      right: -80px;
     }
 
     &-dragonfly {
@@ -52,18 +56,18 @@
     }
 
     &-blue {
-      left: -130px;
+      left: -180px;
       bottom: -85px;
     }
 
     &-red__big {
-      left: -160px;
-      bottom: 380px;
+      left: -180px;
+      bottom: 500px;
     }
 
     &-red__small {
-      bottom: 405px;
-      left: -55px;
+      bottom: 550px;
+      left: -75px;
     }
   }
 }
@@ -141,7 +145,21 @@
 .lines-item p,
 .lines-list,
 .card-heading {
-  font-size: 10vw;
+  font-size: 55px;
+}
+
+@media only screen and (min-width: 768px) {
+  .lines-item p,
+  .card-heading,
+  .lines-list {
+    font-size: 7.5vw;
+  }
+
+  .flowers {
+    div * {
+      transform: scale(0.8);
+    }
+  }
 }
 
 // convert to desktop type styles
@@ -158,9 +176,46 @@
     }
   }
 
-  .lines-item p,
-  .card-heading,
-  .lines-list {
-    font-size: 7.5vw;
+  .flowers {
+    div * {
+      transform: scale(1);
+    }
+
+    &-right {
+      * {
+        position: absolute;
+      }
+
+      &-blue {
+        bottom: 0px;
+        right: 0px;
+      }
+
+      &-dragonfly {
+        bottom: 550px;
+        right: 90px;
+      }
+    }
+
+    &-left {
+      * {
+        position: absolute;
+      }
+
+      &-blue {
+        left: -130px;
+        bottom: -85px;
+      }
+
+      &-red__big {
+        left: -160px;
+        bottom: 380px;
+      }
+
+      &-red__small {
+        bottom: 405px;
+        left: -55px;
+      }
+    }
   }
 }
