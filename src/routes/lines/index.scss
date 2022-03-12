@@ -109,6 +109,7 @@
     text-transform: uppercase;
     font-family: Faubourg;
     width: auto;
+    transition: 0.2s;
 
     p {
       line-height: $line-height-1;
@@ -119,6 +120,15 @@
 
     &:hover {
       cursor: pointer;
+      transform: scale(1.01);
+    }
+
+    &:first-child:hover {
+      transform: scale(1);
+    }
+
+    &:active {
+      transform: scale(1);
     }
   }
 

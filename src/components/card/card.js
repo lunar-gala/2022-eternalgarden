@@ -6,10 +6,10 @@ import { items, item, firstItem } from './animation';
 
 export default function Card({
   name = '',
-  designers = [],
-  description = '',
-  images = [],
-  sublines = [],
+  designers,
+  description,
+  images,
+  sublines,
   index,
   controls,
 }) {
@@ -72,13 +72,7 @@ export default function Card({
   );
 }
 
-function CardContent({
-  name = '',
-  designers = [],
-  description = '',
-  images = [],
-  sublines = [],
-}) {
+function CardContent({ name = '', designers, description, images, sublines }) {
   return (
     <motion.div
       className="card-content"
@@ -87,20 +81,34 @@ function CardContent({
       animate="visible"
       exit="hidden"
     >
-      <motion.h2 className="card-designers">{designers.join(', ')}</motion.h2>
-      <motion.p
-        className="card-description"
-        dangerouslySetInnerHTML={{ __html: description }}
-      ></motion.p>
-      <motion.div className="card-images">
-        {images.map((img, index) => (
-          <img
-            key={index}
-            src={img}
-            alt={`${name} line shoot number ${index}`}
-          />
-        ))}
-      </motion.div>
+      {designers && <h2 className="card-designers">{designers.join(', ')}</h2>}
+      {description && (
+        <p
+          className="card-description"
+          dangerouslySetInnerHTML={{ __html: description }}
+        ></p>
+      )}
+      {images && (
+        <div className="card-images">
+          {images.map((img, index) => (
+            <img
+              key={index}
+              src={img}
+              alt={`${name} line shoot number ${index}`}
+            />
+          ))}
+        </div>
+      )}
+      {sublines && (
+        <div className="sublines">
+          {sublines.map(({ name, designers }, index) => (
+            <div key={`subline-${index}`}>
+              <p className="subline-name">{name}</p>
+              <p className="subline-name">{designers.join(', ')}</p>
+            </div>
+          ))}
+        </div>
+      )}
     </motion.div>
   );
 }
