@@ -2,10 +2,18 @@
 
 .home {
   position: relative;
-  overflow: hidden;
+  overflow-y: hidden;
   background: $off-white;
   width: 100vw;
   height: 100vh;
+
+  .LG-logo-container {
+    position: absolute;
+    color: white;
+    top: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 
   &-main {
     width: calc(100vw);
@@ -53,15 +61,6 @@
     opacity: 1 !important;
   }
 
-  // &-subheader {
-  //   position: absolute;
-  //   left: 50%;
-  //   top: 60%;
-  //   width: 100%;
-  // transform: translate(-50%, -100%);
-  //   text-align: center;
-  // }
-
   &-flowers {
     position: absolute;
     left: 50%;
@@ -74,14 +73,14 @@
 
   &-nav-left {
     position: absolute;
-    top: $spacing-5;
-    left: $spacing-5;
+    top: 2vh;
+    left: 2vw;
   }
 
   &-nav-right {
     position: absolute;
-    top: $spacing-5;
-    right: $spacing-5;
+    top: 2vh;
+    right: 2vw;
   }
 }
 
@@ -108,6 +107,10 @@
 
 // convert to desktop type styles
 @media only screen and (min-width: 768px) {
+  .LG-logo-container {
+    top: 6vh !important;
+  }
+
   .home {
     &-logo {
       width: 100%;
@@ -116,6 +119,18 @@
 
     &-flowers {
       width: 125%;
+    }
+
+    &-nav-left {
+      position: absolute;
+      top: 2vh;
+      left: 2vw;
+    }
+
+    &-nav-right {
+      position: absolute;
+      top: 2vh;
+      right: 2vw;
     }
   }
 }
@@ -133,13 +148,13 @@
     }
 
     &-nav-left {
-      top: 2rem;
-      left: 2rem;
+      top: 4vh;
+      left: 2vw;
     }
 
     &-nav-right {
-      top: 2rem;
-      right: 2rem;
+      top: 4vh;
+      right: 2vw;
     }
   }
 

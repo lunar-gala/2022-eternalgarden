@@ -10,6 +10,7 @@ import {
 import { Link, useLocation } from 'react-router-dom';
 import useWindowSize, { Size } from 'hooks/useWindowSize';
 import logo from 'assets/images/logo.svg';
+import { ReactComponent as LGLogo } from 'assets/icons/white-lg-logo.svg';
 import Button from 'components/button';
 import {
   container,
@@ -47,7 +48,7 @@ export default function Home() {
   const clipWidth = useTransform(aspectRatio, aspectRatioRange, clipRange);
 
   // isMobile
-  const isMobile = size?.width < 1000;
+  const isMobile = size?.width < 768;
   console.log('isMobile = ', isMobile);
 
   const containerVariants = {
@@ -57,7 +58,7 @@ export default function Home() {
       }px 0% 0%)`,
     },
     show: {
-      clipPath: `inset(8% 2% 0% 2% round 300px 300px 0% 0%)`,
+      clipPath: `inset(4% 2% 0% 2% round 300px 300px 0% 0%)`,
     },
     exit: {
       clipPath: `inset(100% 2% 0% 2% round 300px 300px 0% 0%)`,
@@ -157,6 +158,7 @@ export default function Home() {
           </a>
         </Button>
       </motion.div>
+
       <motion.div
         className="home-main"
         variants={isMobile ? mobileContainerVariants : containerVariants}
@@ -187,18 +189,17 @@ export default function Home() {
         >
           <motion.img src={logo} alt="logo" />
 
-          <motion.h5
-            className={loading ? '' : ' showSubheader'}
-            // variant={subheader}
-            // initial="loading"
-            // animate={controls}
-            // exit="loading"
-            // exit="exit"
-          >
-            Carnegie Music Hall • March 20 6:30pm EST
+          <motion.h5 className={loading ? '' : ' showSubheader'}>
+            Carnegie Music Hall • March 20 7:30pm EST
           </motion.h5>
         </motion.div>
-
+        <div
+          className={
+            loading ? 'LG-logo-container' : 'LG-logo-container showSubheader'
+          }
+        >
+          <LGLogo style={{ width: '35px' }}></LGLogo>
+        </div>
         <motion.div
           variants={flowerVariants}
           initial="loading"
