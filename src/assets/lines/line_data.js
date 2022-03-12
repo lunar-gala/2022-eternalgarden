@@ -231,8 +231,7 @@ export const LINE_INFO = [
   },
   {
     id: 13,
-    name: 'Alumni Lines',
-    designers: ['Collab'],
+    name: 'ALUMNI',
     sublines: ALUMNI_LINES,
   },
 ];

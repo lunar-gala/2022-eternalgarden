@@ -76,6 +76,19 @@
   }
 }
 
+.subline-name {
+  font-family: Faubourg;
+  font-size: $font-size-4;
+}
+
+.subline-designers {
+  font-size: $font-size-1;
+  // font-family: Cormorant;
+  // text-transform: capitalize;
+  // font-size: $font-size-3;
+  margin-bottom: $spacing-4;
+}
+
 @media only screen and (min-width: 1200px) {
   .card {
     &-images {

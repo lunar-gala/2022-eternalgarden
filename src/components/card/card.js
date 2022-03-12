@@ -104,7 +104,7 @@ function CardContent({ name = '', designers, description, images, sublines }) {
           {sublines.map(({ name, designers }, index) => (
             <div key={`subline-${index}`}>
               <p className="subline-name">{name}</p>
-              <p className="subline-name">{designers.join(', ')}</p>
+              <p className="subline-designers">{designers.join(', ')}</p>
             </div>
           ))}
         </div>
