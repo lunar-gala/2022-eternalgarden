@@ -45,7 +45,94 @@ import World_Scanner_IMG_1 from './img/World_Scanner/1793-Web.jpeg';
 import World_Scanner_IMG_2 from './img/World_Scanner/1826-Web.jpeg';
 import World_Scanner_IMG_3 from './img/World_Scanner/1886-Web.jpeg';
 
+const YEAR_OF_TIGER_LINES = [
+  {
+    name: 'RENASCI',
+    designers: ['Aadya Bhartia'],
+  },
+  {
+    name: 'SALVOS',
+    designers: ['Patricia Yu'],
+  },
+  {
+    name: 'THE MARIANAS',
+    designers: ['Lily Oberman', 'Skylar McAuliffe'],
+  },
+  {
+    name: 'GOSSAMER IDLE',
+    designers: ['Elise Chapman', 'Jessica Lai'],
+  },
+  {
+    name: 'MIRROR',
+    designers: ['Khushi Nandgoankar', 'Kathy Zhang'],
+  },
+  {
+    name: 'INVASION',
+    designers: ['Olivia Luk'],
+  },
+  {
+    name: 'CHRYSOPHYTA',
+    designers: ['Iz Horgan'],
+  },
+  {
+    name: 'BLOOM',
+    designers: ['Natalie Waldram', 'Amal Jafrani'],
+  },
+  {
+    name: 'SOMATIC',
+    designers: ['Jessa Westheimer'],
+  },
+  {
+    name: 'TIGER',
+    designers: ['Seyoung Choo'],
+  },
+];
+
+const ALUMNI_LINES = [
+  {
+    name: 'REVE/A/L',
+    designers: ['Dani Delgado'],
+  },
+  {
+    name: 'Lanka',
+    designers: ['David Perry'],
+  },
+  {
+    name: '~',
+    designers: ['Leah Kendrick'],
+  },
+  {
+    name: 'SURFACE',
+    designers: ['Michael Powell'],
+  },
+  {
+    name: 'Flutter',
+    designers: ['Mimi Jiao'],
+  },
+  {
+    name: '~',
+    designers: ['Vincent DeRienzo'],
+  },
+  {
+    name: 'Organic Xanax',
+    designers: ['Samantha Ho', 'Arden Wolf', 'Tim Tali'],
+  },
+  {
+    name: 'Tuft',
+    designers: ['Charlotte Deiss'],
+  },
+  {
+    name: 'Somatic',
+    designers: ['Jessa Westheimer'],
+  },
+];
+
 export const LINE_INFO = [
+  {
+    id: 0,
+    name: 'Year of the Tiger',
+    sublines: YEAR_OF_TIGER_LINES,
+  },
   {
     id: 1,
     name: 'experiri',
@@ -127,14 +214,12 @@ export const LINE_INFO = [
     name: 'World Scanner',
     designers: ['Isabel Xu', 'Reifen Jin'],
     images: [World_Scanner_IMG_1, World_Scanner_IMG_2, World_Scanner_IMG_3],
-    description: '',
   },
   {
     id: 11,
     name: 'Reverie',
     designers: ['Somya Pathak'],
     images: [Reverie_IMG_1, Reverie_IMG_2, Reverie_IMG_3],
-    description: '',
   },
   {
     id: 12,
@@ -148,7 +233,6 @@ export const LINE_INFO = [
     id: 13,
     name: 'Alumni Line',
     designers: ['Collab'],
-    images: [],
-    description: '',
+    sublines: ALUMNI_LINES,
   },
 ];

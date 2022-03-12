@@ -79,6 +79,11 @@
 .lines-item {
   transition: 0.2s;
 }
+
+.lines-item:first-child:hover {
+  transform: scale(1);
+}
+
 .lines-item:hover {
   transform: scale(1.01);
 }

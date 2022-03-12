@@ -48,6 +48,7 @@ export default function Card({
   designers = [],
   description = '',
   images = [],
+  sublines = [],
   index,
   controls,
 }) {
@@ -120,7 +121,7 @@ export default function Card({
           initial="lineList"
           exit="lineList"
           animate={controls}
-          variants={open && index === 1 ? firstItem : item}
+          variants={open ? firstItem : item}
           layout="position"
           layoutId={`line-item-${index}`}
         >
