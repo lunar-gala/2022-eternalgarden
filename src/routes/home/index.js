@@ -48,7 +48,7 @@ export default function Home() {
   const clipWidth = useTransform(aspectRatio, aspectRatioRange, clipRange);
 
   // isMobile
-  const isMobile = size?.width < 1000;
+  const isMobile = size?.width < 768;
   console.log('isMobile = ', isMobile);
 
   const containerVariants = {
