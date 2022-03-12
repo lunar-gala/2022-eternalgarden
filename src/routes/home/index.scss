@@ -1,8 +1,12 @@
 @import '../../styles/variables.scss';
 
+.homeContainer {
+  position: static;
+}
+
 .home {
   position: relative;
-  overflow-y: hidden;
+  overflow: hidden;
   background: $off-white;
   width: 100vw;
   height: 100vh;

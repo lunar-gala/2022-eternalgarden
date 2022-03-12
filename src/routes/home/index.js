@@ -121,107 +121,47 @@ export default function Home() {
 
   console.log(loading);
   return (
-    <motion.div className="home">
-      <Link to="/menu" state={{ previousLocation: '/' }}>
+    <div className="homeContainer">
+      <motion.div className="home">
+        <Link to="/menu" state={{ previousLocation: '/' }}>
+          <motion.div
+            className="home-nav-left"
+            variants={buttonVariants}
+            initial="loading"
+            animate={controls}
+            exit="loading"
+            transition={{
+              ...buttonTransition1,
+              delay: loading ? buttonTransition1.delay : 0,
+            }}
+          >
+            <Button>Explore</Button>
+          </motion.div>
+        </Link>
         <motion.div
-          className="home-nav-left"
+          className="home-nav-right"
           variants={buttonVariants}
           initial="loading"
           animate={controls}
           exit="loading"
           transition={{
-            ...buttonTransition1,
-            delay: loading ? buttonTransition1.delay : 0,
+            ...buttonTransition2,
+            delay: loading ? buttonTransition2.delay : 0.4,
           }}
         >
-          <Button>Explore</Button>
+          <Button>
+            <a
+              href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Tickets
+            </a>
+          </Button>
         </motion.div>
-      </Link>
-      <motion.div
-        className="home-nav-right"
-        variants={buttonVariants}
-        initial="loading"
-        animate={controls}
-        exit="loading"
-        transition={{
-          ...buttonTransition2,
-          delay: loading ? buttonTransition2.delay : 0.4,
-        }}
-      >
-        <Button>
-          <a
-            href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tickets
-          </a>
-        </Button>
-      </motion.div>
 
-      <motion.div
-        className="home-main"
-        variants={isMobile ? mobileContainerVariants : containerVariants}
-        initial={location.state?.previousLocation ? 'exit' : 'loading'}
-        animate={controls}
-        exit="exit"
-        transition={{
-          duration: 1,
-          ease:
-            location.state?.previousLocation === undefined
-              ? preloaderTransition.ease
-              : menuTransition.ease,
-        }}
-      >
         <motion.div
-          className="home-logo"
-          variants={logoVariants}
-          initial="loading"
-          animate={controls}
-          exit="loading"
-          transition={{
-            duration: 1,
-            ease:
-              location.state?.previousLocation === undefined
-                ? preloaderTransition.ease
-                : menuTransition.ease,
-          }}
-        >
-          <motion.img src={logo} alt="logo" />
-
-          <motion.h5 className={loading ? '' : ' showSubheader'}>
-            Carnegie Music Hall • March 20 6:30pm EST
-          </motion.h5>
-        </motion.div>
-        <div
-          className={
-            loading ? 'LG-logo-container' : 'LG-logo-container showSubheader'
-          }
-        >
-          <LGLogo style={{ width: '35px' }}></LGLogo>
-        </div>
-        <motion.div
-          variants={flowerVariants}
-          initial="loading"
-          animate={controls}
-          exit="loading"
-          className="home-flowers"
-          alt="flowers"
-          transition={{
-            ...preloaderTransition,
-            ...menuTransition,
-            ease:
-              location.state?.previousLocation === undefined
-                ? preloaderTransition.ease
-                : menuTransition.ease,
-            duration: 1,
-          }}
-        >
-          <Lottie options={defaultOptions} />
-        </motion.div>
-        {/* noise on top of flowers + logo, so it is last */}
-        <motion.div
-          className="noise"
+          className="home-main"
           variants={isMobile ? mobileContainerVariants : containerVariants}
           initial={location.state?.previousLocation ? 'exit' : 'loading'}
           animate={controls}
@@ -233,20 +173,82 @@ export default function Home() {
                 ? preloaderTransition.ease
                 : menuTransition.ease,
           }}
-        />
-      </motion.div>
-      {loading && !location.state?.previousLocation && (
-        <motion.div className="progress">
+        >
           <motion.div
-            className="progress-bar"
-            initial={{
-              width: 0,
+            className="home-logo"
+            variants={logoVariants}
+            initial="loading"
+            animate={controls}
+            exit="loading"
+            transition={{
+              duration: 1,
+              ease:
+                location.state?.previousLocation === undefined
+                  ? preloaderTransition.ease
+                  : menuTransition.ease,
             }}
-            animate={{ width: '100%' }}
-            transition={{ duration: 2 }}
+          >
+            <motion.img src={logo} alt="logo" />
+
+            <motion.h5 className={loading ? '' : ' showSubheader'}>
+              Carnegie Music Hall • March 20 6:30pm EST
+            </motion.h5>
+          </motion.div>
+          <div
+            className={
+              loading ? 'LG-logo-container' : 'LG-logo-container showSubheader'
+            }
+          >
+            <LGLogo style={{ width: '35px' }}></LGLogo>
+          </div>
+          <motion.div
+            variants={flowerVariants}
+            initial="loading"
+            animate={controls}
+            exit="loading"
+            className="home-flowers"
+            alt="flowers"
+            transition={{
+              ...preloaderTransition,
+              ...menuTransition,
+              ease:
+                location.state?.previousLocation === undefined
+                  ? preloaderTransition.ease
+                  : menuTransition.ease,
+              duration: 1,
+            }}
+          >
+            <Lottie options={defaultOptions} />
+          </motion.div>
+          {/* noise on top of flowers + logo, so it is last */}
+          <motion.div
+            className="noise"
+            variants={isMobile ? mobileContainerVariants : containerVariants}
+            initial={location.state?.previousLocation ? 'exit' : 'loading'}
+            animate={controls}
+            exit="exit"
+            transition={{
+              duration: 1,
+              ease:
+                location.state?.previousLocation === undefined
+                  ? preloaderTransition.ease
+                  : menuTransition.ease,
+            }}
           />
         </motion.div>
-      )}
-    </motion.div>
+        {loading && !location.state?.previousLocation && (
+          <motion.div className="progress">
+            <motion.div
+              className="progress-bar"
+              initial={{
+                width: 0,
+              }}
+              animate={{ width: '100%' }}
+              transition={{ duration: 2 }}
+            />
+          </motion.div>
+        )}
+      </motion.div>
+    </div>
   );
 }
