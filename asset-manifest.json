@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.8b82f2c0.css",
-    "main.js": "/static/js/main.ea883535.js",
+    "main.css": "/static/css/main.96b06f83.css",
+    "main.js": "/static/js/main.c5af7eb9.js",
     "static/media/Cormorant-Regular.woff": "/static/media/Cormorant-Regular.873ef9caff916375edc9.woff",
     "static/media/Cormorant-Medium.woff": "/static/media/Cormorant-Medium.09abbb4baf2dff4383f9.woff",
     "static/media/Cormorant-Regular.woff2": "/static/media/Cormorant-Regular.c985b3a588ef07f48046.woff2",
@@ -10,13 +10,14 @@
     "static/media/Faubourg-Display.woff2": "/static/media/Faubourg-Display.f2f4fc07311a9ef819ad.woff2",
     "static/media/logo.svg": "/static/media/logo.f8953a116c5e48540d1718b8d9a6ce89.svg",
     "static/media/lg-logo.svg": "/static/media/lg-logo.e25d50289594027c720a1dd3f794048f.svg",
+    "static/media/white-lg-logo.svg": "/static/media/white-lg-logo.cdadd865e098c48a8919652450e99fb5.svg",
     "index.html": "/index.html",
     "static/media/noise.svg": "/static/media/noise.4a845851535c00b941e5.svg",
-    "main.8b82f2c0.css.map": "/static/css/main.8b82f2c0.css.map",
-    "main.ea883535.js.map": "/static/js/main.ea883535.js.map"
+    "main.96b06f83.css.map": "/static/css/main.96b06f83.css.map",
+    "main.c5af7eb9.js.map": "/static/js/main.c5af7eb9.js.map"
   },
   "entrypoints": [
-    "static/css/main.8b82f2c0.css",
-    "static/js/main.ea883535.js"
+    "static/css/main.96b06f83.css",
+    "static/js/main.c5af7eb9.js"
   ]
 }
