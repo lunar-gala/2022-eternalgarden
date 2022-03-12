@@ -136,11 +136,11 @@ export default function Menu() {
             </motion.h3>
             <motion.h3 className={cn(styles.disabled)} variants={item}>
               LINES
-              <span className={cn('h5', styles.highlight)}>COMING 3/15</span>
+              <span className={cn('h5', styles.highlight)}>COMING 3/17</span>
             </motion.h3>
             <motion.h3 className={cn(styles.disabled)} variants={item}>
               PEOPLE
-              <span className={cn('h5', styles.highlight)}>COMING 3/18</span>
+              <span className={cn('h5', styles.highlight)}>COMING 3/17</span>
             </motion.h3>
             <motion.h3 className={cn(styles.disabled)} variants={item}>
               MERCH

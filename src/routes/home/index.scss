@@ -1,5 +1,9 @@
 @import '../../styles/variables.scss';
 
+.homeContainer {
+  position: static;
+}
+
 .home {
   position: relative;
   overflow: hidden;
@@ -10,15 +14,9 @@
   .LG-logo-container {
     position: absolute;
     color: white;
-
-    top: 6vh;
+    top: 10vh;
     left: 50%;
     transform: translateX(-50%);
-
-    // img {
-    //   width: 100px;
-    //   height: 200px;
-    // }
   }
 
   &-main {
@@ -67,15 +65,6 @@
     opacity: 1 !important;
   }
 
-  // &-subheader {
-  //   position: absolute;
-  //   left: 50%;
-  //   top: 60%;
-  //   width: 100%;
-  // transform: translate(-50%, -100%);
-  //   text-align: center;
-  // }
-
   &-flowers {
     position: absolute;
     left: 50%;
@@ -84,18 +73,6 @@
     height: auto;
     transform: translate(-50%, -50%);
     overflow: hidden;
-  }
-
-  @media only screen and (min-width: 1000px) {
-    &-flowers {
-      position: absolute;
-      left: 50%;
-
-      width: 150%;
-      height: auto;
-      transform: translate(-50%, -50%);
-      overflow: hidden;
-    }
   }
 
   &-nav-left {
@@ -134,6 +111,10 @@
 
 // convert to desktop type styles
 @media only screen and (min-width: 768px) {
+  .LG-logo-container {
+    top: 6vh !important;
+  }
+
   .home {
     &-logo {
       width: 100%;
