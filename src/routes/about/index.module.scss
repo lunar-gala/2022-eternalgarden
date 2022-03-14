@@ -8,7 +8,8 @@
   width: calc(100vw - 4rem);
   padding: $spacing-7;
   text-align: center;
-  background: $gradient-accent;
+  background: $gradient-home;
+  // background: $gradient-accent;
   color: $white;
   z-index: 3;
 }
@@ -30,7 +31,7 @@
 }
 
 .subheader {
-  margin-top: 10vh;
+  margin-top: 8vh;
 }
 
 .content {
@@ -43,8 +44,8 @@
 }
 
 .content p {
-  max-width: 600px;
-  margin: 0 auto $spacing-7 auto;
+  max-width: 390px;
+  margin: 0 auto 0 auto;
 }
 
 .noise {
@@ -56,24 +57,28 @@
   position: absolute;
   bottom: 0;
   left: -250px;
+  pointer-events: none;
 }
 
 .orangeFlower {
   position: absolute;
   bottom: -300px;
   right: -240px;
+  pointer-events: none;
 }
 
 .pinkFlower {
   position: absolute;
   bottom: -230px;
   right: 20px;
+  pointer-events: none;
 }
 
 .groupPurpleFlower {
   position: absolute;
   bottom: -275px;
   left: 0;
+  pointer-events: none;
 }
 
 .singlePurpleFlower {
@@ -81,6 +86,7 @@
 
   bottom: -200px;
   left: -200px;
+  pointer-events: none;
 }
 @media screen and (max-width: 1200px) {
   .eyeFlower {
