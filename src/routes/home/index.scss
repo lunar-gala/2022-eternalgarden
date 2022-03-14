@@ -1,9 +1,5 @@
 @import '../../styles/variables.scss';
 
-.homeContainer {
-  position: static;
-}
-
 .home {
   position: relative;
   overflow: hidden;
@@ -11,18 +7,10 @@
   width: 100vw;
   height: 100vh;
 
-  .LG-logo-container {
-    position: absolute;
-    color: white;
-    top: 10vh;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
   &-main {
     width: calc(100vw);
     height: calc(100vh);
-    background: $gradient-home;
+    background: $gradient-accent;
     position: absolute;
     left: 50%;
     top: 50%;
@@ -36,33 +24,10 @@
     position: absolute;
     left: 50%;
     top: 40%;
-    width: 80%;
-
+    max-width: 100%;
+    width: 70%;
+    height: auto;
     transform: translate(-50%, -50%);
-
-    h5 {
-      margin-top: 20px;
-      text-align: center;
-      color: $off-white;
-      text-transform: uppercase;
-      opacity: 0;
-      transition: opacity 1.5s;
-    }
-
-    img {
-      max-width: 100%;
-
-      // width: 20%;
-      // height: auto;
-      margin: 0 auto;
-      display: flex;
-      // width: 80%;
-      justify-self: center;
-    }
-  }
-
-  .showSubheader {
-    opacity: 1 !important;
   }
 
   &-flowers {
@@ -77,14 +42,16 @@
 
   &-nav-left {
     position: absolute;
-    top: 2vh;
-    left: 2vw;
+    top: $spacing-5;
+    left: $spacing-5;
+    z-index: 5;
   }
 
   &-nav-right {
     position: absolute;
-    top: 2vh;
-    right: 2vw;
+    top: $spacing-5;
+    right: $spacing-5;
+    z-index: 5;
   }
 }
 
@@ -111,30 +78,14 @@
 
 // convert to desktop type styles
 @media only screen and (min-width: 768px) {
-  .LG-logo-container {
-    top: 6vh !important;
-  }
-
   .home {
     &-logo {
       width: 100%;
-      max-width: 450px;
+      max-width: 400px;
     }
 
     &-flowers {
       width: 125%;
-    }
-
-    &-nav-left {
-      position: absolute;
-      top: 2vh;
-      left: 2vw;
-    }
-
-    &-nav-right {
-      position: absolute;
-      top: 2vh;
-      right: 2vw;
     }
   }
 }
@@ -143,7 +94,7 @@
 @media only screen and (min-width: 1000px) {
   .home {
     &-logo {
-      width: 100%;
+      max-width: 450px;
     }
 
     &-flowers {
@@ -152,13 +103,13 @@
     }
 
     &-nav-left {
-      top: 4vh;
-      left: 2vw;
+      top: 2rem;
+      left: 2rem;
     }
 
     &-nav-right {
-      top: 4vh;
-      right: 2vw;
+      top: 2rem;
+      right: 2rem;
     }
   }
 

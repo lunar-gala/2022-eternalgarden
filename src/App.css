@@ -14,11 +14,3 @@ body {
     url(./assets/images/noise.svg);
   z-index: 1;
 }
-
-@media only screen and (max-width: 450px) {
-  .noise {
-    filter: contrast(100%) brightness(100%) grayscale(100%) opacity(0.1);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.05), rgba(0, 0, 0, 0.05)),
-      url(./assets/images/noise.svg);
-  }
-}

@@ -202,21 +202,21 @@ export default function About() {
             ABOUT
           </motion.h1>
           <motion.h2 className={cn('h4', styles.subheader)} variants={item}>
-            A RETURN TO THE GARDEN
+            A RETURN TO THE ETERNAL GARDEN
           </motion.h2>
           <div className={styles.content}>
             <motion.p className="body" variants={item}>
               A garden lives within each of us. We tend to the flowers, dance
               across the grass, and feel the warmth of youth shine upon our
               skin. In this mysterious yet familiar world, we rediscover our
-              inner child.<br></br>
-              <br></br>
+              inner child.
+            </motion.p>
+            <motion.p className="body" variants={item}>
               Lunar Gala 2022 features 14 lines, each with their own story. Join
               us on March 20th for a journey filled with artistry, play, and
               wonder.
-              <br></br>
-              <br></br>
-              <br></br>
+            </motion.p>
+            <motion.p className="body" variants={item}>
               Carnegie Music Hall<br></br>March 20th 6:30PM EST
             </motion.p>
           </div>

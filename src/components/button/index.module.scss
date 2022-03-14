@@ -40,20 +40,3 @@
     color: inherit;
   }
 }
-
-@media (pointer: coarse) {
-  .btn:hover {
-    transform: none;
-    background: transparent;
-    color: $off-white;
-    opacity: 1;
-    color: $solid-accent;
-  }
-
-  .btnWhite:hover {
-    background: transparent;
-    color: $off-white;
-    opacity: 1;
-    // background: yellow;
-  }
-}

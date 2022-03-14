@@ -1,4 +1,3 @@
-import { AnimatePresence } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import cn from 'classnames';
@@ -59,7 +58,6 @@ const logo = {
   visible: {
     opacity: 1,
     transition: {
-      duration: 1,
       ease: 'easeOut',
       duration: 0.3,
       delay: 0.6,
@@ -120,43 +118,33 @@ export default function Menu() {
                 ABOUT
               </Link>
             </motion.h3>
-
             <motion.h3
               className={cn(styles.item, styles.active)}
               variants={item}
             >
-              <a
+              <Link
+                to="/lines"
+                state={{ previousLocation: '/menu' }}
                 className={cn(styles.item)}
-                href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
-                target="_blank"
-                rel="noopener noreferrer"
               >
-                TICKETS
-              </a>
+                LINES
+              </Link>
+            </motion.h3>
+            <motion.h3 className={cn(styles.disabled)} variants={item}>
+              PEOPLE
+              <span className={cn('h5', styles.highlight)}>COMING 3/18</span>
             </motion.h3>
             <motion.h3
               className={cn(styles.item, styles.highlight)}
               variants={item}
             >
               <a
-                href="https://docs.google.com/forms/d/e/1FAIpQLSekz-SgRUPF2_M_5DGIfio-2hwVc7LnaUKAau1qBTZ1A7H6Pg/viewform"
+                href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
                 target="_blank"
                 rel="noopener noreferrer"
               >
-                FLOWER SALE
+                TICKETS
               </a>
-            </motion.h3>
-            <motion.h3 className={cn(styles.disabled)} variants={item}>
-              LINES
-              <span className={cn('h5', styles.highlight)}>COMING 3/17</span>
-            </motion.h3>
-            <motion.h3 className={cn(styles.disabled)} variants={item}>
-              PEOPLE
-              <span className={cn('h5', styles.highlight)}>COMING 3/17</span>
-            </motion.h3>
-            <motion.h3 className={cn(styles.disabled)} variants={item}>
-              MERCH
-              <span className={cn('h5', styles.highlight)}>COMING SOON</span>
             </motion.h3>
           </motion.div>
         </div>

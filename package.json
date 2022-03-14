@@ -1,6 +1,6 @@
 {
   "name": "2022-eternalgarden",
-  "homepage": "https://2022.lunargala.org",
+  "homepage": "http://lunargala.org/2022-eternalgarden/",
   "private": true,
   "dependencies": {
     "@types/jest": "^27.4.0",

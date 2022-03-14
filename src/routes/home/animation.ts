@@ -3,32 +3,21 @@ const container = {
   loading: {
     clipPath: 'inset(40% 44% 40% 44% round 300px 300px 0% 0%)',
   },
-  // show: {
-  //   clipPath: 'inset(8% 2% 0% 2% round 300px 300px 0% 0%)',
-  // },
+  show: {
+    clipPath: 'inset(8% 2% 0% 2% round 300px 300px 0% 0%)',
+  },
   exit: {
     clipPath: 'inset(100% 2% 0% 2% round 300px 300px 0% 0%)',
   },
 };
 
-const subheader = {
-  loading: {
-    opacity: 0,
-    background: 'yellow',
-  },
-  show: {
-    opacity: 1,
-    background: 'yellow',
-  },
-};
-
 const preloaderTransition = {
-  duration: 0.7,
-  ease: [0.76, 0, 0.24, 1],
+  duration: 1,
+  ease: [0.85, 0, 0.55, 1],
 };
 
 const menuTransition = {
-  duration: 0.7,
+  duration: 1,
   ease: [0.16, 1, 0.3, 1],
 };
 
@@ -64,7 +53,6 @@ const logoVariants = {
   },
   show: {
     scale: 1,
-
     top: '40%',
     y: '-50%',
     x: '-50%',
@@ -82,7 +70,6 @@ const flowerVariants = {
 
 export {
   container,
-  subheader,
   buttonVariants,
   buttonTransition1,
   buttonTransition2,
