@@ -123,14 +123,6 @@ export default function Menu() {
               className={cn(styles.item, styles.active)}
               variants={item}
             >
-              <Link
-                to="/lines"
-                state={{ previousLocation: '/menu' }}
-                className={cn(styles.item)}
-              >
-                LINES
-              </Link>
-
               <a
                 className={cn(styles.item)}
                 href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
@@ -140,15 +132,31 @@ export default function Menu() {
                 TICKETS
               </a>
             </motion.h3>
-            <motion.h3 className={cn(styles.disabled)} variants={item}>
-              LINES
-              <span className={cn('h5', styles.highlight)}>COMING 3/17</span>
-              >>>>>>> people-page
+            <motion.h3
+              className={cn(styles.item, styles.active)}
+              variants={item}
+            >
+              <Link
+                to="/people"
+                state={{ previousLocation: '/menu' }}
+                className={cn(styles.item)}
+              >
+                PEOPLE
+              </Link>
             </motion.h3>
-            <motion.h3 className={cn(styles.disabled)} variants={item}>
-              PEOPLE
-              <span className={cn('h5', styles.highlight)}>COMING 3/17</span>
+            <motion.h3
+              className={cn(styles.item, styles.active)}
+              variants={item}
+            >
+              <Link
+                to="/lines"
+                state={{ previousLocation: '/menu' }}
+                className={cn(styles.item)}
+              >
+                LINES
+              </Link>
             </motion.h3>
+
             <motion.h3 className={cn(styles.disabled)} variants={item}>
               MERCH
               <span className={cn('h5', styles.highlight)}>COMING SOON</span>
