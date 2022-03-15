@@ -2,7 +2,7 @@ import cn from 'classnames';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
-import data from './people';
+import data from './people.json';
 
 import styles from './index.module.scss';
 import Button from 'components/button';
@@ -207,18 +207,31 @@ export default function People() {
           {data.map((item) => {
             return (
               <div key={item.team}>
-                <motion.h2
-                  className={cn('h4', styles.subheader)}
-                  variants={item}
-                >
-                  {item.team}
-                </motion.h2>
+                {!item.subteam && (
+                  <motion.h2
+                    className={cn('h3', styles.subheader)}
+                    variants={item}
+                  >
+                    {item.team}
+                  </motion.h2>
+                )}
+
+                {/* TODO: pls change this styling */}
+                {item.subteam && (
+                  <motion.h4
+                    className={cn('h4', styles.subheader)}
+                    variants={item}
+                  >
+                    {item.subteam}
+                  </motion.h4>
+                )}
+
                 <div className={styles.content}>
                   {item.people.map((person) => {
                     return (
                       <div className={styles.card} key={person.slug}>
                         <img
-                          src={`assets/people/${person.slug}.jpg`}
+                          src={`assets/people/${person.slug}`}
                           alt={person.name + ' photo'}
                         />
                         <p>{person.name}</p>
