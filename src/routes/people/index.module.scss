@@ -46,6 +46,9 @@
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .noise {
@@ -109,10 +112,10 @@
 
 .roundFlower {
   position: absolute;
-  transform: rotate(45deg);
+  transform: rotate(25deg);
   width: 320px;
-  bottom: -200px;
-  left: -180px;
+  bottom: -215px;
+  left: -160px;
 }
 @media screen and (max-width: 1200px) {
   .eyeFlower {
