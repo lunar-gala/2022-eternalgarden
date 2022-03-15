@@ -1,11 +1,11 @@
 import os
 import json
 
-start_path = '.' # current directory
+start_path = '.'
 data = [];
-for path,dirs,files in os.walk(start_path):
-    # if (path == start_path): continue
 
+for path,dirs,files in os.walk(start_path):
+    
     teamPaths = path.split('/')
 
     teamName = teamPaths[len(teamPaths) - 1]
