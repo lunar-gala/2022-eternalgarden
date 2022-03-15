@@ -122,10 +122,27 @@
 }
 
 @media screen and (max-width: 768px) {
-  .content {
-    width: 95%;
+  .rose {
+    display: none;
+  }
+
+  .roseSingle {
+    display: none;
+  }
+
+  .sunflower {
+    display: none;
   }
 }
 
-@media screen and (max-width: 414px) {
+@media screen and (max-width: 475px) {
+  .roundFlower {
+    display: none;
+  }
+  .content {
+    width: 90%;
+  }
+  .groupPurpleFlower {
+    display: none;
+  }
 }

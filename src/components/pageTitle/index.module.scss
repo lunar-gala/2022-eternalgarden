@@ -2,11 +2,5 @@
 
 .header {
   text-transform: uppercase;
-  margin-top: $spacing-4;
-}
-
-@media screen and (min-width: 768px) {
-  .header {
-    margin-top: $spacing-10;
-  }
+  margin-top: $spacing-10;
 }
