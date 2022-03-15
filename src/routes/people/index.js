@@ -233,6 +233,7 @@ export default function People() {
           animate="visible"
           exit="hidden"
           transition={{ ...transition, delay: 0.1 }}
+          className="flowers"
         >
           <motion.div className={styles.eyeFlower} variants={flower}>
             <Lottie options={eyeFlowerSettings} />
