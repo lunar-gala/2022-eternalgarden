@@ -9,6 +9,7 @@ import Menu from 'routes/menu';
 import About from 'routes/about';
 import Lines from 'routes/lines';
 import Guide from 'routes/guide';
+import People from 'routes/people';
 
 export default function App() {
   const location = useLocation();
@@ -21,6 +22,7 @@ export default function App() {
           <Route path="/menu" element={<Menu />} />
           <Route path="/about" element={<About />} />
           <Route path="/lines" element={<Lines />} />
+          <Route path="/people" element={<People />} />
           <Route path="/guide" element={<Guide />} />
         </Routes>
       </AnimatePresence>

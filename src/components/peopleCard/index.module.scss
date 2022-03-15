@@ -1,0 +1,23 @@
+@import '../../styles/variables.scss';
+.card {
+  max-width: 136px;
+  width: 136px;
+  margin: 8px 8px;
+  img {
+    width: 100%;
+    object-fit: cover;
+    // height: auto;
+    object-position: top center;
+    height: 80%;
+    border: 1px solid $off-white;
+    border-radius: 8px;
+    transition: box-shadow 0.2s, transform 0.2s;
+  }
+}
+
+.card:hover {
+  transform: scale(1.01);
+  img {
+    box-shadow: 0 0 40px 0 rgba(255, 255, 255, 0.3);
+  }
+}
