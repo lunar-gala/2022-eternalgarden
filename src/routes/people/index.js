@@ -7,6 +7,7 @@ import data from './people.json';
 import styles from './index.module.scss';
 import Button from 'components/button';
 import Lottie from 'react-lottie';
+import PageTitle from 'components/pageTitle';
 
 import rose from 'assets/people_animation/rosegroup/rosegroup.json';
 import roseSingle from 'assets/people_animation/rosesingle/rosesingle.json';
@@ -191,7 +192,6 @@ export default function People() {
               </a>
             </Button>
           </motion.div>
-          {/* </Link> */}
         </div>
         <motion.div
           variants={items}
@@ -199,9 +199,7 @@ export default function People() {
           animate="visible"
           exit="hidden"
         >
-          <motion.h1 className={cn('h2', styles.header)} variants={item}>
-            PEOPLE
-          </motion.h1>
+          <PageTitle title="People"></PageTitle>
           {data.map((item) => {
             return (
               <div key={item.team}>
@@ -249,23 +247,17 @@ export default function People() {
           transition={{ ...transition, delay: 0.1 }}
           className={styles.flowers}
         >
-          {/* <motion.div className={styles.eyeFlower} variants={flower}>
-            <Lottie options={maxbudSettings} />
-          </motion.div> */}
-          {/* <motion.div className={styles.orangeFlower} variants={flower}>
-            <Lottie options={pointyFlowerSettings} />
-          </motion.div> */}
           <motion.div className={styles.rose} variants={flower}>
             <Lottie options={roseSettings} />
           </motion.div>
           <motion.div className={styles.roseSingle} variants={flower}>
             <Lottie options={roseSingleSettings} />
           </motion.div>
-          <motion.div className={styles.sunflower} variants={flower}>
-            <Lottie options={sunflowerSettings} />
-          </motion.div>
           <motion.div className={styles.roundFlower} variants={flower}>
             <Lottie options={roundFlowerSettings} />
+          </motion.div>
+          <motion.div className={styles.sunflower} variants={flower}>
+            <Lottie options={sunflowerSettings} />
           </motion.div>
           <motion.div className={styles.groupPurpleFlower} variants={flower}>
             <Lottie options={groupPurpleFlowerSettings} />

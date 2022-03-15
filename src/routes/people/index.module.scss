@@ -19,26 +19,27 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: fixed;
+  width: calc(100vw - 4rem);
 }
 
 .card {
   max-width: 136px;
   width: 136px;
-  margin: 0 8px;
-
+  margin: 8px 8px;
   img {
     width: 100%;
-    height: auto;
+    object-fit: cover;
+    // height: auto;
+    object-position: top center;
+    height: 80%;
     border: 1px solid $off-white;
+    border-radius: 8px;
   }
 }
 
-.header {
-  margin-top: $spacing-4;
-}
-
 .subheader {
-  margin-top: 8vh;
+  margin: 64px 0 12px 0;
   text-transform: uppercase;
 }
 
@@ -66,21 +67,21 @@
 }
 
 .eyeFlower {
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: -250px;
   width: 600px;
 }
 
 .orangeFlower {
-  position: absolute;
+  position: fixed;
   bottom: -300px;
   right: -240px;
   width: 550px;
 }
 
 .rose {
-  position: absolute;
+  position: fixed;
   transform: rotate(-20deg);
   bottom: 230px;
   width: 270px;
@@ -88,7 +89,7 @@
 }
 
 .roseSingle {
-  position: absolute;
+  position: fixed;
   transform: rotate(45deg);
   bottom: -225px;
   left: -170px;
@@ -96,22 +97,22 @@
 }
 
 .groupPurpleFlower {
-  position: absolute;
-  bottom: -1200px;
+  position: fixed;
+  bottom: -200px;
   right: -220px;
   transform: rotate(80deg);
 }
 
 .sunflower {
-  position: absolute;
+  position: fixed;
   transform: rotate(35deg);
-  bottom: -275px;
+  bottom: -235px;
   left: -100px;
   width: 400px;
 }
 
 .roundFlower {
-  position: absolute;
+  position: fixed;
   transform: rotate(25deg);
   width: 320px;
   bottom: -215px;

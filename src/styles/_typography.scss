@@ -33,6 +33,7 @@
 * {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  margin: 0;
 }
 
 /**
@@ -95,7 +96,7 @@ p,
 }
 
 // convert to desktop type styles
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
   h1,
   .h1 {
     font-size: $font-size-7;
