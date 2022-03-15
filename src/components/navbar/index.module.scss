@@ -1,0 +1,17 @@
+@import '../../styles/variables.scss';
+
+// .navContainer{
+//   position: fixed;
+//   top
+// }
+.navLeft {
+  position: fixed;
+  top: 24px;
+  left: 24px;
+}
+
+.navRight {
+  position: fixed;
+  top: 24px;
+  right: 24px;
+}

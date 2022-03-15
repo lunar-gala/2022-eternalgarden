@@ -6,6 +6,9 @@ import './index.scss';
 import Button from '../../components/button/index';
 import Card from '../../components/card/card';
 import { LINE_INFO } from 'assets/lines/line_data';
+import NavBar from 'components/navbar';
+
+import BottomGradient from 'components/bottomGradient';
 import {
   transition,
   button,
@@ -70,6 +73,27 @@ const sunflowerSettings = {
   },
 };
 
+const flowerStagger = {
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: 'afterChildren',
+      staggerChildren: 0.05,
+      ease: 'easeOut',
+      delay: 0.07,
+    },
+  },
+  visible: {
+    opacity: 1,
+    transition: {
+      when: 'beforeChildren',
+      staggerChildren: 0.05,
+      delay: 0.07,
+      ease: 'easeOut',
+    },
+  },
+};
+
 export default function Lines() {
   const controls = useAnimation();
 
@@ -82,36 +106,6 @@ export default function Lines() {
       exit="hidden"
       transition={{ ...transition, delay: 0, duration: 0.3 }}
     >
-      <Link to="/menu" state={{ previousLocation: '/lines' }}>
-        <motion.div
-          className="home-nav-left"
-          variants={button}
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
-          transition={{ ...transition, delay: 0.1 }}
-        >
-          <Button type="white">Explore</Button>
-        </motion.div>
-      </Link>
-      <motion.div
-        className="home-nav-right"
-        variants={button}
-        initial="hidden"
-        animate="visible"
-        exit="hidden"
-        transition={{ ...transition, delay: 0.1 }}
-      >
-        <Button type="white">
-          <a
-            href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tickets
-          </a>
-        </Button>
-      </motion.div>
       <div className="lines-main">
         {/* noise on top of flowers + logo, so it is last */}
         <ul className="lines-list">
@@ -152,22 +146,33 @@ export default function Lines() {
             <motion.img className="flowers-right-dragonfly" src={dragonfly} />
           </motion.div>
         </motion.div> */}
-        <div className="lines-gradient"></div>
-        <div className="noise" />
       </div>
-
-      <motion.div id="purple3flower" variants={flower}>
+      <BottomGradient></BottomGradient>
+      <div className="noise" />
+      <NavBar prevLoc="lines"></NavBar>
+      {/* <motion.div className="purple3flower" variants={flower}>
         <Lottie options={purple3flowerSettings} />
-      </motion.div>
-      <motion.div id="maxBud" variants={flower}>
-        <Lottie options={maxBudSettings} />
-      </motion.div>
-      <motion.div id="sunflower" variants={flower}>
-        <Lottie options={sunflowerSettings} />
-      </motion.div>
-      <motion.div id="dragonfly" variants={flower}>
-        <Lottie options={dragonflySettings} />
-      </motion.div>
+      </motion.div> */}
+      {/* <motion.div
+        variants={flowerStagger}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+        transition={{ ...transition, delay: 0.1 }}
+      >
+        <motion.div className="purple3flower" variants={flower}>
+          <Lottie options={purple3flowerSettings} />
+        </motion.div>
+        <motion.div className="maxBud" variants={flower}>
+          <Lottie options={maxBudSettings} />
+        </motion.div>
+        <motion.div className="sunflower" variants={flower}>
+          <Lottie options={sunflowerSettings} />
+        </motion.div>
+        <motion.div className="dragonfly" variants={flower}>
+          <Lottie options={dragonflySettings} />
+        </motion.div>
+      </motion.div> */}
     </motion.section>
   );
 }

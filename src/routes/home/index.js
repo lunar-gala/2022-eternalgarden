@@ -12,6 +12,7 @@ import useWindowSize, { Size } from 'hooks/useWindowSize';
 import logo from 'assets/images/logo.svg';
 import { ReactComponent as LGLogo } from 'assets/icons/white-lg-logo.svg';
 import Button from 'components/button';
+import NavBar from 'components/navbar';
 import {
   buttonVariants,
   buttonTransition1,
@@ -122,6 +123,7 @@ export default function Home() {
   return (
     <div className="homeContainer">
       <motion.div className="home">
+        {/* <NavBar prevLoc=""></NavBar> */}
         <Link to="/menu" state={{ previousLocation: '/' }}>
           <motion.div
             className="home-nav-left"

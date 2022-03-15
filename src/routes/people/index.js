@@ -3,12 +3,14 @@ import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 
 import data from './people.json';
+import NavBar from 'components/navbar';
 
 import styles from './index.module.scss';
 import Button from 'components/button';
 import Lottie from 'react-lottie';
 import PageTitle from 'components/pageTitle';
 import PeopleCard from 'components/peopleCard';
+import BottomGradient from 'components/bottomGradient';
 
 import rose from 'assets/people_animation/rosegroup/rosegroup.json';
 import roseSingle from 'assets/people_animation/rosesingle/rosesingle.json';
@@ -162,38 +164,8 @@ export default function People() {
         exit="hidden"
         transition={{ ...transition, delay: 0, duration: 0.3 }}
       >
-        <div className={styles.navbar}>
-          <Link to="/menu" state={{ previousLocation: '/people' }}>
-            <motion.div
-              className={styles.wrapper}
-              variants={button}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              transition={{ ...transition, delay: 0.1 }}
-            >
-              <Button type="white">Explore</Button>
-            </motion.div>
-          </Link>
-          <motion.div
-            className={styles.wrapper}
-            variants={button}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            transition={{ ...transition, delay: 0.1 }}
-          >
-            <Button type="white">
-              <a
-                href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Tickets
-              </a>
-            </Button>
-          </motion.div>
-        </div>
+        <NavBar prevLoc="people"></NavBar>
+
         <motion.div
           variants={items}
           initial="hidden"
@@ -237,31 +209,33 @@ export default function People() {
             );
           })}
         </motion.div>
-        <motion.div
-          variants={flowerStagger}
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
-          transition={{ ...transition, delay: 0.1 }}
-          className={styles.flowers}
-        >
-          <motion.div className={styles.rose} variants={flower}>
-            <Lottie options={roseSettings} />
-          </motion.div>
-          <motion.div className={styles.roseSingle} variants={flower}>
-            <Lottie options={roseSingleSettings} />
-          </motion.div>
-          <motion.div className={styles.roundFlower} variants={flower}>
-            <Lottie options={roundFlowerSettings} />
-          </motion.div>
-          <motion.div className={styles.sunflower} variants={flower}>
-            <Lottie options={sunflowerSettings} />
-          </motion.div>
-          <motion.div className={styles.groupPurpleFlower} variants={flower}>
-            <Lottie options={groupPurpleFlowerSettings} />
-          </motion.div>
-        </motion.div>
       </motion.section>
+
+      <BottomGradient></BottomGradient>
+      <motion.div
+        variants={flowerStagger}
+        initial="hidden"
+        animate="visible"
+        exit="hidden"
+        transition={{ ...transition, delay: 0.1 }}
+        className={styles.flowers}
+      >
+        <motion.div className={styles.rose} variants={flower}>
+          <Lottie options={roseSettings} />
+        </motion.div>
+        <motion.div className={styles.roseSingle} variants={flower}>
+          <Lottie options={roseSingleSettings} />
+        </motion.div>
+        <motion.div className={styles.roundFlower} variants={flower}>
+          <Lottie options={roundFlowerSettings} />
+        </motion.div>
+        <motion.div className={styles.sunflower} variants={flower}>
+          <Lottie options={sunflowerSettings} />
+        </motion.div>
+        <motion.div className={styles.groupPurpleFlower} variants={flower}>
+          <Lottie options={groupPurpleFlowerSettings} />
+        </motion.div>
+      </motion.div>
       <div className={cn('noise', styles.noise)} />
     </div>
   );
