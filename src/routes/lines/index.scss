@@ -15,61 +15,23 @@
   display: inline-block;
 }
 
-.flowers {
-  z-index: 200;
-  position: fixed;
+#purple3flower {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#maxBud {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#sunflower {
+  position: absolute;
+  transform: rotate(20deg);
   bottom: 0;
-  width: 100vw;
-  pointer-events: none;
-
-  div * {
-    transform: scale(0.7);
-  }
-
-  &-right {
-    position: absolute;
-    right: 0;
-    bottom: 0;
-
-    * {
-      position: absolute;
-    }
-
-    &-blue {
-      bottom: -70px;
-      right: -80px;
-    }
-
-    &-dragonfly {
-      bottom: 550px;
-      right: 90px;
-    }
-  }
-
-  &-left {
-    position: absolute;
-    left: 0;
-    bottom: 0;
-
-    * {
-      position: absolute;
-    }
-
-    &-blue {
-      left: -180px;
-      bottom: -85px;
-    }
-
-    &-red__big {
-      left: -180px;
-      bottom: 500px;
-    }
-
-    &-red__small {
-      bottom: 550px;
-      left: -75px;
-    }
-  }
+  left: 0;
 }
 
 .lines {
@@ -164,12 +126,6 @@
   .lines-list {
     font-size: 7.5vw;
   }
-
-  .flowers {
-    div * {
-      transform: scale(0.8);
-    }
-  }
 }
 
 // convert to desktop type styles
@@ -186,46 +142,7 @@
     }
   }
 
-  .flowers {
-    div * {
-      transform: scale(1);
-    }
-
-    &-right {
-      * {
-        position: absolute;
-      }
-
-      &-blue {
-        bottom: 0px;
-        right: 0px;
-      }
-
-      &-dragonfly {
-        bottom: 550px;
-        right: 90px;
-      }
-    }
-
-    &-left {
-      * {
-        position: absolute;
-      }
-
-      &-blue {
-        left: -130px;
-        bottom: -85px;
-      }
-
-      &-red__big {
-        left: -160px;
-        bottom: 380px;
-      }
-
-      &-red__small {
-        bottom: 405px;
-        left: -55px;
-      }
-    }
+  #purple3flower {
+    bottom: 0;
   }
 }

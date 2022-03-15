@@ -16,9 +16,59 @@ import {
 
 import blueFlowerLeft from 'assets/lines_animation/blue_flower_left.svg';
 import blueFlowerRight from 'assets/lines_animation/blue_flowers_right.svg';
-import dragonfly from 'assets/lines_animation/dragonfly.svg';
 import redFlowerSmall from 'assets/lines_animation/red_flower_small.svg';
 import redFlowerBig from 'assets/lines_animation/red_flower_big.svg';
+
+//lottie files
+import Lottie from 'react-lottie';
+import purple3flower from 'assets/lines_animation/purple3flower.json';
+import maxBud from 'assets/lines_animation/maxbud.json';
+import sunflower from 'assets/lines_animation/sunflower.json';
+import dragonfly from 'assets/lines_animation/dragonfly.json';
+
+const flower = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
+
+const purple3flowerSettings = {
+  loop: true,
+  autoplay: true,
+  animationData: purple3flower,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
+
+const dragonflySettings = {
+  loop: true,
+  autoplay: true,
+  animationData: dragonfly,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
+
+const maxBudSettings = {
+  loop: true,
+  autoplay: true,
+  animationData: maxBud,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
+const sunflowerSettings = {
+  loop: true,
+  autoplay: true,
+  animationData: sunflower,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
 
 export default function Lines() {
   const controls = useAnimation();
@@ -76,7 +126,7 @@ export default function Lines() {
             );
           })}
         </ul>
-        <motion.div className="flowers">
+        {/* <motion.div className="flowers">
           <motion.div
             className="flowers-left"
             initial="lineList"
@@ -101,10 +151,23 @@ export default function Lines() {
             <motion.img className="flowers-right-blue" src={blueFlowerRight} />
             <motion.img className="flowers-right-dragonfly" src={dragonfly} />
           </motion.div>
-        </motion.div>
+        </motion.div> */}
         <div className="lines-gradient"></div>
         <div className="noise" />
       </div>
+
+      <motion.div id="purple3flower" variants={flower}>
+        <Lottie options={purple3flowerSettings} />
+      </motion.div>
+      <motion.div id="maxBud" variants={flower}>
+        <Lottie options={maxBudSettings} />
+      </motion.div>
+      <motion.div id="sunflower" variants={flower}>
+        <Lottie options={sunflowerSettings} />
+      </motion.div>
+      <motion.div id="dragonfly" variants={flower}>
+        <Lottie options={dragonflySettings} />
+      </motion.div>
     </motion.section>
   );
 }
