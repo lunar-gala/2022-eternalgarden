@@ -10,6 +10,7 @@
   text-align: center;
   background: $gradient-home;
   overflow-y: scroll;
+  overflow-x: hidden;
   color: $white;
   z-index: 3;
 }
@@ -53,12 +54,11 @@
 
 .flowers {
   opacity: 1;
-  position: fixed;
   bottom: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
   pointer-events: none;
+  overflow: hidden;
+  width: 100%;
 }
 
 .eyeFlower {
@@ -75,25 +75,43 @@
   width: 550px;
 }
 
-.pinkFlower {
+.rose {
   position: absolute;
-  bottom: -230px;
-  right: 20px;
-  width: 500px;
+  transform: rotate(-20deg);
+  bottom: 230px;
+  width: 270px;
+  right: -100px;
+}
+
+.roseSingle {
+  position: absolute;
+  transform: rotate(45deg);
+  bottom: -225px;
+  left: -170px;
+  width: 370px;
 }
 
 .groupPurpleFlower {
   position: absolute;
-  bottom: -275px;
-  left: 0;
-  width: 500px;
+  bottom: -1000px;
+  right: -220px;
+  transform: rotate(80deg);
 }
 
-.singlePurpleFlower {
+.sunflower {
   position: absolute;
-  width: 500px;
+  transform: rotate(35deg);
+  bottom: -275px;
+  left: -100px;
+  width: 400px;
+}
+
+.roundFlower {
+  position: absolute;
+  transform: rotate(45deg);
+  width: 320px;
   bottom: -200px;
-  left: -200px;
+  left: -180px;
 }
 @media screen and (max-width: 1200px) {
   .eyeFlower {

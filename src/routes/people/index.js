@@ -7,40 +7,16 @@ import data from './people';
 import styles from './index.module.scss';
 import Button from 'components/button';
 import Lottie from 'react-lottie';
-import eyeFlower from 'assets/about_animation/eyeflower/eyeflower.json';
-import orangeFlower from 'assets/about_animation/orangeflower/orangeflower.json';
-import pinkFlower from 'assets/about_animation/pinkflower/pinkflower.json';
+
+import maxbud from 'assets/people_animation/maxbud/maxbud.json';
+import pointyFlower from 'assets/people_animation/pointyflower/pointyflower.json';
+import rose from 'assets/people_animation/rosegroup/rosegroup.json';
+import roseSingle from 'assets/people_animation/rosesingle/rosesingle.json';
+import roundFlower from 'assets/people_animation/roundflower/roundflower.json';
+import sunflower from 'assets/people_animation/sunflower/sunflower.json';
 import groupPurpleFlower from 'assets/about_animation/group_purpleflower/group_purpleflower.json';
-import singlePurpleFlower from 'assets/about_animation/single_purpleflower/single_purpleflower.json';
 
 //lottieAnimation settings
-const eyeFlowerSettings = {
-  loop: true,
-  autoplay: true,
-  animationData: eyeFlower,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
-  },
-};
-
-const orangeFlowerSettings = {
-  loop: true,
-  autoplay: true,
-  animationData: orangeFlower,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
-  },
-};
-
-const pinkFlowerSettings = {
-  loop: true,
-  autoplay: true,
-  animationData: pinkFlower,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
-  },
-};
-
 const groupPurpleFlowerSettings = {
   loop: true,
   autoplay: true,
@@ -50,10 +26,37 @@ const groupPurpleFlowerSettings = {
   },
 };
 
-const singlePurpleFlowerSettings = {
+const roseSettings = {
   loop: true,
   autoplay: true,
-  animationData: singlePurpleFlower,
+  animationData: rose,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
+
+const roseSingleSettings = {
+  loop: true,
+  autoplay: true,
+  animationData: roseSingle,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
+
+const roundFlowerSettings = {
+  loop: true,
+  autoplay: true,
+  animationData: roundFlower,
+  rendererSettings: {
+    preserveAspectRatio: 'xMidYMid slice',
+  },
+};
+
+const sunflowerSettings = {
+  loop: true,
+  autoplay: true,
+  animationData: sunflower,
   rendererSettings: {
     preserveAspectRatio: 'xMidYMid slice',
   },
@@ -235,17 +238,23 @@ export default function People() {
           transition={{ ...transition, delay: 0.1 }}
           className={styles.flowers}
         >
-          <motion.div className={styles.eyeFlower} variants={flower}>
-            <Lottie options={eyeFlowerSettings} />
+          {/* <motion.div className={styles.eyeFlower} variants={flower}>
+            <Lottie options={maxbudSettings} />
+          </motion.div> */}
+          {/* <motion.div className={styles.orangeFlower} variants={flower}>
+            <Lottie options={pointyFlowerSettings} />
+          </motion.div> */}
+          <motion.div className={styles.rose} variants={flower}>
+            <Lottie options={roseSettings} />
           </motion.div>
-          <motion.div className={styles.orangeFlower} variants={flower}>
-            <Lottie options={orangeFlowerSettings} />
+          <motion.div className={styles.roseSingle} variants={flower}>
+            <Lottie options={roseSingleSettings} />
           </motion.div>
-          <motion.div className={styles.pinkFlower} variants={flower}>
-            <Lottie options={pinkFlowerSettings} />
+          <motion.div className={styles.sunflower} variants={flower}>
+            <Lottie options={sunflowerSettings} />
           </motion.div>
-          <motion.div className={styles.singlePurpleFlower} variants={flower}>
-            <Lottie options={singlePurpleFlowerSettings} />
+          <motion.div className={styles.roundFlower} variants={flower}>
+            <Lottie options={roundFlowerSettings} />
           </motion.div>
           <motion.div className={styles.groupPurpleFlower} variants={flower}>
             <Lottie options={groupPurpleFlowerSettings} />
