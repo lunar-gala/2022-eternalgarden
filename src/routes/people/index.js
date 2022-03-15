@@ -8,6 +8,7 @@ import styles from './index.module.scss';
 import Button from 'components/button';
 import Lottie from 'react-lottie';
 import PageTitle from 'components/pageTitle';
+import PeopleCard from 'components/peopleCard';
 
 import rose from 'assets/people_animation/rosegroup/rosegroup.json';
 import roseSingle from 'assets/people_animation/rosesingle/rosesingle.json';
@@ -225,13 +226,10 @@ export default function People() {
                 <div className={styles.content}>
                   {item.people.map((person) => {
                     return (
-                      <div className={styles.card} key={person.slug}>
-                        <img
-                          src={`assets/people/${person.slug}`}
-                          alt={person.name + ' photo'}
-                        />
-                        <p>{person.name}</p>
-                      </div>
+                      <PeopleCard
+                        name={person.name}
+                        slug={person.slug}
+                      ></PeopleCard>
                     );
                   })}
                 </div>

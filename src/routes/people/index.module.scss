@@ -119,31 +119,13 @@
   left: -160px;
 }
 @media screen and (max-width: 1200px) {
-  .eyeFlower {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 768px) {
-  .pinkFlower {
-    display: none;
+  .content {
+    width: 95%;
   }
 }
 
 @media screen and (max-width: 414px) {
-  .header {
-    margin-top: $spacing-8;
-  }
-  .singlePurpleFlower {
-    bottom: -240px;
-    left: -200px;
-  }
-
-  .groupPurpleFlower {
-    display: none;
-  }
-
-  .orangeFlower {
-    left: 140px;
-  }
 }
