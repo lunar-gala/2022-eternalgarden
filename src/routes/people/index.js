@@ -8,8 +8,6 @@ import styles from './index.module.scss';
 import Button from 'components/button';
 import Lottie from 'react-lottie';
 
-import maxbud from 'assets/people_animation/maxbud/maxbud.json';
-import pointyFlower from 'assets/people_animation/pointyflower/pointyflower.json';
 import rose from 'assets/people_animation/rosegroup/rosegroup.json';
 import roseSingle from 'assets/people_animation/rosesingle/rosesingle.json';
 import roundFlower from 'assets/people_animation/roundflower/roundflower.json';

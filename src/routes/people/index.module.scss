@@ -29,6 +29,7 @@
   img {
     width: 100%;
     height: auto;
+    border: 1px solid $off-white;
   }
 }
 
@@ -93,7 +94,7 @@
 
 .groupPurpleFlower {
   position: absolute;
-  bottom: -1000px;
+  bottom: -1200px;
   right: -220px;
   transform: rotate(80deg);
 }
