@@ -160,7 +160,7 @@ export default function People() {
         transition={{ ...transition, delay: 0, duration: 0.3 }}
       >
         <div className={styles.navbar}>
-          <Link to="/menu" state={{ previousLocation: '/about' }}>
+          <Link to="/menu" state={{ previousLocation: '/people' }}>
             <motion.div
               className={styles.wrapper}
               variants={button}
@@ -233,7 +233,7 @@ export default function People() {
           animate="visible"
           exit="hidden"
           transition={{ ...transition, delay: 0.1 }}
-          className="flowers"
+          className={styles.flowers}
         >
           <motion.div className={styles.eyeFlower} variants={flower}>
             <Lottie options={eyeFlowerSettings} />
