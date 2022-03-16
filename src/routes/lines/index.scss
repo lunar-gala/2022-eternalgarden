@@ -9,25 +9,6 @@
   display: inline-block;
 }
 
-#purple3flower {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#maxBud {
-  position: absolute;
-  top: 0;
-  left: 0;
-}
-
-#sunflower {
-  position: absolute;
-  transform: rotate(20deg);
-  bottom: 0;
-  left: 0;
-}
-
 .lines {
   color: $white;
   // z-index: 3;
@@ -106,6 +87,68 @@
   }
 }
 
+.flowers {
+  z-index: 200;
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  opacity: 1;
+  overflow: hidden;
+
+  &-right,
+  &-left {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    > * {
+      position: fixed;
+    }
+  }
+
+  &-right {
+    &-blue {
+      bottom: -70px;
+      right: -80px;
+      width: 450px;
+    }
+
+    &-dragonfly {
+      width: 250px;
+      transform: rotate(-35deg);
+      bottom: 550px;
+      right: 90px;
+    }
+  }
+
+  &-left {
+    &-blue {
+      width: 500px;
+      transform: rotate(25deg);
+      left: -180px;
+      bottom: -85px;
+    }
+
+    &-red__big {
+      width: 325px;
+      transform: rotate(30deg);
+      left: -180px;
+      bottom: 500px;
+    }
+
+    &-red__small {
+      width: 225px;
+      transform: rotate(45deg);
+      bottom: 550px;
+      left: -75px;
+    }
+  }
+}
+
 .lines-item p,
 .lines-list,
 .card-heading {
@@ -134,8 +177,34 @@
     }
   }
 
-  #purple3flower {
-    width: 100%;
-    bottom: 0;
+  .flowers {
+    &-right {
+      &-blue {
+        bottom: -100px;
+        right: 0px;
+      }
+
+      &-dragonfly {
+        bottom: 600px;
+        right: 10px;
+      }
+    }
+
+    &-left {
+      &-blue {
+        left: -130px;
+        bottom: -85px;
+      }
+
+      &-red__big {
+        left: -160px;
+        bottom: 350px;
+      }
+
+      &-red__small {
+        bottom: 405px;
+        left: -65px;
+      }
+    }
   }
 }
