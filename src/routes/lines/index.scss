@@ -18,7 +18,7 @@
     position: fixed;
 
     text-align: center;
-    background: $gradient-accent;
+    background: $gradient-home;
     overflow-y: scroll;
     width: 100%;
     height: 100%;
@@ -70,21 +70,6 @@
   &-item:last-child {
     padding-bottom: 1em;
   }
-
-  &-gradient {
-    background: linear-gradient(
-      180deg,
-      rgba(127, 109, 201, 0) 0%,
-      #6d7fc9 100%
-    );
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    height: $spacing-12;
-    pointer-events: none;
-    overflow: overlay;
-  }
 }
 
 .flowers {
@@ -113,8 +98,8 @@
   &-right {
     &-blue {
       bottom: -70px;
-      right: -80px;
-      width: 450px;
+      right: -100px;
+      width: 300px;
     }
 
     &-dragonfly {
@@ -127,9 +112,9 @@
 
   &-left {
     &-blue {
-      width: 500px;
+      width: 300px;
       transform: rotate(25deg);
-      left: -180px;
+      left: -80px;
       bottom: -85px;
     }
 
@@ -147,6 +132,12 @@
       left: -75px;
     }
   }
+
+  &-left-red__big,
+  &-left-red__small,
+  &-right-dragonfly {
+    display: none;
+  }
 }
 
 .lines-item p,
@@ -160,6 +151,12 @@
   .card-heading,
   .lines-list {
     font-size: 7.5vw;
+  }
+
+  .flowers-left-red__big,
+  .flowers-left-red__small,
+  .flowers-right-dragonfly {
+    display: block;
   }
 }
 
@@ -181,7 +178,8 @@
     &-right {
       &-blue {
         bottom: -100px;
-        right: 0px;
+        right: -80px;
+        width: 450px;
       }
 
       &-dragonfly {
@@ -192,8 +190,8 @@
 
     &-left {
       &-blue {
-        left: -130px;
-        bottom: -85px;
+        width: 500px;
+        left: -180px;
       }
 
       &-red__big {
