@@ -92,34 +92,50 @@ const ALUMNI_LINES = [
   {
     name: 'REVE/A/L',
     designers: ['Dani Delgado'],
+    description:
+      'This line was born from a time of turbulence in my life and the layers of feelings that I had while trying to take my life back from the grip of an eating disorder. REVE/A/L plays with the opacity of different fabrics to create multi-dimensional looks that delve into the feeling of always being exposed: No amount of baggy clothing can hide the feeling of being almost naked, of being just an imperfect body. These emotions mingled with the tension between the beauty of the fashion and the ugliness it was born from to bloom into this line.',
   },
   {
     name: 'Lanka',
     designers: ['David Perry'],
+    description:
+      'This outfit features computationally generated, machine stitched embroidery unified by lines of hand embroidery. The combination of hand and machine embroidery allows for improvi- sational stitched designs that flow across the garment and break the surface of the fabric in unique and experimental ways.',
   },
   {
-    name: '~',
+    name: 'Knit',
     designers: ['Leah Kendrick'],
+    description:
+      'There is so much in this world that can be salvaged. We are living in what Hélène Frichot refers to as the “wasteocene.” As humans, we treat this earth as our limitless dumping ground for discarded items. We can breathe new life into these material things that are found everywhere, things that are making their way to the wreckage. This look is to be made from scraps of fabrics and recycled or salvaged thread within my own closet and those that I find around my home city of Philadelphia. From the thread to the textiles woven together, this piece will represent the widely conducted, multidisciplinary exploration of using things that we already have at our disposal.',
   },
   {
     name: 'SURFACE',
     designers: ['Michael Powell'],
+    description:
+      'SURFACE explores the issue of the distortion and trivialization of the human body into objects of desire. The veneer of mesh, over-layed with cut contours, is a constructed external appearance that illustrates areas of the socially ideal body, exposing those who wear it to appreciation and admiration, but also leaving them vulnerable to objectification. As the line progresses, the body becomes more clearly exposed than upon first impression. It is meant to represent an exaggerated set of physical attributes that emphasize the scrutiny of our bodies— conscious and subconscious, external and internal.',
   },
   {
     name: 'Flutter',
     designers: ['Mimi Jiao'],
+    description:
+      'Flutter explores the manipulation of shape through movement. Fabric is layered and cut to create paths for air to travel throughout. Once the model walks, the clothes become breathing, responsive silhouettes.',
   },
   {
-    name: '~',
+    name: "The Tailor's Night Out",
     designers: ['Vincent DeRienzo'],
+    description:
+      'Tailoring has been “re-invigorated,” “re- invented,” and “re-done” so many times. This collection is nothing new; in part because the idea of tailoring is so classically extensive yet redundantly refined. These pieces continue the design intent behind the play theory of beautiful partywear. They seek to be special, sensual, personable, and playful, with a veiled fallacy of grandeur and refinemnet. My hope is this collection can be the party-queer’s alibi that begs the question, “where are they going next?”',
   },
   {
     name: 'Organic Xanax',
     designers: ['Samantha Ho', 'Arden Wolf', 'Tim Tali'],
+    description:
+      'Conceived as a study of consumerism through the material of LED signage, this line seeks to show today’s form of advertising in our digital culture. We touch on digital culture through text by highlighting certain aspects of hum- orous or relatable social media behaviors that Gen Z and Millenials display on a day to day basis.',
   },
   {
     name: 'Tuft',
     designers: ['Charlotte Deiss'],
+    description:
+      'The “less is more” concept has become common place with a lot of ready-to-wear fashion these days. Tuft is a line that challe- nges traditionally mundane garments to be vibrant and tactile, through the use of bright yarns and the craft of tufting.',
   },
   {
     name: 'Somatic',
@@ -214,12 +230,16 @@ export const LINE_INFO = [
     name: 'World Scanner',
     designers: ['Isabel Xu', 'Reifen Jin'],
     images: [World_Scanner_IMG_1, World_Scanner_IMG_2, World_Scanner_IMG_3],
+    description:
+      'The collection prepares a series of “mischievous morphologies” using recycling materials such as thrifted and second hand clothing and found objects. It looks at the life cycles of objects and the human bodies and acts as the landscape for waiting opportunities. Physical embodiment of the design is fluid, aiming to appeal to a certain language rather than a specific physique. Inspired by women in professional works, the collection subverts the purpose of garments to be comfortable and bold in readymade manners, homagin clothes itself as personal home, as an individual voyeur of architecture.',
   },
   {
     id: 11,
     name: 'Reverie',
     designers: ['Somya Pathak'],
     images: [Reverie_IMG_1, Reverie_IMG_2, Reverie_IMG_3],
+    description:
+      'The transition from youth to adulthood is often marked by an increase in constraining factors and pressures and limitations, both from society and within. Our less tainted minds as children unabashe- dly exercise creativity. As we grow older, those minds become cluttered with “why does my stomach like that”, with “will I earn enough money”, with “will I be accepted for who I am” ad infinitum. My clothing line encapsulates the increase in constraint placed on the youth’s time and space to be creative as we age. I want to highlight the importance of finding those pockets of tranquility to let the mind wander despite a never ending to-do list. In this line, these pockets are comm- nicated visually through the symbol of water. Water invokes feelings of peace and calm. When floating in a body of water, often the line between where the water ends and your body begins fades away. Dulling of the senses. Weightless. Putting the constant barrage of excess stimuli at bay, if even for only a few moments. Lack of external stimulation lets the mind reach a meditative, daydream-like state where creativity and problem-solving have been known to flourish.',
   },
   {
     id: 12,
