@@ -28,7 +28,7 @@ export default function Lines() {
   const size = useWindowSize();
   const isMobile = size?.width < 768;
 
-  const { leftFlowers, rightFlowers } = getFlowerVariants(isMobile ? 25 : 65);
+  const { leftFlowers, rightFlowers } = getFlowerVariants(isMobile ? 35 : 65);
 
   return (
     <motion.section
