@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 
 import styles from 'routes/about/index.module.scss';
 import Button from 'components/button';
+import NavBar from 'components/navbar';
 import Lottie from 'react-lottie';
 import eyeFlower from 'assets/about_animation/eyeflower/eyeflower.json';
 import orangeFlower from 'assets/about_animation/orangeflower/orangeflower.json';
@@ -157,40 +158,7 @@ export default function About() {
         exit="hidden"
         transition={{ ...transition, delay: 0, duration: 0.3 }}
       >
-        <div className={styles.navbar}>
-          <Link to="/menu" state={{ previousLocation: '/about' }}>
-            <motion.div
-              className={styles.wrapper}
-              variants={button}
-              initial="hidden"
-              animate="visible"
-              exit="hidden"
-              transition={{ ...transition, delay: 0.1 }}
-            >
-              <Button type="white">Explore</Button>
-            </motion.div>
-          </Link>
-          {/* <Link to="/" state={{ previousLocation: '/about' }}> */}
-          <motion.div
-            className={styles.wrapper}
-            variants={button}
-            initial="hidden"
-            animate="visible"
-            exit="hidden"
-            transition={{ ...transition, delay: 0.1 }}
-          >
-            <Button type="white">
-              <a
-                href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                Tickets
-              </a>
-            </Button>
-          </motion.div>
-          {/* </Link> */}
-        </div>
+        <NavBar prevLoc="about"></NavBar>
         <motion.div
           className={styles.items}
           variants={items}

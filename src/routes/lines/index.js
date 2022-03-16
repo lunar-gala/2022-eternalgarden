@@ -1,27 +1,35 @@
 import React from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { Link } from 'react-router-dom';
+
+import Lottie from 'react-lottie';
 
 import './index.scss';
-import Button from '../../components/button/index';
 import Card from '../../components/card/card';
 import { LINE_INFO } from 'assets/lines/line_data';
+import NavBar from 'components/navbar';
+import useWindowSize from 'hooks/useWindowSize';
+import BottomGradient from 'components/bottomGradient';
 import {
   transition,
-  button,
   container,
-  leftFlowers,
-  rightFlowers,
+  getFlowerVariants,
+  flowerStagger,
 } from './animation';
-
-import blueFlowerLeft from 'assets/lines_animation/blue_flower_left.svg';
-import blueFlowerRight from 'assets/lines_animation/blue_flowers_right.svg';
-import dragonfly from 'assets/lines_animation/dragonfly.svg';
-import redFlowerSmall from 'assets/lines_animation/red_flower_small.svg';
-import redFlowerBig from 'assets/lines_animation/red_flower_big.svg';
+import {
+  flower,
+  purple3flowerSettings,
+  dragonflySettings,
+  maxBudSettings,
+  sunflowerSettings,
+  pointyflowerSettings,
+} from './lottie_settings';
 
 export default function Lines() {
   const controls = useAnimation();
+  const size = useWindowSize();
+  const isMobile = size?.width < 768;
+
+  const { leftFlowers, rightFlowers } = getFlowerVariants(isMobile ? 200 : 300);
 
   return (
     <motion.section
@@ -32,36 +40,6 @@ export default function Lines() {
       exit="hidden"
       transition={{ ...transition, delay: 0, duration: 0.3 }}
     >
-      <Link to="/menu" state={{ previousLocation: '/lines' }}>
-        <motion.div
-          className="home-nav-left"
-          variants={button}
-          initial="hidden"
-          animate="visible"
-          exit="hidden"
-          transition={{ ...transition, delay: 0.1 }}
-        >
-          <Button type="white">Explore</Button>
-        </motion.div>
-      </Link>
-      <motion.div
-        className="home-nav-right"
-        variants={button}
-        initial="hidden"
-        animate="visible"
-        exit="hidden"
-        transition={{ ...transition, delay: 0.1 }}
-      >
-        <Button type="white">
-          <a
-            href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Tickets
-          </a>
-        </Button>
-      </motion.div>
       <div className="lines-main">
         {/* noise on top of flowers + logo, so it is last */}
         <ul className="lines-list">
@@ -76,7 +54,8 @@ export default function Lines() {
             );
           })}
         </ul>
-        <motion.div className="flowers">
+
+        <motion.div className="flowers" variants={flowerStagger}>
           <motion.div
             className="flowers-left"
             initial="lineList"
@@ -84,12 +63,15 @@ export default function Lines() {
             animate={controls}
             variants={leftFlowers}
           >
-            <motion.img className="flowers-left-blue" src={blueFlowerLeft} />
-            <motion.img className="flowers-left-red__big" src={redFlowerBig} />
-            <motion.img
-              className="flowers-left-red__small"
-              src={redFlowerSmall}
-            />
+            <motion.div className="flowers-left-blue" variants={flower}>
+              <Lottie options={sunflowerSettings} />
+            </motion.div>
+            <motion.div className="flowers-left-red__big" variants={flower}>
+              <Lottie options={pointyflowerSettings} />
+            </motion.div>
+            <motion.div className="flowers-left-red__small" variants={flower}>
+              <Lottie options={maxBudSettings} />
+            </motion.div>
           </motion.div>
           <motion.div
             className="flowers-right"
@@ -98,13 +80,18 @@ export default function Lines() {
             animate={controls}
             variants={rightFlowers}
           >
-            <motion.img className="flowers-right-blue" src={blueFlowerRight} />
-            <motion.img className="flowers-right-dragonfly" src={dragonfly} />
+            <motion.div className="flowers-right-blue" variants={flower}>
+              <Lottie options={purple3flowerSettings} />
+            </motion.div>
+            <motion.div className="flowers-right-dragonfly" variants={flower}>
+              <Lottie options={dragonflySettings} />
+            </motion.div>
           </motion.div>
         </motion.div>
-        <div className="lines-gradient"></div>
-        <div className="noise" />
       </div>
+      <BottomGradient></BottomGradient>
+      <div className="noise" />
+      <NavBar prevLoc="lines"></NavBar>
     </motion.section>
   );
 }

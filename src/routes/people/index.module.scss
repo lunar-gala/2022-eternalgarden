@@ -1,0 +1,151 @@
+@import '../../styles/variables.scss';
+
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: calc(100vh - 4rem);
+  width: calc(100vw - 4rem);
+  padding: $spacing-7;
+  text-align: center;
+  background: $gradient-home;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  color: $white;
+  z-index: 3;
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  width: calc(100vw - 4rem);
+}
+
+.card {
+  max-width: 136px;
+  width: 136px;
+  margin: 8px 8px;
+  img {
+    width: 100%;
+    object-fit: cover;
+    // height: auto;
+    object-position: top center;
+    height: 80%;
+    border: 1px solid $off-white;
+    border-radius: 8px;
+  }
+}
+
+.subheader {
+  margin: 64px 0 12px 0;
+  text-transform: uppercase;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.noise {
+  z-index: 3;
+  pointer-events: none;
+}
+
+.flowers {
+  position: fixed;
+  opacity: 1;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 4;
+}
+
+.eyeFlower {
+  position: fixed;
+  bottom: 0;
+  left: -250px;
+  width: 600px;
+}
+
+.orangeFlower {
+  position: fixed;
+  bottom: -300px;
+  right: -240px;
+  width: 550px;
+}
+
+.rose {
+  position: fixed;
+  transform: rotate(-20deg);
+  bottom: 230px;
+  width: 270px;
+  right: -100px;
+}
+
+.roseSingle {
+  position: fixed;
+  transform: rotate(45deg);
+  bottom: -225px;
+  left: -170px;
+  width: 370px;
+}
+
+.groupPurpleFlower {
+  position: fixed;
+  bottom: -200px;
+  right: -220px;
+  transform: rotate(80deg);
+}
+
+.sunflower {
+  position: fixed;
+  transform: rotate(35deg);
+  bottom: -235px;
+  left: -100px;
+  width: 400px;
+}
+
+.roundFlower {
+  position: fixed;
+  transform: rotate(25deg);
+  width: 320px;
+  bottom: -215px;
+  left: -160px;
+}
+@media screen and (max-width: 1200px) {
+}
+
+@media screen and (max-width: 768px) {
+  .rose {
+    display: none;
+  }
+
+  .roseSingle {
+    display: none;
+  }
+
+  .sunflower {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 475px) {
+  .roundFlower {
+    display: none;
+  }
+  .content {
+    width: 90%;
+  }
+  .groupPurpleFlower {
+    display: none;
+  }
+}

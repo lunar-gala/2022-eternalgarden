@@ -1,0 +1,19 @@
+@import '../../styles/variables.scss';
+
+.gradient {
+  background: linear-gradient(180deg, rgba(127, 109, 201, 0) 0%, #6d7fc9 100%);
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: $spacing-10;
+  pointer-events: none;
+  overflow: overlay;
+  z-index: 3;
+}
+
+@media only screen and (min-width: 768px) {
+  .gradient {
+    height: $spacing-12;
+  }
+}
