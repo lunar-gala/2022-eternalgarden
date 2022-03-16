@@ -113,8 +113,8 @@
     &-blue {
       width: 300px;
       transform: rotate(25deg);
-      left: -80px;
-      bottom: -85px;
+      left: -120px;
+      bottom: -105px;
     }
 
     &-red__big {
@@ -179,9 +179,11 @@
       &-red__big {
         width: 275px;
         left: -140px;
+        bottom: 300px;
       }
       &-red__small {
         width: 190px;
+        bottom: 350px;
       }
     }
   }

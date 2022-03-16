@@ -39,6 +39,7 @@ export default function People() {
         <NavBar prevLoc="people"></NavBar>
 
         <motion.div
+          style={{ paddingBottom: '200px' }}
           variants={items}
           initial="hidden"
           animate="visible"
@@ -81,33 +82,32 @@ export default function People() {
             );
           })}
         </motion.div>
+        <BottomGradient></BottomGradient>
+        <motion.div
+          variants={flowerStagger}
+          initial="hidden"
+          animate="visible"
+          exit="hidden"
+          transition={{ ...transition, delay: 0.1 }}
+          className={styles.flowers}
+        >
+          <motion.div className={styles.rose} variants={flower}>
+            <Lottie options={roseSettings} />
+          </motion.div>
+          <motion.div className={styles.roseSingle} variants={flower}>
+            <Lottie options={roseSingleSettings} />
+          </motion.div>
+          <motion.div className={styles.roundFlower} variants={flower}>
+            <Lottie options={roundFlowerSettings} />
+          </motion.div>
+          <motion.div className={styles.sunflower} variants={flower}>
+            <Lottie options={sunflowerSettings} />
+          </motion.div>
+          <motion.div className={styles.groupPurpleFlower} variants={flower}>
+            <Lottie options={groupPurpleFlowerSettings} />
+          </motion.div>
+        </motion.div>
       </motion.section>
-
-      <BottomGradient></BottomGradient>
-      <motion.div
-        variants={flowerStagger}
-        initial="hidden"
-        animate="visible"
-        exit="hidden"
-        transition={{ ...transition, delay: 0.1 }}
-        className={styles.flowers}
-      >
-        <motion.div className={styles.rose} variants={flower}>
-          <Lottie options={roseSettings} />
-        </motion.div>
-        <motion.div className={styles.roseSingle} variants={flower}>
-          <Lottie options={roseSingleSettings} />
-        </motion.div>
-        <motion.div className={styles.roundFlower} variants={flower}>
-          <Lottie options={roundFlowerSettings} />
-        </motion.div>
-        <motion.div className={styles.sunflower} variants={flower}>
-          <Lottie options={sunflowerSettings} />
-        </motion.div>
-        <motion.div className={styles.groupPurpleFlower} variants={flower}>
-          <Lottie options={groupPurpleFlowerSettings} />
-        </motion.div>
-      </motion.div>
       <div className={cn('noise', styles.noise)} />
     </div>
   );

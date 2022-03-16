@@ -28,13 +28,19 @@ const container = {
 const flowerShiftVariants = {
   lineList: {
     x: 0,
+    transition: {
+      ease: 'easeInOut',
+    },
   },
   lineOpen: {
     x: '-65px',
+    transition: {
+      ease: 'easeInOut',
+    },
   },
 };
 
-const getFlowerVariants = (shift = 65) => {
+const getFlowerVariants = (shift) => {
   const leftFlowers = {
     ...flowerShiftVariants,
     lineOpen: { x: `-${shift}px` },
