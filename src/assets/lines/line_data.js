@@ -47,20 +47,28 @@ import World_Scanner_IMG_3 from './img/World_Scanner/1886-Web.jpeg';
 
 const YEAR_OF_TIGER_LINES = [
   {
+    name: 'TIGER',
+    designers: ['Seyoung Choo'],
+  },
+  {
     name: 'RENASCI',
     designers: ['Aadya Bhartia'],
   },
   {
-    name: 'SALVOS',
+    name: 'DURATION',
     designers: ['Patricia Yu'],
   },
   {
-    name: 'THE MARIANAS',
+    name: 'THE MARIANAS TRENCH',
     designers: ['Lily Oberman', 'Skylar McAuliffe'],
   },
   {
     name: 'GOSSAMER IDLE',
     designers: ['Elise Chapman', 'Jessica Lai'],
+  },
+  {
+    name: 'SOMATIC',
+    designers: ['Jessa Westheimer'],
   },
   {
     name: 'MIRROR',
@@ -77,14 +85,6 @@ const YEAR_OF_TIGER_LINES = [
   {
     name: 'BLOOM',
     designers: ['Natalie Waldram', 'Amal Jafrani'],
-  },
-  {
-    name: 'SOMATIC',
-    designers: ['Jessa Westheimer'],
-  },
-  {
-    name: 'TIGER',
-    designers: ['Seyoung Choo'],
   },
 ];
 
@@ -136,10 +136,6 @@ const ALUMNI_LINES = [
     designers: ['Charlotte Deiss'],
     description:
       'The “less is more” concept has become common place with a lot of ready-to-wear fashion these days. Tuft is a line that challe- nges traditionally mundane garments to be vibrant and tactile, through the use of bright yarns and the craft of tufting.',
-  },
-  {
-    name: 'Somatic',
-    designers: ['Jessa Westheimer'],
   },
 ];
 
