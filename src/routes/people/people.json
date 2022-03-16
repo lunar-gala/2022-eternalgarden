@@ -24,31 +24,31 @@
     "people": [
       {
         "name": "Camille Chandler",
-        "slug": "Dance-Entertainment/Camille-Chandler.jpeg"
+        "slug": "Dance/Camille-Chandler.jpeg"
       },
       {
         "name": "Christina Di",
-        "slug": "Dance-Entertainment/christina-di.jpeg"
+        "slug": "Dance/christina-di.jpeg"
       },
       {
         "name": "Kristine Kim",
-        "slug": "Dance-Entertainment/kristine-kim.jpeg"
+        "slug": "Dance/kristine-kim.jpeg"
       },
-      { "name": "Bonnie Chan", "slug": "Dance-Entertainment/bonnie-chan.jpeg" },
-      { "name": "Vicky Jung", "slug": "Dance-Entertainment/vicky-jung.jpeg" },
-      { "name": "Alana Wu", "slug": "Dance-Entertainment/Alana-wu.jpeg" },
-      { "name": "Sharon Fung", "slug": "Dance-Entertainment/sharon-fung.jpeg" },
-      { "name": "Cynthia Hu", "slug": "Dance-Entertainment/Cynthia-Hu.jpeg" },
-      { "name": "Yuxi Lee", "slug": "Dance-Entertainment/yuxi-lee.jpeg" },
-      { "name": "Lili Chang", "slug": "Dance-Entertainment/lili-chang.jpeg" },
+      { "name": "Bonnie Chan", "slug": "Dance/bonnie-chan.jpeg" },
+      { "name": "Vicky Jung", "slug": "Dance/vicky-jung.jpeg" },
+      { "name": "Alana Wu", "slug": "Dance/Alana-wu.jpeg" },
+      { "name": "Sharon Fung", "slug": "Dance/sharon-fung.jpeg" },
+      { "name": "Cynthia Hu", "slug": "Dance/Cynthia-Hu.jpeg" },
+      { "name": "Yuxi Lee", "slug": "Dance/yuxi-lee.jpeg" },
+      { "name": "Lili Chang", "slug": "Dance/lili-chang.jpeg" },
       {
         "name": "Heeyun Choikim",
-        "slug": "Dance-Entertainment/heeyun-choikim.jpeg"
+        "slug": "Dance/heeyun-choikim.jpeg"
       },
-      { "name": "Rachel Shin", "slug": "Dance-Entertainment/rachel-shin.jpeg" },
-      { "name": "Tina Lin", "slug": "Dance-Entertainment/tina-lin.jpeg" }
+      { "name": "Rachel Shin", "slug": "Dance/rachel-shin.jpeg" },
+      { "name": "Tina Lin", "slug": "Dance/tina-lin.jpeg" }
     ],
-    "team": "Dance-Entertainment"
+    "team": "Dance"
   },
   {
     "people": [

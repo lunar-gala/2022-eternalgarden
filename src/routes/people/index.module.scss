@@ -41,6 +41,7 @@
 .subheader {
   margin: 64px 0 12px 0;
   text-transform: uppercase;
+  font-size: 48px;
 }
 
 .content {
@@ -125,6 +126,9 @@
 }
 
 @media screen and (max-width: 768px) {
+  .subheader {
+    font-size: 40px;
+  }
   .rose {
     display: none;
   }
@@ -139,13 +143,18 @@
 }
 
 @media screen and (max-width: 475px) {
+  .subheader {
+    font-size: 40px;
+  }
   .roundFlower {
-    display: none;
+    bottom: -265px;
+    left: -160px;
   }
   .content {
     width: 90%;
   }
   .groupPurpleFlower {
-    display: none;
+    bottom: -280px;
+    right: -250px;
   }
 }
