@@ -103,7 +103,6 @@
     }
 
     &-dragonfly {
-      width: 250px;
       transform: rotate(-35deg);
       bottom: 550px;
       right: 90px;
@@ -119,14 +118,12 @@
     }
 
     &-red__big {
-      width: 325px;
       transform: rotate(30deg);
       left: -180px;
       bottom: 500px;
     }
 
     &-red__small {
-      width: 225px;
       transform: rotate(45deg);
       bottom: 550px;
       left: -75px;
@@ -158,6 +155,34 @@
   .flowers-right-dragonfly {
     display: block;
   }
+
+  .flowers {
+    &-left {
+      &-blue {
+        width: 380px;
+      }
+      &-red__big {
+        width: 275px;
+        left: -140px;
+      }
+      &-red__small {
+        width: 190px;
+      }
+    }
+  }
+
+  .flowers {
+    &-right {
+      &-blue {
+        right: -80px;
+        width: 350px;
+      }
+      &-dragonfly {
+        width: 200px;
+        right: 30px;
+      }
+    }
+  }
 }
 
 // convert to desktop type styles
@@ -183,6 +208,7 @@
       }
 
       &-dragonfly {
+        width: 250px;
         bottom: 600px;
         right: 10px;
       }
@@ -195,11 +221,13 @@
       }
 
       &-red__big {
+        width: 325px;
         left: -160px;
         bottom: 350px;
       }
 
       &-red__small {
+        width: 225px;
         bottom: 405px;
         left: -65px;
       }
