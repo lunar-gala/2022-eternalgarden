@@ -1,159 +1,31 @@
 import cn from 'classnames';
-import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
+import Lottie from 'react-lottie';
 
 import data from './people.json';
 import NavBar from 'components/navbar';
-
 import styles from './index.module.scss';
-import Button from 'components/button';
-import Lottie from 'react-lottie';
 import PageTitle from 'components/pageTitle';
 import PeopleCard from 'components/peopleCard';
 import BottomGradient from 'components/bottomGradient';
 
-import rose from 'assets/people_animation/rosegroup/rosegroup.json';
-import roseSingle from 'assets/people_animation/rosesingle/rosesingle.json';
-import roundFlower from 'assets/people_animation/roundflower/roundflower.json';
-import sunflower from 'assets/people_animation/sunflower/sunflower.json';
-import groupPurpleFlower from 'assets/about_animation/group_purpleflower/group_purpleflower.json';
+import {
+  groupPurpleFlowerSettings,
+  roseSettings,
+  roseSingleSettings,
+  roundFlowerSettings,
+  sunflowerSettings,
+} from './lottie_settings';
 
-//lottieAnimation settings
-const groupPurpleFlowerSettings = {
-  loop: true,
-  autoplay: true,
-  animationData: groupPurpleFlower,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
-  },
-};
-
-const roseSettings = {
-  loop: true,
-  autoplay: true,
-  animationData: rose,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
-  },
-};
-
-const roseSingleSettings = {
-  loop: true,
-  autoplay: true,
-  animationData: roseSingle,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
-  },
-};
-
-const roundFlowerSettings = {
-  loop: true,
-  autoplay: true,
-  animationData: roundFlower,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
-  },
-};
-
-const sunflowerSettings = {
-  loop: true,
-  autoplay: true,
-  animationData: sunflower,
-  rendererSettings: {
-    preserveAspectRatio: 'xMidYMid slice',
-  },
-};
-
-const transition = {
-  duration: 1,
-  ease: 'easeOut',
-};
-
-const button = {
-  hidden: {
-    scale: 0.9,
-    opacity: 0,
-  },
-  visible: {
-    scale: 1,
-    opacity: 1,
-  },
-};
-
-const container = {
-  hidden: {
-    opacity: 0,
-    duration: 0.1,
-  },
-  visible: {
-    opacity: 1,
-    duration: 0.1,
-  },
-};
-
-const items = {
-  hidden: {
-    opacity: 0,
-    transition: {
-      when: 'afterChildren',
-      staggerChildren: 0.05,
-      ease: 'easeOut',
-      delay: 0.07,
-    },
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      when: 'beforeChildren',
-      staggerChildren: 0.05,
-      delay: 0.07,
-      ease: 'easeOut',
-    },
-  },
-};
-
-const flowerStagger = {
-  hidden: {
-    opacity: 0,
-    transition: {
-      when: 'afterChildren',
-      staggerChildren: 0.05,
-      ease: 'easeOut',
-      delay: 0.07,
-    },
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      when: 'beforeChildren',
-      staggerChildren: 0.05,
-      delay: 0.07,
-      ease: 'easeOut',
-    },
-  },
-};
-
-const flower = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-  },
-};
-
-const item = {
-  hidden: {
-    opacity: 0,
-  },
-  visible: {
-    opacity: 1,
-  },
-};
+import {
+  transition,
+  container,
+  items,
+  flowerStagger,
+  flower,
+} from './animation';
 
 export default function People() {
-  const location = useLocation();
-
   return (
     <div>
       <motion.section

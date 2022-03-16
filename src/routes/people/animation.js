@@ -3,17 +3,6 @@ const transition = {
   ease: 'easeOut',
 };
 
-const button = {
-  hidden: {
-    scale: 0.9,
-    opacity: 0,
-  },
-  visible: {
-    scale: 1,
-    opacity: 1,
-  },
-};
-
 const container = {
   hidden: {
     opacity: 0,
@@ -25,25 +14,25 @@ const container = {
   },
 };
 
-const flowerShiftVariants = {
-  lineList: {
-    x: 0,
+const items = {
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: 'afterChildren',
+      staggerChildren: 0.05,
+      ease: 'easeOut',
+      delay: 0.07,
+    },
   },
-  lineOpen: {
-    x: '-65px',
+  visible: {
+    opacity: 1,
+    transition: {
+      when: 'beforeChildren',
+      staggerChildren: 0.05,
+      delay: 0.07,
+      ease: 'easeOut',
+    },
   },
-};
-
-const getFlowerVariants = (shift = 65) => {
-  const leftFlowers = {
-    ...flowerShiftVariants,
-    lineOpen: { x: `-${shift}px` },
-  };
-  const rightFlowers = {
-    ...flowerShiftVariants,
-    lineOpen: { x: `${shift}px` },
-  };
-  return { leftFlowers, rightFlowers };
 };
 
 const flowerStagger = {
@@ -67,4 +56,13 @@ const flowerStagger = {
   },
 };
 
-export { transition, container, getFlowerVariants, flowerStagger };
+const flower = {
+  hidden: {
+    opacity: 0,
+  },
+  visible: {
+    opacity: 1,
+  },
+};
+
+export { transition, container, items, flowerStagger, flower };

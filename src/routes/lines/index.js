@@ -53,7 +53,7 @@ export default function Lines() {
             );
           })}
         </ul>
-        <motion.div className="flowers">
+        <motion.div className="flowers" variants={flowerStagger}>
           <motion.div
             className="flowers-left"
             initial="lineList"
