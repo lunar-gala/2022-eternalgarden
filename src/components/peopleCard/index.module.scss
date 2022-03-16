@@ -21,3 +21,12 @@
     box-shadow: 0 0 40px 0 rgba(255, 255, 255, 0.3);
   }
 }
+
+@media (pointer: coarse) {
+  .card:hover {
+    transform: none;
+    img {
+      box-shadow: none;
+    }
+  }
+}

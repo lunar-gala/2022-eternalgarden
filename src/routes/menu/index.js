@@ -123,19 +123,6 @@ export default function Menu() {
               className={cn(styles.item, styles.active)}
               variants={item}
             >
-              <a
-                className={cn(styles.item)}
-                href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                TICKETS
-              </a>
-            </motion.h3>
-            <motion.h3
-              className={cn(styles.item, styles.active)}
-              variants={item}
-            >
               <Link
                 to="/people"
                 state={{ previousLocation: '/menu' }}
@@ -156,7 +143,32 @@ export default function Menu() {
                 LINES
               </Link>
             </motion.h3>
-
+            <motion.h3
+              className={cn(styles.item, styles.active)}
+              variants={item}
+            >
+              <a
+                className={cn(styles.item)}
+                href="https://carnegiemellontickets.universitytickets.com/w/event.aspx?id=2150&p=1"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                TICKETS
+              </a>
+            </motion.h3>
+            <motion.h3
+              className={cn(styles.item, styles.highlight)}
+              variants={item}
+            >
+              <a
+                className={cn(styles.item)}
+                href="https://docs.google.com/forms/d/e/1FAIpQLSekz-SgRUPF2_M_5DGIfio-2hwVc7LnaUKAau1qBTZ1A7H6Pg/viewform"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                FLOWER SALE
+              </a>
+            </motion.h3>
             <motion.h3 className={cn(styles.disabled)} variants={item}>
               MERCH
               <span className={cn('h5', styles.highlight)}>COMING SOON</span>
