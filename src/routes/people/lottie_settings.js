@@ -1,6 +1,6 @@
 import rose from 'assets/people_animation/rosegroup/rosegroup.json';
 import roseSingle from 'assets/people_animation/rosesingle/rosesingle.json';
-import roundFlower from 'assets/people_animation/roundflower/roundflower.json';
+import roundFlower from 'assets/people_animation/roundflower/roundflower';
 import sunflower from 'assets/people_animation/sunflower/sunflower.json';
 import groupPurpleFlower from 'assets/about_animation/group_purpleflower/group_purpleflower.json';
 
