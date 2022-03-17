@@ -11,7 +11,6 @@ import Lines from 'routes/lines';
 import Guide from 'routes/guide';
 
 import People from 'routes/people';
-import Lines from 'routes/lines';
 
 export default function App() {
   const location = useLocation();
