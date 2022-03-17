@@ -1,6 +1,6 @@
 {
   "files": {
-    "main.css": "/static/css/main.0d303477.css",
+    "main.css": "/static/css/main.2c9b8f79.css",
     "main.js": "/static/js/main.8e099f45.js",
     "static/media/1886-Web.jpeg": "/static/media/1886-Web.dab7160f075b1cbb94f0.jpeg",
     "static/media/1622-Web.jpeg": "/static/media/1622-Web.cf7d437827edeab2fc35.jpeg",
@@ -48,11 +48,11 @@
     "static/media/white-lg-logo.svg": "/static/media/white-lg-logo.cdadd865e098c48a8919652450e99fb5.svg",
     "index.html": "/index.html",
     "static/media/noise.svg": "/static/media/noise.4a845851535c00b941e5.svg",
-    "main.0d303477.css.map": "/static/css/main.0d303477.css.map",
+    "main.2c9b8f79.css.map": "/static/css/main.2c9b8f79.css.map",
     "main.8e099f45.js.map": "/static/js/main.8e099f45.js.map"
   },
   "entrypoints": [
-    "static/css/main.0d303477.css",
+    "static/css/main.2c9b8f79.css",
     "static/js/main.8e099f45.js"
   ]
 }
