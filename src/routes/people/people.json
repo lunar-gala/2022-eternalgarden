@@ -1,0 +1,199 @@
+[
+  {
+    "people": [
+      { "name": "Vivian Sun", "slug": "Design/vivian-sun.jpeg" },
+      { "name": "Emily Dubois", "slug": "Design/Emily-DuBois.jpeg" },
+      { "name": "Seyoung Choo", "slug": "Design/seyoung-choo.jpg" },
+      { "name": "Jeanie Xu", "slug": "Design/Jeanie-Xu.jpeg" },
+      { "name": "Sean Meng", "slug": "Design/sean-meng.jpeg" },
+      { "name": "Sunniva Liu", "slug": "Design/sunniva-liu.jpeg" },
+      { "name": "Skylar Mcauliffe", "slug": "Design/skylar-mcauliffe.jpeg" },
+      { "name": "Oscar Monarrez", "slug": "Design/Oscar-Monarrez.jpeg" },
+      { "name": "Minsung Kang", "slug": "Design/Minsung-Kang.jpeg" },
+      { "name": "Somya Pathak", "slug": "Design/Somya-Pathak.jpeg" },
+      { "name": "Mai Tian", "slug": "Design/mai-tian.jpeg" },
+      { "name": "Patricia Yu", "slug": "Design/Patricia-Yu.jpeg" },
+      { "name": "Aadya Bhartia", "slug": "Design/Aadya-Bhartia.jpeg" },
+      { "name": "Suzie Liu", "slug": "Design/suzie-liu.jpeg" },
+      { "name": "Jamie Mcarthur", "slug": "Design/jamie-mcarthur.jpeg" },
+      { "name": "Asad Sheikh", "slug": "Design/asad-sheikh.jpeg" }
+    ],
+    "team": "Design"
+  },
+  {
+    "people": [
+      {
+        "name": "Camille Chandler",
+        "slug": "Dance/Camille-Chandler.jpeg"
+      },
+      {
+        "name": "Christina Di",
+        "slug": "Dance/christina-di.jpeg"
+      },
+      {
+        "name": "Kristine Kim",
+        "slug": "Dance/kristine-kim.jpeg"
+      },
+      { "name": "Bonnie Chan", "slug": "Dance/bonnie-chan.jpeg" },
+      { "name": "Vicky Jung", "slug": "Dance/vicky-jung.jpeg" },
+      { "name": "Alana Wu", "slug": "Dance/Alana-wu.jpeg" },
+      { "name": "Sharon Fung", "slug": "Dance/sharon-fung.jpeg" },
+      { "name": "Cynthia Hu", "slug": "Dance/Cynthia-Hu.jpeg" },
+      { "name": "Yuxi Lee", "slug": "Dance/yuxi-lee.jpeg" },
+      { "name": "Lili Chang", "slug": "Dance/lili-chang.jpeg" },
+      {
+        "name": "Heeyun Choikim",
+        "slug": "Dance/heeyun-choikim.jpeg"
+      },
+      { "name": "Rachel Shin", "slug": "Dance/rachel-shin.jpeg" },
+      { "name": "Tina Lin", "slug": "Dance/tina-lin.jpeg" }
+    ],
+    "team": "Dance"
+  },
+  {
+    "people": [
+      { "name": "Amanda Wen", "slug": "PR/amanda-wen.jpeg" },
+      { "name": "Sabina Spektor ", "slug": "PR/sabina-spektor .jpeg" },
+      { "name": "Shefali Dahiya", "slug": "PR/shefali-dahiya.jpeg" },
+      { "name": "Elizabeth Choi", "slug": "PR/elizabeth-choi.jpeg" },
+      { "name": "Sihan Wu", "slug": "PR/sihan-wu.jpeg" }
+    ],
+    "team": "PR"
+  },
+  {
+    "people": [
+      { "name": "Pauline Qin", "slug": "Model/pauline-qin.jpeg" },
+      { "name": "Adeife Gafaar", "slug": "Model/adeife-gafaar.jpeg" },
+      { "name": "Nathan Wai", "slug": "Model/nathan-wai.jpeg" },
+      { "name": "Brooke Gunter", "slug": "Model/brooke-gunter.jpeg" },
+      { "name": "Morgan Boyd", "slug": "Model/morgan-boyd.jpeg" },
+      { "name": "Clayton Edwards", "slug": "Model/clayton-edwards.jpeg" },
+      { "name": "Kasey Park", "slug": "Model/kasey-park.jpeg" },
+      { "name": "Catherine Deng", "slug": "Model/Catherine-Deng.jpeg" },
+      { "name": "Lucy Altus", "slug": "Model/lucy-altus.jpeg" },
+      { "name": "Leo Deng", "slug": "Model/Leo-Deng.jpeg" },
+      { "name": "Ayaan Hussain", "slug": "Model/Ayaan-Hussain.jpeg" },
+      { "name": "Jinny Hwang", "slug": "Model/jinny-hwang.jpeg" },
+      { "name": "Shariq Shah", "slug": "Model/shariq-shah.jpeg" },
+      { "name": "Ruoming Xin", "slug": "Model/ruoming-xin.jpeg" },
+      { "name": "Carmyn Talento", "slug": "Model/Carmyn-Talento.jpeg" },
+      { "name": "Jeffrey Zhang", "slug": "Model/jeffrey-zhang.jpeg" },
+      { "name": "Remi Adeoti", "slug": "Model/remi-adeoti.jpeg" },
+      { "name": "Mabel Tsado", "slug": "Model/Mabel-Tsado.jpeg" },
+      { "name": "Angelica Kim", "slug": "Model/angelica-kim.jpg" },
+      { "name": "Nora Wai", "slug": "Model/nora-wai.jpeg" },
+      { "name": "Tiffany Kim", "slug": "Model/tiffany-kim.jpeg" },
+      { "name": "Melody Sun", "slug": "Model/Melody-Sun.jpeg" },
+      { "name": "Arin Pantja", "slug": "Model/Arin-Pantja.jpeg" },
+      { "name": "Jamie Liu", "slug": "Model/jamie-liu.jpeg" },
+      { "name": "Anita Cheng", "slug": "Model/anita-cheng.jpeg" },
+      { "name": "Serena Wang", "slug": "Model/serena-wang.jpeg" },
+      { "name": "Amy Hu", "slug": "Model/amy-hu.jpeg" },
+      { "name": "Tejas Venkatesh", "slug": "Model/tejas-venkatesh.jpeg" }
+    ],
+    "team": "Model"
+  },
+  {
+    "people": [
+      {
+        "name": "Gabriela Schwartz",
+        "slug": "Production/Gabriela-Schwartz.jpeg"
+      },
+      {
+        "name": "Sowang Kundeling",
+        "slug": "Production/sowang-kundeling.jpeg"
+      },
+      { "name": "Cole Savo", "slug": "Production/cole-savo.jpeg" },
+      { "name": "Fiona Chiu", "slug": "Production/fiona-chiu.jpeg" },
+      { "name": "Nadia Cho", "slug": "Production/nadia-cho.jpeg" },
+      { "name": "Sophie Tayade", "slug": "Production/sophie-tayade.jpeg" },
+      { "name": "Erica Fu", "slug": "Production/erica-fu.jpeg" },
+      { "name": "Rui Chang", "slug": "Production/rui-chang.jpeg" },
+      { "name": "Cody Rong", "slug": "Production/cody-rong.jpeg" },
+      { "name": "Mia Zurovac", "slug": "Production/mia-zurovac.jpeg" },
+      { "name": "Amanda Qian", "slug": "Production/amanda-qian.jpeg" },
+      {
+        "name": "Liberty Lapayowker",
+        "slug": "Production/Liberty-Lapayowker.jpeg"
+      },
+      { "name": "Isabella Egawa", "slug": "Production/isabella-egawa.jpeg" },
+      { "name": "Julia Timmons", "slug": "Production/julia-timmons.jpeg" }
+    ],
+    "team": "Production"
+  },
+  {
+    "people": [
+      { "name": "Peiran Ge", "slug": "Cinematography/Peiran-Ge.jpeg" },
+      { "name": "Jason Xu", "slug": "Cinematography/jason-xu.jpeg" },
+      { "name": "Judy Xu", "slug": "Cinematography/judy-xu.jpeg" },
+      { "name": "Jd Hopper", "slug": "Cinematography/jd-hopper.jpeg" },
+      {
+        "name": "Creighton Arrington",
+        "slug": "Cinematography/creighton-arrington.jpeg"
+      },
+      {
+        "name": "Matilda Mcdougall",
+        "slug": "Cinematography/matilda-mcdougall.jpeg"
+      }
+    ],
+    "team": "Cinematography"
+  },
+  {
+    "people": [
+      { "name": "Alice Cai", "slug": "Creative/alice-cai.jpeg" },
+      { "name": "Angela Lee", "slug": "Creative/angela-lee.jpeg" }
+    ],
+    "team": "Creative"
+  },
+  {
+    "people": [
+      { "name": "Mia Tang", "slug": "Creative/Web/mia-tang.jpeg" },
+      { "name": "Katie Shaw", "slug": "Creative/Web/katie-shaw.jpeg" },
+      {
+        "name": "Bennett Huffman",
+        "slug": "Creative/Web/bennett-huffman.jpeg"
+      },
+      { "name": "Michelle Liu", "slug": "Creative/Web/michelle-liu.jpeg" },
+      { "name": "Kazi Jawad", "slug": "Creative/Web/kazi-jawad.jpeg" },
+      { "name": "Joseph Zhang", "slug": "Creative/Web/joseph-zhang.jpeg" },
+      { "name": "Youie Cho", "slug": "Creative/Web/youie-cho.jpeg" }
+    ],
+    "subteam": "Web",
+    "team": "Creative"
+  },
+  {
+    "people": [
+      { "name": "Sammie Kim", "slug": "Creative/Motion/Sammie-Kim.jpeg" },
+      { "name": "Hayoon Choi", "slug": "Creative/Motion/Hayoon-Choi.jpeg" },
+      { "name": "Jin Oh", "slug": "Creative/Motion/Jin-Oh.jpeg" },
+      {
+        "name": "Yoshi Torralva",
+        "slug": "Creative/Motion/yoshi-torralva.jpeg"
+      }
+    ],
+    "subteam": "Motion",
+    "team": "Creative"
+  },
+  {
+    "people": [
+      { "name": "Maggie Ma", "slug": "Creative/Print/maggie-ma.jpeg" },
+      { "name": "Jacky Lococo", "slug": "Creative/Print/Jacky-Lococo.jpeg" },
+      { "name": "Charmaine Qiu", "slug": "Creative/Print/charmaine-qiu.jpeg" },
+      { "name": "Ethan Yang", "slug": "Creative/Print/ethan-yang.jpeg" },
+      { "name": "Francis Park", "slug": "Creative/Print/francis-park.jpeg" },
+      { "name": "Ricky Chen", "slug": "Creative/Print/ricky-chen.jpeg" },
+      { "name": "Elysha Tsai", "slug": "Creative/Print/elysha-tsai.jpeg" }
+    ],
+    "subteam": "Print",
+    "team": "Creative"
+  },
+  {
+    "people": [
+      { "name": "David Domalik", "slug": "Creative/Photo/david-domalik.jpeg" },
+      { "name": "Sabrina Xu", "slug": "Creative/Photo/sabrina-xu.jpeg" },
+      { "name": "Olivia Luk", "slug": "Creative/Photo/Olivia-Luk.jpeg" }
+    ],
+    "subteam": "Photo",
+    "team": "Creative"
+  }
+]

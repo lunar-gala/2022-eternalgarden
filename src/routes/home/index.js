@@ -12,8 +12,8 @@ import useWindowSize, { Size } from 'hooks/useWindowSize';
 import logo from 'assets/images/logo.svg';
 import { ReactComponent as LGLogo } from 'assets/icons/white-lg-logo.svg';
 import Button from 'components/button';
+import NavBar from 'components/navbar';
 import {
-  container,
   buttonVariants,
   buttonTransition1,
   buttonTransition2,
@@ -123,6 +123,7 @@ export default function Home() {
   return (
     <div className="homeContainer">
       <motion.div className="home">
+        {/* <NavBar prevLoc=""></NavBar> */}
         <Link to="/menu" state={{ previousLocation: '/' }}>
           <motion.div
             className="home-nav-left"
@@ -191,7 +192,7 @@ export default function Home() {
             <motion.img src={logo} alt="logo" />
 
             <motion.h5 className={loading ? '' : ' showSubheader'}>
-              Carnegie Music Hall • March 20 6:30pm EST
+              Carnegie Music Hall • March 20 7:30pm EST
             </motion.h5>
           </motion.div>
           <div

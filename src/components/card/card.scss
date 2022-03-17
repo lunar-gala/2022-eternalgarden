@@ -50,7 +50,8 @@
     font-size: $font-size-3;
   }
 
-  &-description {
+  &-description,
+  .subline-description {
     max-width: 700px;
     margin: $spacing-4 auto $spacing-8 auto;
     font-size: $font-size-1;
@@ -82,10 +83,9 @@
 }
 
 .subline-designers {
-  font-size: $font-size-1;
-  // font-family: Cormorant;
-  // text-transform: capitalize;
-  // font-size: $font-size-3;
+  font-family: Cormorant;
+  text-transform: capitalize;
+  font-size: $font-size-3;
   margin-bottom: $spacing-4;
 }
 

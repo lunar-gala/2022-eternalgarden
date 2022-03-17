@@ -101,10 +101,15 @@ function CardContent({ name = '', designers, description, images, sublines }) {
       )}
       {sublines && (
         <div className="sublines">
-          {sublines.map(({ name, designers }, index) => (
+          {sublines.map(({ name, designers, description }, index) => (
             <div key={`subline-${index}`}>
-              <p className="subline-name">{name}</p>
-              <p className="subline-designers">{designers.join(', ')}</p>
+              {name && <p className="subline-name">{name}</p>}
+              {designers && (
+                <p className="subline-designers">{designers.join(', ')}</p>
+              )}
+              {description && (
+                <p className="subline-description">{description}</p>
+              )}
             </div>
           ))}
         </div>
