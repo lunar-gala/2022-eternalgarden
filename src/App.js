@@ -10,8 +10,8 @@ import About from 'routes/about';
 import Lines from 'routes/lines';
 import Guide from 'routes/guide';
 
-// import Guide from 'routes/people';
-import Guide from 'routes/lines';
+import People from 'routes/people';
+import Lines from 'routes/lines';
 
 export default function App() {
   const location = useLocation();
@@ -23,9 +23,11 @@ export default function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/menu" element={<Menu />} />
           <Route path="/about" element={<About />} />
-          <Route path="/lines" element={<Lines />} />
-          <Route path="/people" element={<People />} />
+
           <Route path="/guide" element={<Guide />} />
+          <Route path="/people" element={<People />} />
+
+          <Route path="/lines" element={<Lines />} />
         </Routes>
       </AnimatePresence>
     </main>
