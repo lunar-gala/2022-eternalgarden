@@ -9,7 +9,9 @@ import Menu from 'routes/menu';
 import About from 'routes/about';
 import Lines from 'routes/lines';
 import Guide from 'routes/guide';
-import People from 'routes/people';
+
+// import Guide from 'routes/people';
+import Guide from 'routes/lines';
 
 export default function App() {
   const location = useLocation();
