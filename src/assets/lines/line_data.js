@@ -55,7 +55,7 @@ const YEAR_OF_TIGER_LINES = [
     designers: ['Aadya Bhartia'],
   },
   {
-    name: 'DURATION',
+    name: 'SALVOS',
     designers: ['Patricia Yu'],
   },
   {
