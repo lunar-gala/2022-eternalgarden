@@ -6,7 +6,6 @@
       { "name": "Seyoung Choo", "slug": "Design/seyoung-choo.jpg" },
       { "name": "Jeanie Xu", "slug": "Design/Jeanie-Xu.jpeg" },
       { "name": "Sean Meng", "slug": "Design/sean-meng.jpeg" },
-      { "name": "Sunniva Liu", "slug": "Design/sunniva-liu.jpeg" },
       { "name": "Skylar Mcauliffe", "slug": "Design/skylar-mcauliffe.jpeg" },
       { "name": "Oscar Monarrez", "slug": "Design/Oscar-Monarrez.jpeg" },
       { "name": "Minsung Kang", "slug": "Design/Minsung-Kang.jpeg" },
@@ -19,36 +18,6 @@
       { "name": "Asad Sheikh", "slug": "Design/asad-sheikh.jpeg" }
     ],
     "team": "Design"
-  },
-  {
-    "people": [
-      {
-        "name": "Camille Chandler",
-        "slug": "Dance/Camille-Chandler.jpeg"
-      },
-      {
-        "name": "Christina Di",
-        "slug": "Dance/christina-di.jpeg"
-      },
-      {
-        "name": "Kristine Kim",
-        "slug": "Dance/kristine-kim.jpeg"
-      },
-      { "name": "Bonnie Chan", "slug": "Dance/bonnie-chan.jpeg" },
-      { "name": "Vicky Jung", "slug": "Dance/vicky-jung.jpeg" },
-      { "name": "Alana Wu", "slug": "Dance/Alana-wu.jpeg" },
-      { "name": "Sharon Fung", "slug": "Dance/sharon-fung.jpeg" },
-      { "name": "Cynthia Hu", "slug": "Dance/Cynthia-Hu.jpeg" },
-      { "name": "Yuxi Lee", "slug": "Dance/yuxi-lee.jpeg" },
-      { "name": "Lili Chang", "slug": "Dance/lili-chang.jpeg" },
-      {
-        "name": "Heeyun Choikim",
-        "slug": "Dance/heeyun-choikim.jpeg"
-      },
-      { "name": "Rachel Shin", "slug": "Dance/rachel-shin.jpeg" },
-      { "name": "Tina Lin", "slug": "Dance/tina-lin.jpeg" }
-    ],
-    "team": "Dance"
   },
   {
     "people": [
@@ -92,6 +61,25 @@
       { "name": "Tejas Venkatesh", "slug": "Model/tejas-venkatesh.jpeg" }
     ],
     "team": "Model"
+  },
+  {
+    "people": [
+      { "name": "Camille Chandler", "slug": "Dance/Camille-Chandler.jpeg" },
+      { "name": "Christina Di", "slug": "Dance/christina-di.jpeg" },
+      { "name": "Kristine Kim", "slug": "Dance/kristine-kim.jpeg" },
+      { "name": "Bonnie Chan", "slug": "Dance/bonnie-chan.jpeg" },
+      { "name": "Vicky Jung", "slug": "Dance/vicky-jung.jpeg" },
+      { "name": "Alana Wu", "slug": "Dance/Alana-wu.jpeg" },
+      { "name": "Sharon Fung", "slug": "Dance/sharon-fung.jpeg" },
+      { "name": "Megan Ying", "slug": "Dance/megan-ying.jpeg" },
+      { "name": "Cynthia Hu", "slug": "Dance/Cynthia-Hu.jpeg" },
+      { "name": "Yuxi Lee", "slug": "Dance/yuxi-lee.jpeg" },
+      { "name": "Lili Chang", "slug": "Dance/lili-chang.jpeg" },
+      { "name": "Heeyun Choikim", "slug": "Dance/heeyun-choikim.jpeg" },
+      { "name": "Rachel Shin", "slug": "Dance/rachel-shin.jpeg" },
+      { "name": "Tina Lin", "slug": "Dance/tina-lin.jpeg" }
+    ],
+    "team": "Dance"
   },
   {
     "people": [
