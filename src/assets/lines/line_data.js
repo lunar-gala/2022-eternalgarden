@@ -47,44 +47,47 @@ import World_Scanner_IMG_3 from './img/World_Scanner/1886-Web.jpeg';
 
 const YEAR_OF_TIGER_LINES = [
   {
-    name: 'TIGER',
-    designers: ['Seyoung Choo'],
-  },
-  {
-    name: 'RENASCI',
+    name: 'Renasci',
     designers: ['Aadya Bhartia'],
   },
+
   {
-    name: 'SALVOS',
+    name: 'Salvos',
     designers: ['Patricia Yu'],
   },
   {
-    name: 'THE MARIANAS TRENCH',
+    name: 'The Marianas Trench',
     designers: ['Lily Oberman', 'Skylar McAuliffe'],
   },
   {
-    name: 'GOSSAMER IDLE',
+    name: 'Gossamer Idle',
     designers: ['Elise Chapman', 'Jessica Lai'],
   },
   {
-    name: 'SOMATIC',
-    designers: ['Jessa Westheimer'],
-  },
-  {
-    name: 'MIRROR',
+    name: 'Mirror',
     designers: ['Khushi Nandgoankar', 'Kathy Zhang'],
   },
   {
-    name: 'INVASION',
+    name: 'Invasion',
     designers: ['Olivia Luk'],
   },
   {
-    name: 'CHRYSOPHYTA',
+    name: 'Chrysophyta',
     designers: ['Iz Horgan'],
   },
   {
-    name: 'BLOOM',
+    name: 'Bloom',
     designers: ['Natalie Waldram', 'Amal Jafrani'],
+  },
+
+  {
+    name: 'Somatic',
+    designers: ['Jessa Westheimer'],
+  },
+
+  {
+    name: 'Tiger',
+    designers: ['Seyoung Choo'],
   },
 ];
 
@@ -108,7 +111,7 @@ const ALUMNI_LINES = [
       'There is so much in this world that can be salvaged. We are living in what Hélène Frichot refers to as the “wasteocene.” As humans, we treat this earth as our limitless dumping ground for discarded items. We can breathe new life into these material things that are found everywhere, things that are making their way to the wreckage. This look is to be made from scraps of fabrics and recycled or salvaged thread within my own closet and those that I find around my home city of Philadelphia. From the thread to the textiles woven together, this piece will represent the widely conducted, multidisciplinary exploration of using things that we already have at our disposal.',
   },
   {
-    name: 'SURFACE',
+    name: 'Surface',
     designers: ['Michael Powell'],
     description:
       'SURFACE explores the issue of the distortion and trivialization of the human body into objects of desire. The veneer of mesh, over-layed with cut contours, is a constructed external appearance that illustrates areas of the socially ideal body, exposing those who wear it to appreciation and admiration, but also leaving them vulnerable to objectification. As the line progresses, the body becomes more clearly exposed than upon first impression. It is meant to represent an exaggerated set of physical attributes that emphasize the scrutiny of our bodies— conscious and subconscious, external and internal.',
